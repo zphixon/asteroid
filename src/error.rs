@@ -1,5 +1,6 @@
 
 use std::fmt;
+use std::error::Error;
 
 #[derive(Debug, PartialEq)]
 pub enum AsteroidResult {
@@ -15,47 +16,27 @@ pub struct AsteroidError {
 
 #[derive(Debug, PartialEq)]
 pub enum AsteroidErrorKind {
-    Exit,
-}
-
-impl AsteroidResult {
-    pub fn assert_exit(&self) {
-        match self {
-            &AsteroidResult::Err(ref r) => {
-                if r.kind != AsteroidErrorKind::Exit {
-                    panic!("error: {}", r)
-                }
-            },
-            &AsteroidResult::Ok => {},
-        }
-    }
+    InvalidSettingsFormat,
 }
 
 impl AsteroidError {
-    pub fn new(kind: AsteroidErrorKind, msg: &str) -> AsteroidResult {
-        AsteroidResult::Err(AsteroidError {
+    pub fn new(kind: AsteroidErrorKind, msg: &str) -> Self {
+        AsteroidError {
             kind: kind,
             msg: msg.to_owned(),
-        })
-    }
-
-    pub fn exit() -> AsteroidResult {
-        AsteroidError::new(AsteroidErrorKind::Exit, "The game exited normally.")
-    }
-
-    pub fn ok() -> AsteroidResult {
-        AsteroidResult::Ok
+        }
     }
 }
 
 impl fmt::Display for AsteroidError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match self.kind {
-            AsteroidErrorKind::Exit => Ok(()),
-            _ => {
-                write!(f, "An error has ocurred: {}", self.msg)
-            }
-        }
+        write!(f, "An error has ocurred: {:?} {}", self.kind, self.msg)
+    }
+}
+
+impl Error for AsteroidError {
+    fn description(&self) -> &str {
+        &self.msg
     }
 }
 
