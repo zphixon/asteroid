@@ -13,11 +13,14 @@ use error::*;
 use game::*;
 use settings::Settings;
 
-pub fn game_loop<T: GameState>(mut state: T, settings: Settings) -> AsteroidResult {
-    use glium::{glutin, Surface};
+pub fn game_loop<T: GameState>(mut state: T, settings_file: &str) -> AsteroidResult {
+    let settings = settings::open(settings_file).unwrap();
 
+    use glium::{glutin, Surface};
     let mut events = glutin::EventsLoop::new();
-    let window = glutin::WindowBuilder::new();
+    let window = glutin::WindowBuilder::new()
+        .with_title(settings.title)
+        .with_dimensions(settings.width, settings.height);
     let context = glutin::ContextBuilder::new();
     let display = glium::Display::new(window, context, &events).unwrap();
 

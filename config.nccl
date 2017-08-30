@@ -1,0 +1,15 @@
+window
+    fullscreen
+        true
+    title
+        Hello, world!
+    width # in pixels
+        700
+    height
+        490
+graphics
+    shaders
+        name
+            path
+        name2
+            path
