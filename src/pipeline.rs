@@ -1,6 +1,6 @@
 
 pub struct Graphics {
-    inner: Vec<RenderEvent>
+    inner: Vec<Shape>
 }
 
 impl Graphics {
@@ -10,11 +10,7 @@ impl Graphics {
         }
     }
 
-    pub fn do_buffer(&mut self) {
-        unsafe {
-            //::gl::DrawArrays(::gl::TRIANGLES, 0, 3);
-        }
-
+    fn do_buffer(&mut self, target: &mut ::glium::Frame) {
         self.inner.clear();
     }
 
@@ -41,19 +37,18 @@ impl Graphics {
     }
 }
 
-pub enum RenderEvent {
-    Clear,
-    Square {
-        x: u32,
-        y: u32,
-        width: u32,
-        height: u32,
-    },
-    Ellipse {
-        x: u32,
-        y: u32,
-        width: u32,
-        height: u32,
-    },
+pub enum ShapeKind {
+    Triangle,
+    Square,
+    Ellipse,
+}
+
+pub struct Shape {
+    kind: ShapeKind,
+    x: u32,
+    y: u32,
+    width: u32,
+    height: u32,
+    rot: u32,
 }
 

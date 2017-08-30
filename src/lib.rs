@@ -1,22 +1,17 @@
 
 #[macro_use]
 extern crate glium;
-//extern crate glutin;
-//extern crate gl;
 extern crate nccl;
 extern crate time;
-
-//use glutin::GlContext;
 
 pub mod error;
 pub mod settings;
 pub mod game;
-pub mod pipeline;
+pub mod graphics;
 
 use error::*;
 use game::*;
 use settings::Settings;
-use pipeline::Graphics;
 
 pub fn game_loop<T: GameState>(mut state: T, settings: Settings) -> AsteroidResult {
     use glium::{glutin, Surface};
@@ -26,20 +21,20 @@ pub fn game_loop<T: GameState>(mut state: T, settings: Settings) -> AsteroidResu
     let context = glutin::ContextBuilder::new();
     let display = glium::Display::new(window, context, &events).unwrap();
 
+    // TODO: move to mod graphics
     #[derive(Copy, Clone)]
     struct Vertex {
         position: [f32; 2],
     }
     implement_vertex!(Vertex, position);
-
     let v1 = Vertex { position: [-0.5, -0.5] };
     let v2 = Vertex { position: [0., 0.5] };
     let v3 = Vertex { position: [0.5, -0.25] };
     let shape = vec![v1, v2, v3];
-
     let vertex_buffer = glium::VertexBuffer::new(&display, &shape).unwrap();
     let indices = glium::index::NoIndices(glium::index::PrimitiveType::TrianglesList);
 
+    // TODO: move to settings file - path of shaders
     let vertex_shader_src = r#"
         #version 140
         in vec2 position;
@@ -58,7 +53,6 @@ pub fn game_loop<T: GameState>(mut state: T, settings: Settings) -> AsteroidResu
             color = vec4(my_attr, 0.0, 1.0);   // we build a vec4 from a vec2 and two floats
         }
     "#;
-
     let program = glium::Program::from_source(&display, vertex_shader_src, fragment_shader_src, None).unwrap();
 
     let mut t: f32 = -0.5;
@@ -70,8 +64,9 @@ pub fn game_loop<T: GameState>(mut state: T, settings: Settings) -> AsteroidResu
         }
 
         let mut target = display.draw();
-        target.clear_color(0., 0., 1., 1.);
 
+        // TODO: move to struct Graphics
+        target.clear_color(0., 0., 1., 1.);
         let uniforms = uniform! {
             matrix: [
                 [t.cos(), t.sin(), 0.0, 0.0],
@@ -80,8 +75,8 @@ pub fn game_loop<T: GameState>(mut state: T, settings: Settings) -> AsteroidResu
                 [t,   0.0, 0.0, 1.0f32],
             ]
         };
-
         target.draw(&vertex_buffer, &indices, &program, &uniforms, &Default::default()).unwrap();
+
         target.finish().unwrap();
 
         events.poll_events(|event| {
