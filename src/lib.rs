@@ -40,17 +40,17 @@ pub fn game_loop<T: GameState>(mut game: T, settings_file: &str) -> AsteroidResu
     let mut event_loop = sdl_context.event_pump().unwrap();
 
     let mut graphics = Graphics::new();
-
     let mut tick = 0;
-
     let mut t = time::precise_time_s();
-    'outer: loop {
+    let mut err = None;
+
+    while err.is_none() {
         for event in event_loop.poll_iter() {
             match event {
-                Event::Quit {..} => break 'outer,
+                Event::Quit {..} => err = Some(AsteroidResult::Ok),
                 Event::KeyDown { keycode: Some(Keycode::Escape), .. } => {
                     if settings.exit_on_escape {
-                        break 'outer
+                        err = Some(AsteroidResult::Ok);
                     } else {
                         game.keyboard_input(Keycode::Escape);
                     }
@@ -61,26 +61,28 @@ pub fn game_loop<T: GameState>(mut game: T, settings_file: &str) -> AsteroidResu
                 _ => {}
             }
         }
+
         canvas.set_draw_color(Color::RGB(0, 0, 0));
         canvas.clear();
 
         let t_now = time::precise_time_s();
         game.update(t_now - t);
+
         game.render(&mut graphics);
 
         graphics.empty_queue(&mut canvas);
-
         canvas.present();
 
         tick += 1;
-        if tick % 1_000 == 0 {
+        if tick >= 1_000 {
             // sketchy fps algorithm
             println!("fps: {}", 1. / (t_now - t));
+            tick = 0;
         }
 
         t = time::precise_time_s();
     }
 
-    AsteroidResult::Ok
+    err.unwrap()
 }
 
