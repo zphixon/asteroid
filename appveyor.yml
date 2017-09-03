@@ -46,10 +46,10 @@ install:
   - copy SDL2-2.0.5\x86_64-w64-mingw32\lib\libSDL2main.a gnu-mingw\lib\64
   - rmdir /s /q SDL2-2.0.5
   - 7z x SDL2-devel-2.0.5-VC.zip
-  - copy SDL2-2.0.5\lib\x32\SDL2.dll msvc\dll\32
-  - copy SDL2-2.0.5\lib\x32\SDL2.lib msvc\lib\32
-  - copy SDL2-2.0.5\lib\x32\SDL2main.lib msvc\lib\32
-  - copy SDL2-2.0.5\lib\x32\SDL2test.lib msvc\lib\32
+  - copy SDL2-2.0.5\lib\x86\SDL2.dll msvc\dll\32
+  - copy SDL2-2.0.5\lib\x86\SDL2.lib msvc\lib\32
+  - copy SDL2-2.0.5\lib\x86\SDL2main.lib msvc\lib\32
+  - copy SDL2-2.0.5\lib\x86\SDL2test.lib msvc\lib\32
   - copy SDL2-2.0.5\lib\x64\SDL2.dll msvc\dll\64
   - copy SDL2-2.0.5\lib\x64\SDL2.lib msvc\lib\64
   - copy SDL2-2.0.5\lib\x64\SDL2main.lib msvc\lib\64
