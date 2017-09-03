@@ -20,21 +20,50 @@ matrix:
     - channel: nightly
 
 install:
+  - appveyor DownloadFile https://www.libsdl.org/release/SDL2-devel-2.0.5-VC.zip
+  - appveyor DownloadFile https://www.libsdl.org/release/SDL2-devel-2.0.5-mingw.tar.gz
+  - mkdir gnu-mingw\dll\32
+  - mkdir gnu-mingw\dll\64
+  - mkdir gnu-mingw\lib\32
+  - mkdir gnu-mingw\lib\64
+  - mkdir msvc\dll\32
+  - mkdir msvc\dll\64
+  - mkdir msvc\lib\32
+  - mkdir msvc\lib\64
+  - 7z x SDL2-devel-2.0.5-VC.zip
+  - copy SDL2-2.0.5\i686-w64-mingw32\bin\SDL2.dll gnu-mingw\dll\32
+  - copy SDL2-2.0.5\i686-w64-mingw32\lib\libSDL2.a gnu-mingw\lib\32
+  - copy SDL2-2.0.5\i686-w64-mingw32\lib\libSDL2.dll.a gnu-mingw\lib\32
+  - copy SDL2-2.0.5\i686-w64-mingw32\lib\libSDL2.la gnu-mingw\lib\32
+  - copy SDL2-2.0.5\i686-w64-mingw32\lib\libSDL2_test.a gnu-mingw\lib\32
+  - copy SDL2-2.0.5\i686-w64-mingw32\lib\libSDL2main.a gnu-mingw\lib\32
+  - copy SDL2-2.0.5\x86_64-w64-mingw32\bin\SDL2.dll gnu-mingw\dll\64
+  - copy SDL2-2.0.5\x86_64-w64-mingw32\lib\libSDL2.a gnu-mingw\lib\64
+  - copy SDL2-2.0.5\x86_64-w64-mingw32\lib\libSDL2.dll.a gnu-mingw\lib\64
+  - copy SDL2-2.0.5\x86_64-w64-mingw32\lib\libSDL2.la gnu-mingw\lib\64
+  - copy SDL2-2.0.5\x86_64-w64-mingw32\lib\libSDL2_test.a gnu-mingw\lib\64
+  - copy SDL2-2.0.5\x86_64-w64-mingw32\lib\libSDL2main.a gnu-mingw\lib\64
+  - rmdir /s /q SDL2-2.0.5
+  - 7z x SDL2-devel-2.0.5-mingw.tar.gz
+  - 7z x SDL2-devel-2.0.5-mingw.tar
+  - copy SDL2-2.0.5\lib\x32\SDL2.dll msvc\dll\32
+  - copy SDL2-2.0.5\lib\x32\SDL2.lib msvc\lib\32
+  - copy SDL2-2.0.5\lib\x32\SDL2main.lib msvc\lib\32
+  - copy SDL2-2.0.5\lib\x32\SDL2test.lib msvc\lib\32
+  - copy SDL2-2.0.5\lib\x64\SDL2.dll msvc\dll\64
+  - copy SDL2-2.0.5\lib\x64\SDL2.lib msvc\lib\64
+  - copy SDL2-2.0.5\lib\x64\SDL2main.lib msvc\lib\64
+  - copy SDL2-2.0.5\lib\x64\SDL2test.lib msvc\lib\64
+  - rmdir /s /q SDL2-2.0.5
+  - tree
   - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
   - rustup-init -yv --default-toolchain %channel% --default-host %target%
   - set PATH=%PATH%;%USERPROFILE%\.cargo\bin
   - rustc -vV
   - cargo -vV
 
-## Build Script ##
-
-# 'cargo test' takes care of building for us, so disable Appveyor's build stage. This prevents
-# the "directory does not contain a project or solution file" error.
 build: false
 
-# Uses 'cargo test' to run tests and build. Alternatively, the project may call compiled programs
-#directly or perform other testing commands. Rust will automatically be placed in the PATH
-# environment variable.
 test_script:
 - cargo test --verbose
 
