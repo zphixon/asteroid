@@ -1,8 +1,13 @@
 
 #[macro_use]
-extern crate glium;
 extern crate nccl;
 extern crate time;
+//extern crate adi;
+extern crate sdl2;
+
+use sdl2::pixels::Color;
+use sdl2::event::Event;
+pub use sdl2::keyboard::Keycode;
 
 pub mod error;
 pub mod settings;
@@ -11,146 +16,71 @@ pub mod graphics;
 
 use error::*;
 use game::*;
+use graphics::Graphics;
 use settings::Settings;
 
-pub fn game_loop<T: GameState>(mut state: T, settings_file: &str) -> AsteroidResult {
+use std::time::Duration;
+
+pub fn game_loop<T: GameState>(mut game: T, settings_file: &str) -> AsteroidResult {
     let settings = settings::open(settings_file).unwrap();
 
-    use glium::{glutin, Surface};
-    let mut events = glutin::EventsLoop::new();
-    let window = glutin::WindowBuilder::new()
-        .with_title(settings.title)
-        .with_dimensions(settings.width, settings.height);
-    let context = glutin::ContextBuilder::new();
-    let display = glium::Display::new(window, context, &events).unwrap();
+    let sdl_context = sdl2::init().unwrap();
+    let window_builder = sdl_context.video().unwrap();
 
-    // TODO: move to mod graphics
-    #[derive(Copy, Clone)]
-    struct Vertex {
-        position: [f32; 2],
-    }
-    implement_vertex!(Vertex, position);
-    let v1 = Vertex { position: [-0.5, -0.5] };
-    let v2 = Vertex { position: [0., 0.5] };
-    let v3 = Vertex { position: [0.5, -0.25] };
-    let shape = vec![v1, v2, v3];
-    let vertex_buffer = glium::VertexBuffer::new(&display, &shape).unwrap();
-    let indices = glium::index::NoIndices(glium::index::PrimitiveType::TrianglesList);
+    let window = window_builder.window(&settings.title, settings.width, settings.height)
+        .opengl()
+        .position_centered()
+        .build().unwrap();
 
-    // TODO: move to settings file - path of shaders
-    let vertex_shader_src = r#"
-        #version 140
-        in vec2 position;
-        out vec2 my_attr;      // our new attribute
-        uniform mat4 matrix;
-        void main() {
-            my_attr = position;     // we need to set the value of each `out` variable.
-            gl_Position = matrix * vec4(position, 0.0, 1.0);
-        }
-    "#;
-    let fragment_shader_src = r#"
-        #version 140
-        in vec2 my_attr;
-        out vec4 color;
-        void main() {
-            color = vec4(my_attr, 0.0, 1.0);   // we build a vec4 from a vec2 and two floats
-        }
-    "#;
-    let program = glium::Program::from_source(&display, vertex_shader_src, fragment_shader_src, None).unwrap();
+    let mut canvas: sdl2::render::Canvas<sdl2::video::Window> = window.into_canvas().build().unwrap();
 
-    let mut t: f32 = -0.5;
-    let mut err = None;
-    while err.is_none() {
-        t += 0.0002;
-        if t > 0.5 {
-            t = -0.5;
-        }
+    canvas.set_draw_color(Color::RGB(0, 0, 0));
+    canvas.clear();
+    canvas.present();
+    let mut event_loop = sdl_context.event_pump().unwrap();
 
-        let mut target = display.draw();
+    let mut graphics = Graphics::new();
 
-        // TODO: move to struct Graphics
-        target.clear_color(0., 0., 1., 1.);
-        let uniforms = uniform! {
-            matrix: [
-                [t.cos(), t.sin(), 0.0, 0.0],
-                [-t.sin(), t.cos(), 0.0, 0.0],
-                [0.0, 0.0, 1.0, 0.0],
-                [t,   0.0, 0.0, 1.0f32],
-            ]
-        };
-        target.draw(&vertex_buffer, &indices, &program, &uniforms, &Default::default()).unwrap();
+    let mut tick = 0;
 
-        target.finish().unwrap();
-
-        events.poll_events(|event| {
+    let mut t = time::precise_time_s();
+    'outer: loop {
+        for event in event_loop.poll_iter() {
             match event {
-                glutin::Event::WindowEvent { event, .. } => match event {
-                    glutin::WindowEvent::Closed => err = Some(AsteroidResult::Ok),
-                    glutin::WindowEvent::KeyboardInput { input, .. } => {
-                        if input.virtual_keycode.unwrap() == glutin::VirtualKeyCode::Escape {
-                            err = Some(AsteroidResult::Ok);
-                        }
+                Event::Quit {..} => break 'outer,
+                Event::KeyDown { keycode: Some(Keycode::Escape), .. } => {
+                    if settings.exit_on_escape {
+                        break 'outer
+                    } else {
+                        game.keyboard_input(Keycode::Escape);
                     }
-                    _ => ()
                 },
-                _ => (),
+                Event::KeyDown { keycode: Some(key), .. } => {
+                    game.keyboard_input(key);
+                }
+                _ => {}
             }
-        });
+        }
+        canvas.set_draw_color(Color::RGB(0, 0, 0));
+        canvas.clear();
+
+        let t_now = time::precise_time_s();
+        game.update(t_now - t);
+        game.render(&mut graphics);
+
+        graphics.empty_queue(&mut canvas);
+
+        canvas.present();
+
+        tick += 1;
+        if tick % 1_000 == 0 {
+            // sketchy fps algorithm
+            println!("fps: {}", 1. / (t_now - t));
+        }
+
+        t = time::precise_time_s();
     }
 
-    err.unwrap()
-    //let mut event_loop = glutin::EventsLoop::new();
-    //let window = glutin::WindowBuilder::new()
-    //    .with_title(settings.title)
-    //    .with_dimensions(settings.dimensions.0, settings.dimensions.1);
-    //let context = glutin::ContextBuilder::new()
-    //    .with_vsync(settings.vsync);
-    //let window = glutin::GlWindow::new(window, context, &event_loop).unwrap();
-
-    //unsafe {
-    //    window.make_current().unwrap();
-    //    gl::load_with(|symbol| window.get_proc_address(symbol) as *const _);
-    //    gl::ClearColor(0., 1., 0., 1.);
-    //}
-
-    //let mut graphics = Graphics::new();
-
-    //let mut last_iter = time::precise_time_ns();
-    //let mut err = None;
-    //while err.is_none() {
-    //    event_loop.poll_events(|event| {
-    //        last_iter = time::precise_time_ns();
-
-    //        match event {
-    //            glutin::Event::WindowEvent { event, .. } => match event {
-    //                glutin::WindowEvent::Closed => {
-    //                    err = Some(AsteroidResult::Ok);
-    //                },
-    //                glutin::WindowEvent::Resized(w, h) => window.resize(w, h),
-    //                _ => {}
-    //            },
-    //            _ => {
-    //            }
-    //        }
-
-    //        unsafe {
-    //            gl::Clear(gl::COLOR_BUFFER_BIT);
-    //        }
-
-    //        let dt = time::precise_time_ns() - last_iter;
-
-    //        if let AsteroidResult::Err(e) = state.update(&mut graphics, dt) {
-    //            err = Some(AsteroidResult::Err(e));
-    //        }
-    //        if let AsteroidResult::Err(e) = state.render(&mut graphics) {
-    //            err = Some(AsteroidResult::Err(e));
-    //        }
-    //        graphics.do_buffer();
-
-    //        window.swap_buffers().unwrap();
-    //    });
-    //}
-
-    //err.unwrap()
+    AsteroidResult::Ok
 }
 

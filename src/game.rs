@@ -1,20 +1,17 @@
 
 use error::AsteroidResult;
-//use pipeline::Graphics;
+use graphics::Graphics;
 
 pub trait GameState {
-    fn update(&mut self, dt: u64) -> AsteroidResult;
-    fn render(&mut self) -> AsteroidResult;
+    fn update(&mut self, dt: f64) -> AsteroidResult;
+    fn render(&self, graphics: &mut Graphics) -> AsteroidResult;
 
     #[allow(unused_variables)]
-    fn keyboard_input(&mut self, key: String) -> AsteroidResult { AsteroidResult::Ok }
+    fn keyboard_input(&mut self, key: ::Keycode) -> AsteroidResult { AsteroidResult::Ok }
     #[allow(unused_variables)]
     fn mouse_move(&mut self, position: (f64, f64)) -> AsteroidResult { AsteroidResult::Ok }
     #[allow(unused_variables)]
     fn mouse_wheel(&mut self, scroll: f64) -> AsteroidResult { AsteroidResult::Ok }
-
-    fn mouse_entered(&mut self) -> AsteroidResult { AsteroidResult::Ok }
-    fn mouse_left(&mut self) -> AsteroidResult { AsteroidResult::Ok }
     fn mouse_input(&mut self /* enum MouseButton */) -> AsteroidResult { AsteroidResult::Ok }
     fn analog_input(&mut self /* enum Direction, value: f64 */) -> AsteroidResult { AsteroidResult::Ok }
     //fn update(&mut self, graphics: &mut Graphics, dt: u64) -> AsteroidResult;

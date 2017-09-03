@@ -7,6 +7,8 @@
 //     dimensions
 //         490               # width
 //         700               # height
+//     exit on escape
+//         true
 // graphics
 //     shaders
 //         name
@@ -22,6 +24,7 @@ pub struct Settings {
     pub height: u32,
     pub vsync: bool,
     pub fullscreen: bool,
+    pub exit_on_escape: bool,
 }
 
 pub fn open(filename: &str) -> Result<Settings, ()> {
@@ -29,10 +32,11 @@ pub fn open(filename: &str) -> Result<Settings, ()> {
         Ok(pair) => {
             Ok(Settings {
                 title: pair["window"]["title"].value_or("untitled".into()),
-                width: pair["window"]["width"].keys_as_or::<i64>(vec![600])[0] as u32,
-                height: pair["window"]["height"].keys_as_or::<i64>(vec![900])[0] as u32,
+                width: pair["window"]["width"].keys_as_or::<u32>(vec![600])[0],
+                height: pair["window"]["height"].keys_as_or::<u32>(vec![900])[0],
                 vsync: false, // does not seem to work using glium
-                fullscreen: pair["window"]["fullscreen"].value_as::<bool>().unwrap_or(false),
+                fullscreen: pair["window"]["fullscreen"].value_as_or::<bool>(false),
+                exit_on_escape: pair["window"]["exit on escape"].value_as_or::<bool>(true),
             })
         },
 
