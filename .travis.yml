@@ -11,14 +11,14 @@ matrix:
 install:
   - wget https://www.libsdl.org/release/SDL2-devel-2.0.5-VC.zip
   - wget https://www.libsdl.org/release/SDL2-devel-2.0.5-mingw.tar.gz
-  - mkdir gnu-mingw/dll/32
-  - mkdir gnu-mingw/dll/64
-  - mkdir gnu-mingw/lib/32
-  - mkdir gnu-mingw/lib/64
-  - mkdir msvc/dll/32
-  - mkdir msvc/dll/64
-  - mkdir msvc/lib/32
-  - mkdir msvc/lib/64
+  - mkdir gnu-mingw/dll/32 -p
+  - mkdir gnu-mingw/dll/64 -p
+  - mkdir gnu-mingw/lib/32 -p
+  - mkdir gnu-mingw/lib/64 -p
+  - mkdir msvc/dll/32 -p
+  - mkdir msvc/dll/64 -p
+  - mkdir msvc/lib/32 -p
+  - mkdir msvc/lib/64 -p
   - 7z x SDL2-devel-2.0.5-mingw.tar.gz
   - 7z x SDL2-devel-2.0.5-mingw.tar
   - cp SDL2-2.0.5/i686-w64-mingw32/bin/SDL2.dll gnu-mingw/dll/32
