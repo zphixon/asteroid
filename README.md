@@ -1,5 +1,5 @@
 
-# asteroid [![Freaking appveyor](https://ci.appveyor.com/api/projects/status/niua9s3by7budnwb?svg=true)](https://ci.appveyor.com/project/cheezgi/asteroid)
+# asteroid [![Freaking appveyor](https://ci.appveyor.com/api/projects/status/niua9s3by7budnwb?svg=true)](https://ci.appveyor.com/project/cheezgi/asteroid) [![Freaking travis](https://travis-ci.org/cheezgi/asteroid.svg?branch=master)](https://travis-ci.org/cheezgi/asteroid)
 
 Very simple (inefficient?) game engine built on SDL2. Inspired by kiss3d/ggez.
 
