@@ -8,6 +8,10 @@ matrix:
   allow_failures:
     - rust: nightly
 
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y p7zip-full
+
 install:
   - wget https://www.libsdl.org/release/SDL2-devel-2.0.5-VC.zip
   - wget https://www.libsdl.org/release/SDL2-devel-2.0.5-mingw.tar.gz
