@@ -34,7 +34,7 @@ pub fn open(filename: &str) -> Result<Settings, ()> {
                 title: pair["window"]["title"].value_or("untitled".into()),
                 width: pair["window"]["width"].keys_as_or::<u32>(vec![600])[0],
                 height: pair["window"]["height"].keys_as_or::<u32>(vec![900])[0],
-                vsync: false, // does not seem to work using glium
+                vsync: pair["window"]["vsync"].value_as_or::<bool>(false),
                 fullscreen: pair["window"]["fullscreen"].value_as_or::<bool>(false),
                 exit_on_escape: pair["window"]["exit on escape"].value_as_or::<bool>(true),
             })

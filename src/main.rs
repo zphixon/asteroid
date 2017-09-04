@@ -4,63 +4,53 @@ extern crate asteroid;
 use asteroid::error::AsteroidResult;
 use asteroid::graphics::{Graphics, Draw};
 use asteroid::Keycode;
+use asteroid::game::{Args, GameState};
 
 use std::time::Duration;
 
 struct Game {
-    cx: i32,
-    cy: i32,
-    cr: i32,
+    cx: f64,
+    cy: f64,
+    cr: f64,
 }
 
-impl asteroid::game::GameState for Game {
-    fn update(&mut self, dt: f64) -> AsteroidResult {
-        AsteroidResult::Ok
-    }
-
-    fn render(&self, graphics: &mut Graphics) -> AsteroidResult {
-        graphics.set_color(255, 255, 255);
-        graphics.draw(Draw::CircleFill {x: self.cx, y: self.cy, r: self.cr});
-        graphics.set_color(0, 50, 255);
-        graphics.draw(Draw::RectangleLine {x: self.cx - 30, y: 99i32 - self.cy as i32 * 3, w: self.cr as u32, h: 2u32 * self.cr as u32 / 3u32});
-        AsteroidResult::Ok
-    }
-
-    fn keyboard_input(&mut self, key: Keycode) -> AsteroidResult {
-        match key {
-            Keycode::W => {
-                self.cy -= 5;
-            },
-            Keycode::A => {
-                self.cx -= 5;
-            },
-            Keycode::S => {
-                self.cy += 5;
-            },
-            Keycode::D => {
-                self.cx += 5;
-            },
-            Keycode::Q => {
-                self.cr += 1;
-            },
-            Keycode::E => {
-                if self.cr >= 0 {
-                    self.cr -= 1;
-                }
-            },
-            key => {
-                println!("{:?}", key);
-            }
+impl GameState for Game {
+    fn update(&mut self, args: &mut Args) -> AsteroidResult {
+        if args.is_down(Keycode::W) {
+            self.cy -= 50000. * args.dt();
         }
+        if args.is_down(Keycode::A) {
+            self.cx -= 50000. * args.dt();
+        }
+        if args.is_down(Keycode::S) {
+            self.cy += 50000. * args.dt();
+        }
+        if args.is_down(Keycode::D) {
+            self.cx += 50000. * args.dt();
+        }
+        if args.is_down(Keycode::Q) {
+            self.cr += 50000. * args.dt();
+        }
+        if args.is_down(Keycode::E) {
+            self.cr -= 50000. * args.dt();
+        }
+        AsteroidResult::Ok
+    }
+
+    fn render(&self, args: &mut Args) -> AsteroidResult {
+        args.graphics().set_color(255, 255, 255);
+        args.graphics().draw(Draw::CircleFill {x: self.cx as i32, y: self.cy as i32, r: self.cr as i32});
+        args.graphics().set_color(0, 50, 255);
+        args.graphics().draw(Draw::RectangleLine {x: (self.cx - 30.) as i32, y: (99. - self.cy * 3.) as i32, w: self.cr as u32, h: (2. * self.cr / 3.) as u32});
         AsteroidResult::Ok
     }
 }
 
 fn main() {
     let mut game = Game {
-        cx: 50,
-        cy: 50,
-        cr: 33,
+        cx: 50.,
+        cy: 50.,
+        cr: 33.,
     };
 
     asteroid::game_loop(game, "config.nccl");

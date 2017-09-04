@@ -32,17 +32,19 @@ pub fn game_loop<T: GameState>(mut game: T, settings_file: &str) -> AsteroidResu
         .position_centered()
         .build().unwrap();
 
-    let mut canvas: sdl2::render::Canvas<sdl2::video::Window> = window.into_canvas().build().unwrap();
+    let canvas = window.into_canvas();
+    let mut canvas = if settings.vsync {
+        canvas.present_vsync()
+    } else { canvas }.build().unwrap();
 
     canvas.set_draw_color(Color::RGB(0, 0, 0));
     canvas.clear();
     canvas.present();
     let mut event_loop = sdl_context.event_pump().unwrap();
 
-    let mut graphics = Graphics::new();
-    let mut tick = 0;
-    let mut t = time::precise_time_s();
+    let mut last_t = time::precise_time_s();
     let mut err = None;
+    let mut args = Args::new(Graphics::new());
 
     while err.is_none() {
         for event in event_loop.poll_iter() {
@@ -56,7 +58,11 @@ pub fn game_loop<T: GameState>(mut game: T, settings_file: &str) -> AsteroidResu
                     }
                 },
                 Event::KeyDown { keycode: Some(key), .. } => {
+                    args.set_key_down(key);
                     game.keyboard_input(key);
+                },
+                Event::KeyUp { keycode: Some(key), .. } => {
+                    args.set_key_up(key);
                 }
                 _ => {}
             }
@@ -65,22 +71,18 @@ pub fn game_loop<T: GameState>(mut game: T, settings_file: &str) -> AsteroidResu
         canvas.set_draw_color(Color::RGB(0, 0, 0));
         canvas.clear();
 
-        let t_now = time::precise_time_s();
-        game.update(t_now - t);
+        args.set_dt(time::precise_time_s() - last_t);
 
-        game.render(&mut graphics);
+        game.update(&mut args);
 
-        graphics.empty_queue(&mut canvas);
+        game.render(&mut args);
+
+        args.graphics().empty_queue(&mut canvas);
         canvas.present();
 
-        tick += 1;
-        if tick >= 1_000 {
-            // sketchy fps algorithm
-            println!("fps: {}", 1. / (t_now - t));
-            tick = 0;
-        }
+        //while time::precise_time_s() - last_t <= 1. / 60. {}
 
-        t = time::precise_time_s();
+        last_t = time::precise_time_s();
     }
 
     err.unwrap()
