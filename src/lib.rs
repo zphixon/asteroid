@@ -2,7 +2,6 @@
 #[macro_use]
 extern crate nccl;
 extern crate time;
-//extern crate adi;
 extern crate sdl2;
 
 use sdl2::pixels::Color;
@@ -44,7 +43,9 @@ pub fn game_loop<T: GameState>(mut game: T, settings_file: &str) -> AsteroidResu
 
     let mut last_t = time::precise_time_s();
     let mut err = None;
-    let mut args = Args::new(Graphics::new());
+    let mut args = Args::new();
+
+    let mut graphics = Graphics::new(canvas);
 
     while err.is_none() {
         for event in event_loop.poll_iter() {
@@ -58,8 +59,9 @@ pub fn game_loop<T: GameState>(mut game: T, settings_file: &str) -> AsteroidResu
                     }
                 },
                 Event::KeyDown { keycode: Some(key), .. } => {
-                    args.set_key_down(key);
-                    game.keyboard_input(key);
+                    if !args.is_down(key) {
+                        args.set_key_down(key);
+                    }
                 },
                 Event::KeyUp { keycode: Some(key), .. } => {
                     args.set_key_up(key);
@@ -68,19 +70,17 @@ pub fn game_loop<T: GameState>(mut game: T, settings_file: &str) -> AsteroidResu
             }
         }
 
-        canvas.set_draw_color(Color::RGB(0, 0, 0));
-        canvas.clear();
+        graphics.canvas.set_draw_color(Color::RGB(0, 0, 0));
+        graphics.canvas.clear();
 
         args.set_dt(time::precise_time_s() - last_t);
 
         game.update(&mut args);
+        game.render(&mut args, &mut graphics);
 
-        game.render(&mut args);
+        // put sleep here
 
-        args.graphics().empty_queue(&mut canvas);
-        canvas.present();
-
-        //while time::precise_time_s() - last_t <= 1. / 60. {}
+        graphics.canvas.present();
 
         last_t = time::precise_time_s();
     }

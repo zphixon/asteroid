@@ -4,45 +4,37 @@ use ::sdl2::video::Window;
 use ::sdl2::rect::Point;
 
 pub struct Graphics {
-    queue: Vec<Draw>
+    pub canvas: Canvas<Window>
 }
 
 impl Graphics {
-    pub fn new() -> Self {
+    pub fn new(canvas: Canvas<Window>) -> Self {
         Graphics {
-            queue: vec![],
+            canvas: canvas,
         }
     }
 
     pub fn draw(&mut self, shape: Draw) {
-        self.queue.push(shape);
-    }
-
-    pub fn empty_queue(&mut self, canvas: &mut ::sdl2::render::Canvas<::sdl2::video::Window>) {
-        for shape in self.queue.iter() {
-            match *shape {
-                Draw::Color {r, g, b} => {
-                    canvas.set_draw_color(::sdl2::pixels::Color::RGB(r, g, b));
-                },
-                Draw::CircleFill {x, y, r} => {
-                    fill_circle(canvas, x + r, y + r, r);
-                },
-                Draw::CircleLine {x, y, r} => {
-                    draw_circle(canvas, x + r, y + r, r);
-                },
-                Draw::RectangleFill {x, y, w, h} => {
-                    canvas.fill_rect(::sdl2::rect::Rect::new(x, y, w, h)).unwrap();
-                },
-                Draw::RectangleLine {x, y, w, h} => {
-                    canvas.draw_rect(::sdl2::rect::Rect::new(x, y, w, h)).unwrap();
-                },
-                Draw::Ellipse {x, y, f} => {},
-                Draw::Triangle {x, y, b, h} => {},
-                _ => {}
-            }
+        match shape {
+            Draw::Color {r, g, b} => {
+                self.canvas.set_draw_color(::sdl2::pixels::Color::RGB(r, g, b));
+            },
+            Draw::CircleFill {x, y, r} => {
+                fill_circle(&mut self.canvas, x + r, y + r, r);
+            },
+            Draw::CircleLine {x, y, r} => {
+                draw_circle(&mut self.canvas, x + r, y + r, r);
+            },
+            Draw::RectangleFill {x, y, w, h} => {
+                self.canvas.fill_rect(::sdl2::rect::Rect::new(x, y, w, h)).unwrap();
+            },
+            Draw::RectangleLine {x, y, w, h} => {
+                self.canvas.draw_rect(::sdl2::rect::Rect::new(x, y, w, h)).unwrap();
+            },
+            Draw::Ellipse {x, y, f} => {},
+            Draw::Triangle {x, y, b, h} => {},
+            _ => {}
         }
-
-        self.queue.clear();
     }
 
     pub fn set_color(&mut self, r: u8, g: u8, b: u8) {
