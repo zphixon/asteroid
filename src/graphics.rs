@@ -31,6 +31,10 @@ impl Graphics {
             Draw::Ellipse {x, y, f} => {},
             Draw::Triangle {x, y, b, h} => {},
             _ => {}
+            //Draw::Triangle {x, y, b, h} => {},
+            s => {
+                unimplemented!("not implemented: {:?}", s);
+            }
         }
     }
 
@@ -39,7 +43,7 @@ impl Graphics {
     }
 }
 
-#[derive(Clone, Copy, PartialEq)]
+#[derive(Clone, Copy, PartialEq, Debug)]
 pub enum Draw {
     CircleFill {
         x: i32,
