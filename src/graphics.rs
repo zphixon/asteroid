@@ -16,9 +16,6 @@ impl Graphics {
 
     pub fn draw(&mut self, shape: Draw) {
         match shape {
-            Draw::Color {r, g, b} => {
-                self.canvas.set_draw_color(::sdl2::pixels::Color::RGB(r, g, b));
-            },
             Draw::CircleFill {x, y, r} => {
                 fill_circle(&mut self.canvas, x + r, y + r, r);
             },
@@ -38,17 +35,12 @@ impl Graphics {
     }
 
     pub fn set_color(&mut self, r: u8, g: u8, b: u8) {
-        self.draw(Draw::Color {r: r, g: g, b: b});
+        self.canvas.set_draw_color(::sdl2::pixels::Color::RGB(r, g, b));
     }
 }
 
 #[derive(Clone, Copy, PartialEq)]
 pub enum Draw {
-    Color {
-        r: u8,
-        g: u8,
-        b: u8,
-    },
     CircleFill {
         x: i32,
         y: i32,
