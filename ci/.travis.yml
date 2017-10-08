@@ -1,0 +1,15 @@
+language: rust
+
+rust:
+  - stable
+  - nightly
+
+matrix:
+  allow_failures:
+    - rust: nightly
+
+addons:
+  apt:
+    packages:
+      - libsdl2-dev
+
