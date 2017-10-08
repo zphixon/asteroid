@@ -20,9 +20,7 @@ use settings::Settings;
 
 use std::time::Duration;
 
-pub fn game_loop<T: GameState>(mut game: T, settings_file: &str) -> AsteroidResult {
-    let settings = settings::open(settings_file).unwrap();
-
+pub fn game_loop<T: GameState>(mut game: T, settings: Settings) -> AsteroidResult {
     let sdl_context = sdl2::init().unwrap();
     let window_builder = sdl_context.video().unwrap();
 
