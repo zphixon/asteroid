@@ -1,6 +1,6 @@
 window
     fullscreen
-        true
+        false
     title
         Hello, world!
     width # in pixels
