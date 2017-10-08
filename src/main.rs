@@ -5,6 +5,7 @@ use asteroid::error::AsteroidResult;
 use asteroid::graphics::{Graphics, Draw};
 use asteroid::Keycode;
 use asteroid::game::{Args, GameState};
+use asteroid::settings::{SettingsBuilder, open};
 
 use std::time::Duration;
 
@@ -55,6 +56,14 @@ fn main() {
         cr: 33.,
     };
 
-    asteroid::game_loop(game, "config.nccl");
+    let settings = SettingsBuilder::new()
+        .title("Hello, world!")
+        .width(700)
+        .height(490)
+        .vsync(true)
+        .build();
+    //let settings = settings::open(settings_file).unwrap();
+
+    asteroid::game_loop(game, settings);
 }
 
