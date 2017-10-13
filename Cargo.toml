@@ -12,7 +12,11 @@ readme = "README.md"
 
 [badges]
 travis-ci = { repository = "cheezgi/asteroid" }
-appveyor = { repository = "cheezgi/asteroid" }
+
+# examples need sdl2 to be present in order to build
+# but cargo doesn't know how to specify a build file for an example
+# so I'm just not showing the appveyor badge for now
+#appveyor = { repository = "cheezgi/asteroid" }
 
 [dependencies]
 nccl = "0.4.0"
