@@ -1,5 +1,4 @@
 
-#[macro_use]
 extern crate nccl;
 extern crate time;
 extern crate sdl2;
@@ -18,7 +17,7 @@ use game::*;
 use graphics::Graphics;
 use settings::Settings;
 
-use std::time::Duration;
+//use std::time::Duration;
 
 pub fn game_loop<T: GameState>(mut game: T, settings: Settings) -> AsteroidResult {
     let sdl_context = sdl2::init().unwrap();

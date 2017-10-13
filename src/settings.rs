@@ -16,7 +16,7 @@
 //         name2
 //             path
 
-use error::*;
+//use error::*;
 
 pub struct SettingsBuilder {
     title: Option<String>,

@@ -1,6 +1,6 @@
 
 use error::AsteroidResult;
-use graphics::{Graphics, Draw};
+use graphics::Graphics;
 
 use std::collections::HashMap;
 
