@@ -9,8 +9,6 @@ keywords = ["game", "game framework"]
 categories = ["game-engines"]
 license = "MIT"
 readme = "README.md"
-build = "build.rs"
-include = ["gnu-mingw/*", "msvc/*"]
 
 [badges]
 travis-ci = { repository = "cheezgi/asteroid" }
@@ -20,4 +18,7 @@ appveyor = { repository = "cheezgi/asteroid" }
 nccl = "0.4.0"
 time = "0.1.38"
 sdl2 = "0.30.0"
+
+[[example]]
+name = "basic"
 
