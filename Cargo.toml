@@ -12,6 +12,9 @@ readme = "README.md"
 
 build = "build.rs"
 
+[package]
+include = ["gnu-mingw/*", "msvc/*"]
+
 [badges]
 travis-ci = { repository = "cheezgi/asteroid" }
 appveyor = { repository = "cheezgi/asteroid" }
