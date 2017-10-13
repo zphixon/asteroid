@@ -2,11 +2,22 @@
 name = "asteroid"
 version = "0.1.0"
 authors = ["cheezgi <zackh@firemail.cc>"]
+description = "Small game framework based on SDL2"
+homepage = "https://github.com/cheezgi/asteroid"
+repository = "https://github.com/cheezgi/asteroid"
+keywords = ["game", "game framework"]
+categories = ["game-engines"]
+license = "MIT"
+readme = "README.md"
+
 build = "build.rs"
+
+[badges]
+travis-ci = { repository = "cheezgi/asteroid" }
+appveyor = { repository = "cheezgi/asteroid" }
 
 [dependencies]
 nccl = "0.4.0"
 time = "0.1.38"
-#adi = "0.3.1"
 sdl2 = "0.30.0"
 
