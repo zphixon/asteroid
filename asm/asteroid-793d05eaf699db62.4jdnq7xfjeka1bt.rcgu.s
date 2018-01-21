@@ -242,19 +242,19 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h0de013db69979796E:
 .Lcfi35:
 	.seh_endproc
 
-	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE;
+	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h1a21c070ba5f0d87E;
 	.scl	2;
 	.type	32;
 	.endef
-	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
-	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h1a21c070ba5f0d87E
+	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h1a21c070ba5f0d87E
 	.p2align	4, 0x90
-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE:
+_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h1a21c070ba5f0d87E:
 .Lfunc_begin6:
 	.cv_func_id 6
 	.cv_loc	6 1 89 0
 .Lcfi36:
-.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
+.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h1a21c070ba5f0d87E
 	pushq	%rbp
 .Lcfi37:
 	.seh_pushreg 5
@@ -277,23 +277,23 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE:
 .Ltmp13:
 .Lfunc_end6:
 	.seh_handlerdata
-	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h1a21c070ba5f0d87E
 .Lcfi41:
 	.seh_endproc
 
-	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E;
+	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE;
 	.scl	2;
 	.type	32;
 	.endef
-	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
-	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
+	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
 	.p2align	4, 0x90
-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E:
+_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE:
 .Lfunc_begin7:
 	.cv_func_id 7
 	.cv_loc	7 1 89 0
 .Lcfi42:
-.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
+.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
 	pushq	%rbp
 .Lcfi43:
 	.seh_pushreg 5
@@ -316,23 +316,23 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E:
 .Ltmp15:
 .Lfunc_end7:
 	.seh_handlerdata
-	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
 .Lcfi47:
 	.seh_endproc
 
-	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE;
+	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E;
 	.scl	2;
 	.type	32;
 	.endef
-	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
-	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
+	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
 	.p2align	4, 0x90
-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE:
+_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E:
 .Lfunc_begin8:
 	.cv_func_id 8
 	.cv_loc	8 1 89 0
 .Lcfi48:
-.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
+.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
 	pushq	%rbp
 .Lcfi49:
 	.seh_pushreg 5
@@ -355,23 +355,23 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE:
 .Ltmp17:
 .Lfunc_end8:
 	.seh_handlerdata
-	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
 .Lcfi53:
 	.seh_endproc
 
-	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E;
+	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE;
 	.scl	2;
 	.type	32;
 	.endef
-	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
-	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
+	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
 	.p2align	4, 0x90
-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E:
+_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE:
 .Lfunc_begin9:
 	.cv_func_id 9
 	.cv_loc	9 1 89 0
 .Lcfi54:
-.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
 	pushq	%rbp
 .Lcfi55:
 	.seh_pushreg 5
@@ -394,23 +394,23 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E:
 .Ltmp19:
 .Lfunc_end9:
 	.seh_handlerdata
-	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
 .Lcfi59:
 	.seh_endproc
 
-	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE;
+	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h9c5e90ef81b0078bE;
 	.scl	2;
 	.type	32;
 	.endef
-	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
-	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h9c5e90ef81b0078bE
+	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h9c5e90ef81b0078bE
 	.p2align	4, 0x90
-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
+_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h9c5e90ef81b0078bE:
 .Lfunc_begin10:
 	.cv_func_id 10
 	.cv_loc	10 1 89 0
 .Lcfi60:
-.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h9c5e90ef81b0078bE
 	pushq	%rbp
 .Lcfi61:
 	.seh_pushreg 5
@@ -433,18 +433,135 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 .Ltmp21:
 .Lfunc_end10:
 	.seh_handlerdata
-	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h9c5e90ef81b0078bE
 .Lcfi65:
+	.seh_endproc
+
+	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E;
+	.scl	2;
+	.type	32;
+	.endef
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+	.p2align	4, 0x90
+_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E:
+.Lfunc_begin11:
+	.cv_func_id 11
+	.cv_loc	11 1 89 0
+.Lcfi66:
+.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+	pushq	%rbp
+.Lcfi67:
+	.seh_pushreg 5
+	pushq	%rax
+.Lcfi68:
+	.seh_stackalloc 8
+	movq	%rsp, %rbp
+.Lcfi69:
+	.seh_setframe 5, 0
+.Lcfi70:
+	.seh_endprologue
+	movq	%rcx, (%rbp)
+.Ltmp22:
+	.cv_loc	11 1 90 0
+	movq	(%rbp), %rax
+	.cv_loc	11 1 91 0
+	addq	$8, %rsp
+	popq	%rbp
+	retq
+.Ltmp23:
+.Lfunc_end11:
+	.seh_handlerdata
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+.Lcfi71:
+	.seh_endproc
+
+	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hcd32639cd25890f0E;
+	.scl	2;
+	.type	32;
+	.endef
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hcd32639cd25890f0E
+	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hcd32639cd25890f0E
+	.p2align	4, 0x90
+_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hcd32639cd25890f0E:
+.Lfunc_begin12:
+	.cv_func_id 12
+	.cv_loc	12 1 89 0
+.Lcfi72:
+.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hcd32639cd25890f0E
+	pushq	%rbp
+.Lcfi73:
+	.seh_pushreg 5
+	pushq	%rax
+.Lcfi74:
+	.seh_stackalloc 8
+	movq	%rsp, %rbp
+.Lcfi75:
+	.seh_setframe 5, 0
+.Lcfi76:
+	.seh_endprologue
+	movq	%rcx, (%rbp)
+.Ltmp24:
+	.cv_loc	12 1 90 0
+	movq	(%rbp), %rax
+	.cv_loc	12 1 91 0
+	addq	$8, %rsp
+	popq	%rbp
+	retq
+.Ltmp25:
+.Lfunc_end12:
+	.seh_handlerdata
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hcd32639cd25890f0E
+.Lcfi77:
+	.seh_endproc
+
+	.def	 _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE;
+	.scl	2;
+	.type	32;
+	.endef
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+	.globl	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+	.p2align	4, 0x90
+_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
+.Lfunc_begin13:
+	.cv_func_id 13
+	.cv_loc	13 1 89 0
+.Lcfi78:
+.seh_proc _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+	pushq	%rbp
+.Lcfi79:
+	.seh_pushreg 5
+	pushq	%rax
+.Lcfi80:
+	.seh_stackalloc 8
+	movq	%rsp, %rbp
+.Lcfi81:
+	.seh_setframe 5, 0
+.Lcfi82:
+	.seh_endprologue
+	movq	%rcx, (%rbp)
+.Ltmp26:
+	.cv_loc	13 1 90 0
+	movq	(%rbp), %rax
+	.cv_loc	13 1 91 0
+	addq	$8, %rsp
+	popq	%rbp
+	retq
+.Ltmp27:
+.Lfunc_end13:
+	.seh_handlerdata
+	.section	.text,"xr",one_only,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+.Lcfi83:
 	.seh_endproc
 
 	.section	.debug$S,"dr"
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp23-.Ltmp22
-.Ltmp22:
-	.short	.Ltmp25-.Ltmp24
-.Ltmp24:
+	.long	.Ltmp29-.Ltmp28
+.Ltmp28:
+	.short	.Ltmp31-.Ltmp30
+.Ltmp30:
 	.short	4412
 	.long	3
 	.short	208
@@ -457,17 +574,17 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.short	0
 	.short	0
 	.asciz	"clang LLVM (rustc version 1.25.0-nightly (15a1e2844 2018-01-20))"
-.Ltmp25:
-.Ltmp23:
+.Ltmp31:
+.Ltmp29:
 	.p2align	2
 	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$13new_unchecked17h3de90eb9bf94c495E
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp27-.Ltmp26
-.Ltmp26:
-	.short	.Ltmp29-.Ltmp28
-.Ltmp28:
+	.long	.Ltmp33-.Ltmp32
+.Ltmp32:
+	.short	.Ltmp35-.Ltmp34
+.Ltmp34:
 	.short	4423
 	.long	0
 	.long	0
@@ -480,28 +597,28 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$13new_unchecked17h3de90eb9bf94c495E
 	.byte	0
 	.asciz	"core::nonzero::NonZero<const nccl::value::Value*>::new_unchecked<const nccl::value::Value*>"
-.Ltmp29:
-	.short	.Ltmp31-.Ltmp30
-.Ltmp30:
+.Ltmp35:
+	.short	.Ltmp37-.Ltmp36
+.Ltmp36:
 	.short	4414
 	.long	4098
 	.short	1
 	.asciz	"inner"
-.Ltmp31:
+.Ltmp37:
 	.cv_def_range	 .Ltmp0 .Ltmp1, "E\021N\001\000\000\360\377\377\377"
 	.short	2
 	.short	4431
-.Ltmp27:
+.Ltmp33:
 	.p2align	2
 	.cv_linetable	0, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$13new_unchecked17h3de90eb9bf94c495E, .Lfunc_end0
 	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$13new_unchecked17hab5160b04d52662bE
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp33-.Ltmp32
-.Ltmp32:
-	.short	.Ltmp35-.Ltmp34
-.Ltmp34:
+	.long	.Ltmp39-.Ltmp38
+.Ltmp38:
+	.short	.Ltmp41-.Ltmp40
+.Ltmp40:
 	.short	4423
 	.long	0
 	.long	0
@@ -514,28 +631,28 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$13new_unchecked17hab5160b04d52662bE
 	.byte	0
 	.asciz	"core::nonzero::NonZero<const usize*>::new_unchecked<const usize*>"
-.Ltmp35:
-	.short	.Ltmp37-.Ltmp36
-.Ltmp36:
+.Ltmp41:
+	.short	.Ltmp43-.Ltmp42
+.Ltmp42:
 	.short	4414
 	.long	1571
 	.short	1
 	.asciz	"inner"
-.Ltmp37:
+.Ltmp43:
 	.cv_def_range	 .Ltmp2 .Ltmp3, "E\021N\001\000\000\360\377\377\377"
 	.short	2
 	.short	4431
-.Ltmp33:
+.Ltmp39:
 	.p2align	2
 	.cv_linetable	1, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$13new_unchecked17hab5160b04d52662bE, .Lfunc_end1
 	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$13new_unchecked17hcef501c0b3af4485E
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp39-.Ltmp38
-.Ltmp38:
-	.short	.Ltmp41-.Ltmp40
-.Ltmp40:
+	.long	.Ltmp45-.Ltmp44
+.Ltmp44:
+	.short	.Ltmp47-.Ltmp46
+.Ltmp46:
 	.short	4423
 	.long	0
 	.long	0
@@ -548,28 +665,28 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$13new_unchecked17hcef501c0b3af4485E
 	.byte	0
 	.asciz	"core::nonzero::NonZero<const u32*>::new_unchecked<const u32*>"
-.Ltmp41:
-	.short	.Ltmp43-.Ltmp42
-.Ltmp42:
+.Ltmp47:
+	.short	.Ltmp49-.Ltmp48
+.Ltmp48:
 	.short	4414
 	.long	1653
 	.short	1
 	.asciz	"inner"
-.Ltmp43:
+.Ltmp49:
 	.cv_def_range	 .Ltmp4 .Ltmp5, "E\021N\001\000\000\360\377\377\377"
 	.short	2
 	.short	4431
-.Ltmp39:
+.Ltmp45:
 	.p2align	2
 	.cv_linetable	2, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$13new_unchecked17hcef501c0b3af4485E, .Lfunc_end2
 	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$13new_unchecked17he4852267727e2a25E
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp45-.Ltmp44
-.Ltmp44:
-	.short	.Ltmp47-.Ltmp46
-.Ltmp46:
+	.long	.Ltmp51-.Ltmp50
+.Ltmp50:
+	.short	.Ltmp53-.Ltmp52
+.Ltmp52:
 	.short	4423
 	.long	0
 	.long	0
@@ -582,28 +699,28 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$13new_unchecked17he4852267727e2a25E
 	.byte	0
 	.asciz	"core::nonzero::NonZero<const alloc::boxed::Box<Error>*>::new_unchecked<const alloc::boxed::Box<Error>*>"
-.Ltmp47:
-	.short	.Ltmp49-.Ltmp48
-.Ltmp48:
+.Ltmp53:
+	.short	.Ltmp55-.Ltmp54
+.Ltmp54:
 	.short	4414
 	.long	4152
 	.short	1
 	.asciz	"inner"
-.Ltmp49:
+.Ltmp55:
 	.cv_def_range	 .Ltmp6 .Ltmp7, "E\021N\001\000\000\360\377\377\377"
 	.short	2
 	.short	4431
-.Ltmp45:
+.Ltmp51:
 	.p2align	2
 	.cv_linetable	3, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$13new_unchecked17he4852267727e2a25E, .Lfunc_end3
 	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h09174f10b0f1e9b0E
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp51-.Ltmp50
-.Ltmp50:
-	.short	.Ltmp53-.Ltmp52
-.Ltmp52:
+	.long	.Ltmp57-.Ltmp56
+.Ltmp56:
+	.short	.Ltmp59-.Ltmp58
+.Ltmp58:
 	.short	4423
 	.long	0
 	.long	0
@@ -616,28 +733,28 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h09174f10b0f1e9b0E
 	.byte	0
 	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::render::RendererContext<sdl2::video::WindowContext>>*>::get<const alloc::rc::RcBox<sdl2::render::RendererContext<sdl2::video::WindowContext>>*>"
-.Ltmp53:
-	.short	.Ltmp55-.Ltmp54
-.Ltmp54:
+.Ltmp59:
+	.short	.Ltmp61-.Ltmp60
+.Ltmp60:
 	.short	4414
 	.long	4165
 	.short	1
 	.asciz	"self"
-.Ltmp55:
+.Ltmp61:
 	.cv_def_range	 .Ltmp8 .Ltmp9, "E\021N\001\000\000\000\000\000\000"
 	.short	2
 	.short	4431
-.Ltmp51:
+.Ltmp57:
 	.p2align	2
 	.cv_linetable	4, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h09174f10b0f1e9b0E, .Lfunc_end4
 	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h0de013db69979796E
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp57-.Ltmp56
-.Ltmp56:
-	.short	.Ltmp59-.Ltmp58
-.Ltmp58:
+	.long	.Ltmp63-.Ltmp62
+.Ltmp62:
+	.short	.Ltmp65-.Ltmp64
+.Ltmp64:
 	.short	4423
 	.long	0
 	.long	0
@@ -650,55 +767,21 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h0de013db69979796E
 	.byte	0
 	.asciz	"core::nonzero::NonZero<const u32*>::get<const u32*>"
-.Ltmp59:
-	.short	.Ltmp61-.Ltmp60
-.Ltmp60:
-	.short	4414
-	.long	4146
-	.short	1
-	.asciz	"self"
-.Ltmp61:
-	.cv_def_range	 .Ltmp10 .Ltmp11, "E\021N\001\000\000\000\000\000\000"
-	.short	2
-	.short	4431
-.Ltmp57:
-	.p2align	2
-	.cv_linetable	5, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h0de013db69979796E, .Lfunc_end5
-	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
-	.p2align	2
-	.long	4
-	.long	241
-	.long	.Ltmp63-.Ltmp62
-.Ltmp62:
-	.short	.Ltmp65-.Ltmp64
-.Ltmp64:
-	.short	4423
-	.long	0
-	.long	0
-	.long	0
-	.long	.Lfunc_end6-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
-	.long	0
-	.long	0
-	.long	4273
-	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
-	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
-	.byte	0
-	.asciz	"core::nonzero::NonZero<const alloc::boxed::Box<Error>*>::get<const alloc::boxed::Box<Error>*>"
 .Ltmp65:
 	.short	.Ltmp67-.Ltmp66
 .Ltmp66:
 	.short	4414
-	.long	4154
+	.long	4146
 	.short	1
 	.asciz	"self"
 .Ltmp67:
-	.cv_def_range	 .Ltmp12 .Ltmp13, "E\021N\001\000\000\000\000\000\000"
+	.cv_def_range	 .Ltmp10 .Ltmp11, "E\021N\001\000\000\000\000\000\000"
 	.short	2
 	.short	4431
 .Ltmp63:
 	.p2align	2
-	.cv_linetable	6, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE, .Lfunc_end6
-	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
+	.cv_linetable	5, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h0de013db69979796E, .Lfunc_end5
+	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h1a21c070ba5f0d87E
 	.p2align	2
 	.long	4
 	.long	241
@@ -710,29 +793,29 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.long	0
 	.long	0
 	.long	0
-	.long	.Lfunc_end7-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
+	.long	.Lfunc_end6-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h1a21c070ba5f0d87E
 	.long	0
 	.long	0
-	.long	4275
-	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
-	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
+	.long	4273
+	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h1a21c070ba5f0d87E
+	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h1a21c070ba5f0d87E
 	.byte	0
-	.asciz	"core::nonzero::NonZero<const usize*>::get<const usize*>"
+	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::sdl::SdlDrop>*>::get<const alloc::rc::RcBox<sdl2::sdl::SdlDrop>*>"
 .Ltmp71:
 	.short	.Ltmp73-.Ltmp72
 .Ltmp72:
 	.short	4414
-	.long	4140
+	.long	4260
 	.short	1
 	.asciz	"self"
 .Ltmp73:
-	.cv_def_range	 .Ltmp14 .Ltmp15, "E\021N\001\000\000\000\000\000\000"
+	.cv_def_range	 .Ltmp12 .Ltmp13, "E\021N\001\000\000\000\000\000\000"
 	.short	2
 	.short	4431
 .Ltmp69:
 	.p2align	2
-	.cv_linetable	7, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E, .Lfunc_end7
-	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
+	.cv_linetable	6, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h1a21c070ba5f0d87E, .Lfunc_end6
+	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
 	.p2align	2
 	.long	4
 	.long	241
@@ -744,29 +827,29 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.long	0
 	.long	0
 	.long	0
-	.long	.Lfunc_end8-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
+	.long	.Lfunc_end7-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
 	.long	0
 	.long	0
-	.long	4277
-	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
-	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
+	.long	4275
+	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
+	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE
 	.byte	0
-	.asciz	"core::nonzero::NonZero<const u8*>::get<const u8*>"
+	.asciz	"core::nonzero::NonZero<const alloc::boxed::Box<Error>*>::get<const alloc::boxed::Box<Error>*>"
 .Ltmp77:
 	.short	.Ltmp79-.Ltmp78
 .Ltmp78:
 	.short	4414
-	.long	4131
+	.long	4154
 	.short	1
 	.asciz	"self"
 .Ltmp79:
-	.cv_def_range	 .Ltmp16 .Ltmp17, "E\021N\001\000\000\000\000\000\000"
+	.cv_def_range	 .Ltmp14 .Ltmp15, "E\021N\001\000\000\000\000\000\000"
 	.short	2
 	.short	4431
 .Ltmp75:
 	.p2align	2
-	.cv_linetable	8, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE, .Lfunc_end8
-	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+	.cv_linetable	7, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h321be3e6a6f8574eE, .Lfunc_end7
+	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
 	.p2align	2
 	.long	4
 	.long	241
@@ -778,29 +861,29 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.long	0
 	.long	0
 	.long	0
-	.long	.Lfunc_end9-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+	.long	.Lfunc_end8-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
 	.long	0
 	.long	0
-	.long	4279
-	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
-	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+	.long	4277
+	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
+	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E
 	.byte	0
-	.asciz	"core::nonzero::NonZero<const nccl::value::Value*>::get<const nccl::value::Value*>"
+	.asciz	"core::nonzero::NonZero<const usize*>::get<const usize*>"
 .Ltmp83:
 	.short	.Ltmp85-.Ltmp84
 .Ltmp84:
 	.short	4414
-	.long	4100
+	.long	4140
 	.short	1
 	.asciz	"self"
 .Ltmp85:
-	.cv_def_range	 .Ltmp18 .Ltmp19, "E\021N\001\000\000\000\000\000\000"
+	.cv_def_range	 .Ltmp16 .Ltmp17, "E\021N\001\000\000\000\000\000\000"
 	.short	2
 	.short	4431
 .Ltmp81:
 	.p2align	2
-	.cv_linetable	9, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E, .Lfunc_end9
-	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+	.cv_linetable	8, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h449fe5feb3d70b52E, .Lfunc_end8
+	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
 	.p2align	2
 	.long	4
 	.long	241
@@ -812,303 +895,439 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.long	0
 	.long	0
 	.long	0
-	.long	.Lfunc_end10-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+	.long	.Lfunc_end9-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
 	.long	0
 	.long	0
-	.long	4305
-	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
-	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+	.long	4279
+	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
+	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE
 	.byte	0
-	.asciz	"core::nonzero::NonZero<const nccl::pair::Pair*>::get<const nccl::pair::Pair*>"
+	.asciz	"core::nonzero::NonZero<const u8*>::get<const u8*>"
 .Ltmp89:
 	.short	.Ltmp91-.Ltmp90
 .Ltmp90:
 	.short	4414
-	.long	4284
+	.long	4131
 	.short	1
 	.asciz	"self"
 .Ltmp91:
-	.cv_def_range	 .Ltmp20 .Ltmp21, "E\021N\001\000\000\000\000\000\000"
+	.cv_def_range	 .Ltmp18 .Ltmp19, "E\021N\001\000\000\000\000\000\000"
 	.short	2
 	.short	4431
 .Ltmp87:
 	.p2align	2
-	.cv_linetable	10, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE, .Lfunc_end10
-	.section	.debug$S,"dr"
+	.cv_linetable	9, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h566edca7f4bda38eE, .Lfunc_end9
+	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h9c5e90ef81b0078bE
+	.p2align	2
+	.long	4
 	.long	241
 	.long	.Ltmp93-.Ltmp92
 .Ltmp92:
 	.short	.Ltmp95-.Ltmp94
 .Ltmp94:
-	.short	4360
-	.long	4100
-	.asciz	"core::nonzero::NonZero<const nccl::value::Value*>"
+	.short	4423
+	.long	0
+	.long	0
+	.long	0
+	.long	.Lfunc_end10-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h9c5e90ef81b0078bE
+	.long	0
+	.long	0
+	.long	4281
+	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h9c5e90ef81b0078bE
+	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h9c5e90ef81b0078bE
+	.byte	0
+	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::sdl::SubsystemDrop>*>::get<const alloc::rc::RcBox<sdl2::sdl::SubsystemDrop>*>"
 .Ltmp95:
 	.short	.Ltmp97-.Ltmp96
 .Ltmp96:
-	.short	4360
-	.long	4107
-	.asciz	"nccl::value::Value"
+	.short	4414
+	.long	4236
+	.short	1
+	.asciz	"self"
 .Ltmp97:
-	.short	.Ltmp99-.Ltmp98
+	.cv_def_range	 .Ltmp20 .Ltmp21, "E\021N\001\000\000\000\000\000\000"
+	.short	2
+	.short	4431
+.Ltmp93:
+	.p2align	2
+	.cv_linetable	10, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17h9c5e90ef81b0078bE, .Lfunc_end10
+	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+	.p2align	2
+	.long	4
+	.long	241
+	.long	.Ltmp99-.Ltmp98
 .Ltmp98:
-	.short	4360
-	.long	4111
-	.asciz	"alloc::string::String"
-.Ltmp99:
 	.short	.Ltmp101-.Ltmp100
 .Ltmp100:
-	.short	4360
-	.long	4115
-	.asciz	"alloc::vec::Vec<u8>"
+	.short	4423
+	.long	0
+	.long	0
+	.long	0
+	.long	.Lfunc_end11-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+	.long	0
+	.long	0
+	.long	4283
+	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E
+	.byte	0
+	.asciz	"core::nonzero::NonZero<const nccl::value::Value*>::get<const nccl::value::Value*>"
 .Ltmp101:
 	.short	.Ltmp103-.Ltmp102
 .Ltmp102:
-	.short	4360
-	.long	4120
-	.asciz	"alloc::raw_vec::RawVec<u8, alloc::heap::Heap>"
+	.short	4414
+	.long	4100
+	.short	1
+	.asciz	"self"
 .Ltmp103:
-	.short	.Ltmp105-.Ltmp104
+	.cv_def_range	 .Ltmp22 .Ltmp23, "E\021N\001\000\000\000\000\000\000"
+	.short	2
+	.short	4431
+.Ltmp99:
+	.p2align	2
+	.cv_linetable	11, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hb370368f6d55d523E, .Lfunc_end11
+	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hcd32639cd25890f0E
+	.p2align	2
+	.long	4
+	.long	241
+	.long	.Ltmp105-.Ltmp104
 .Ltmp104:
-	.short	4360
-	.long	4125
-	.asciz	"core::ptr::Unique<u8>"
-.Ltmp105:
 	.short	.Ltmp107-.Ltmp106
 .Ltmp106:
-	.short	4360
-	.long	4128
-	.asciz	"alloc::heap::Heap"
+	.short	4423
+	.long	0
+	.long	0
+	.long	0
+	.long	.Lfunc_end12-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hcd32639cd25890f0E
+	.long	0
+	.long	0
+	.long	4285
+	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hcd32639cd25890f0E
+	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hcd32639cd25890f0E
+	.byte	0
+	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::video::WindowContext>*>::get<const alloc::rc::RcBox<sdl2::video::WindowContext>*>"
 .Ltmp107:
 	.short	.Ltmp109-.Ltmp108
 .Ltmp108:
-	.short	4360
-	.long	4131
-	.asciz	"core::nonzero::NonZero<const u8*>"
+	.short	4414
+	.long	4204
+	.short	1
+	.asciz	"self"
 .Ltmp109:
-	.short	.Ltmp111-.Ltmp110
+	.cv_def_range	 .Ltmp24 .Ltmp25, "E\021N\001\000\000\000\000\000\000"
+	.short	2
+	.short	4431
+.Ltmp105:
+	.p2align	2
+	.cv_linetable	12, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hcd32639cd25890f0E, .Lfunc_end12
+	.section	.debug$S,"dr",associative,_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+	.p2align	2
+	.long	4
+	.long	241
+	.long	.Ltmp111-.Ltmp110
 .Ltmp110:
-	.short	4360
-	.long	4133
-	.asciz	"core::marker::PhantomData<u8>"
-.Ltmp111:
 	.short	.Ltmp113-.Ltmp112
 .Ltmp112:
-	.short	4360
-	.long	4140
-	.asciz	"core::nonzero::NonZero<const usize*>"
+	.short	4423
+	.long	0
+	.long	0
+	.long	0
+	.long	.Lfunc_end13-_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+	.long	0
+	.long	0
+	.long	4311
+	.secrel32	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+	.secidx	_ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE
+	.byte	0
+	.asciz	"core::nonzero::NonZero<const nccl::pair::Pair*>::get<const nccl::pair::Pair*>"
 .Ltmp113:
 	.short	.Ltmp115-.Ltmp114
 .Ltmp114:
-	.short	4360
-	.long	4146
-	.asciz	"core::nonzero::NonZero<const u32*>"
+	.short	4414
+	.long	4290
+	.short	1
+	.asciz	"self"
 .Ltmp115:
-	.short	.Ltmp117-.Ltmp116
+	.cv_def_range	 .Ltmp26 .Ltmp27, "E\021N\001\000\000\000\000\000\000"
+	.short	2
+	.short	4431
+.Ltmp111:
+	.p2align	2
+	.cv_linetable	13, _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE, .Lfunc_end13
+	.section	.debug$S,"dr"
+	.long	241
+	.long	.Ltmp117-.Ltmp116
 .Ltmp116:
-	.short	4360
-	.long	4154
-	.asciz	"core::nonzero::NonZero<const alloc::boxed::Box<Error>*>"
-.Ltmp117:
 	.short	.Ltmp119-.Ltmp118
 .Ltmp118:
 	.short	4360
-	.long	4157
-	.asciz	"std::error::Box<Error>"
+	.long	4100
+	.asciz	"core::nonzero::NonZero<const nccl::value::Value*>"
 .Ltmp119:
 	.short	.Ltmp121-.Ltmp120
 .Ltmp120:
 	.short	4360
-	.long	4165
-	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::render::RendererContext<sdl2::video::WindowContext>>*>"
+	.long	4107
+	.asciz	"nccl::value::Value"
 .Ltmp121:
 	.short	.Ltmp123-.Ltmp122
 .Ltmp122:
 	.short	4360
-	.long	4170
-	.asciz	"alloc::rc::RcBox<sdl2::render::RendererContext<sdl2::video::WindowContext>>"
+	.long	4111
+	.asciz	"alloc::string::String"
 .Ltmp123:
 	.short	.Ltmp125-.Ltmp124
 .Ltmp124:
 	.short	4360
-	.long	4174
-	.asciz	"core::cell::Cell<usize>"
+	.long	4115
+	.asciz	"alloc::vec::Vec<u8>"
 .Ltmp125:
 	.short	.Ltmp127-.Ltmp126
 .Ltmp126:
 	.short	4360
-	.long	4180
-	.asciz	"sdl2::render::RendererContext<sdl2::video::WindowContext>"
+	.long	4120
+	.asciz	"alloc::raw_vec::RawVec<u8, alloc::heap::Heap>"
 .Ltmp127:
 	.short	.Ltmp129-.Ltmp128
 .Ltmp128:
 	.short	4360
-	.long	4183
-	.asciz	"core::cell::UnsafeCell<usize>"
+	.long	4125
+	.asciz	"core::ptr::Unique<u8>"
 .Ltmp129:
 	.short	.Ltmp131-.Ltmp130
 .Ltmp130:
 	.short	4360
-	.long	4188
-	.asciz	"sdl2_sys::render::SDL_Renderer"
+	.long	4128
+	.asciz	"alloc::heap::Heap"
 .Ltmp131:
 	.short	.Ltmp133-.Ltmp132
 .Ltmp132:
 	.short	4360
-	.long	4193
-	.asciz	"alloc::rc::Rc<sdl2::video::WindowContext>"
+	.long	4131
+	.asciz	"core::nonzero::NonZero<const u8*>"
 .Ltmp133:
 	.short	.Ltmp135-.Ltmp134
 .Ltmp134:
 	.short	4360
-	.long	4197
-	.asciz	"core::ptr::NonNull<alloc::rc::RcBox<sdl2::video::WindowContext>>"
+	.long	4133
+	.asciz	"core::marker::PhantomData<u8>"
 .Ltmp135:
 	.short	.Ltmp137-.Ltmp136
 .Ltmp136:
 	.short	4360
-	.long	4199
-	.asciz	"core::marker::PhantomData<sdl2::video::WindowContext>"
+	.long	4140
+	.asciz	"core::nonzero::NonZero<const usize*>"
 .Ltmp137:
 	.short	.Ltmp139-.Ltmp138
 .Ltmp138:
 	.short	4360
-	.long	4204
-	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::video::WindowContext>*>"
+	.long	4146
+	.asciz	"core::nonzero::NonZero<const u32*>"
 .Ltmp139:
 	.short	.Ltmp141-.Ltmp140
 .Ltmp140:
 	.short	4360
-	.long	4208
-	.asciz	"alloc::rc::RcBox<sdl2::video::WindowContext>"
+	.long	4154
+	.asciz	"core::nonzero::NonZero<const alloc::boxed::Box<Error>*>"
 .Ltmp141:
 	.short	.Ltmp143-.Ltmp142
 .Ltmp142:
 	.short	4360
-	.long	4214
-	.asciz	"sdl2::video::WindowContext"
+	.long	4157
+	.asciz	"std::error::Box<Error>"
 .Ltmp143:
 	.short	.Ltmp145-.Ltmp144
 .Ltmp144:
 	.short	4360
-	.long	4218
-	.asciz	"sdl2::sdl::VideoSubsystem"
+	.long	4165
+	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::render::RendererContext<sdl2::video::WindowContext>>*>"
 .Ltmp145:
 	.short	.Ltmp147-.Ltmp146
 .Ltmp146:
 	.short	4360
-	.long	4220
-	.asciz	"sdl2_sys::video::SDL_Window"
+	.long	4170
+	.asciz	"alloc::rc::RcBox<sdl2::render::RendererContext<sdl2::video::WindowContext>>"
 .Ltmp147:
 	.short	.Ltmp149-.Ltmp148
 .Ltmp148:
 	.short	4360
-	.long	4225
-	.asciz	"alloc::rc::Rc<sdl2::sdl::SubsystemDrop>"
+	.long	4174
+	.asciz	"core::cell::Cell<usize>"
 .Ltmp149:
 	.short	.Ltmp151-.Ltmp150
 .Ltmp150:
 	.short	4360
-	.long	4229
-	.asciz	"core::ptr::NonNull<alloc::rc::RcBox<sdl2::sdl::SubsystemDrop>>"
+	.long	4180
+	.asciz	"sdl2::render::RendererContext<sdl2::video::WindowContext>"
 .Ltmp151:
 	.short	.Ltmp153-.Ltmp152
 .Ltmp152:
 	.short	4360
-	.long	4231
-	.asciz	"core::marker::PhantomData<sdl2::sdl::SubsystemDrop>"
+	.long	4183
+	.asciz	"core::cell::UnsafeCell<usize>"
 .Ltmp153:
 	.short	.Ltmp155-.Ltmp154
 .Ltmp154:
 	.short	4360
-	.long	4236
-	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::sdl::SubsystemDrop>*>"
+	.long	4188
+	.asciz	"sdl2_sys::render::SDL_Renderer"
 .Ltmp155:
 	.short	.Ltmp157-.Ltmp156
 .Ltmp156:
 	.short	4360
-	.long	4240
-	.asciz	"alloc::rc::RcBox<sdl2::sdl::SubsystemDrop>"
+	.long	4193
+	.asciz	"alloc::rc::Rc<sdl2::video::WindowContext>"
 .Ltmp157:
 	.short	.Ltmp159-.Ltmp158
 .Ltmp158:
 	.short	4360
-	.long	4244
-	.asciz	"sdl2::sdl::SubsystemDrop"
+	.long	4197
+	.asciz	"core::ptr::NonNull<alloc::rc::RcBox<sdl2::video::WindowContext>>"
 .Ltmp159:
 	.short	.Ltmp161-.Ltmp160
 .Ltmp160:
 	.short	4360
-	.long	4249
-	.asciz	"alloc::rc::Rc<sdl2::sdl::SdlDrop>"
+	.long	4199
+	.asciz	"core::marker::PhantomData<sdl2::video::WindowContext>"
 .Ltmp161:
 	.short	.Ltmp163-.Ltmp162
 .Ltmp162:
 	.short	4360
-	.long	4253
-	.asciz	"core::ptr::NonNull<alloc::rc::RcBox<sdl2::sdl::SdlDrop>>"
+	.long	4204
+	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::video::WindowContext>*>"
 .Ltmp163:
 	.short	.Ltmp165-.Ltmp164
 .Ltmp164:
 	.short	4360
-	.long	4255
-	.asciz	"core::marker::PhantomData<sdl2::sdl::SdlDrop>"
+	.long	4208
+	.asciz	"alloc::rc::RcBox<sdl2::video::WindowContext>"
 .Ltmp165:
 	.short	.Ltmp167-.Ltmp166
 .Ltmp166:
 	.short	4360
-	.long	4260
-	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::sdl::SdlDrop>*>"
+	.long	4214
+	.asciz	"sdl2::video::WindowContext"
 .Ltmp167:
 	.short	.Ltmp169-.Ltmp168
 .Ltmp168:
 	.short	4360
-	.long	4264
-	.asciz	"alloc::rc::RcBox<sdl2::sdl::SdlDrop>"
+	.long	4218
+	.asciz	"sdl2::sdl::VideoSubsystem"
 .Ltmp169:
 	.short	.Ltmp171-.Ltmp170
 .Ltmp170:
 	.short	4360
-	.long	4266
-	.asciz	"sdl2::sdl::SdlDrop"
+	.long	4220
+	.asciz	"sdl2_sys::video::SDL_Window"
 .Ltmp171:
 	.short	.Ltmp173-.Ltmp172
 .Ltmp172:
 	.short	4360
-	.long	4284
-	.asciz	"core::nonzero::NonZero<const nccl::pair::Pair*>"
+	.long	4225
+	.asciz	"alloc::rc::Rc<sdl2::sdl::SubsystemDrop>"
 .Ltmp173:
 	.short	.Ltmp175-.Ltmp174
 .Ltmp174:
 	.short	4360
-	.long	4288
-	.asciz	"nccl::pair::Pair"
+	.long	4229
+	.asciz	"core::ptr::NonNull<alloc::rc::RcBox<sdl2::sdl::SubsystemDrop>>"
 .Ltmp175:
 	.short	.Ltmp177-.Ltmp176
 .Ltmp176:
 	.short	4360
-	.long	4292
-	.asciz	"alloc::vec::Vec<nccl::pair::Pair>"
+	.long	4231
+	.asciz	"core::marker::PhantomData<sdl2::sdl::SubsystemDrop>"
 .Ltmp177:
 	.short	.Ltmp179-.Ltmp178
 .Ltmp178:
 	.short	4360
-	.long	4296
-	.asciz	"alloc::raw_vec::RawVec<nccl::pair::Pair, alloc::heap::Heap>"
+	.long	4236
+	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::sdl::SubsystemDrop>*>"
 .Ltmp179:
 	.short	.Ltmp181-.Ltmp180
 .Ltmp180:
 	.short	4360
-	.long	4300
-	.asciz	"core::ptr::Unique<nccl::pair::Pair>"
+	.long	4240
+	.asciz	"alloc::rc::RcBox<sdl2::sdl::SubsystemDrop>"
 .Ltmp181:
 	.short	.Ltmp183-.Ltmp182
 .Ltmp182:
 	.short	4360
-	.long	4302
-	.asciz	"core::marker::PhantomData<nccl::pair::Pair>"
+	.long	4244
+	.asciz	"sdl2::sdl::SubsystemDrop"
 .Ltmp183:
-.Ltmp93:
+	.short	.Ltmp185-.Ltmp184
+.Ltmp184:
+	.short	4360
+	.long	4249
+	.asciz	"alloc::rc::Rc<sdl2::sdl::SdlDrop>"
+.Ltmp185:
+	.short	.Ltmp187-.Ltmp186
+.Ltmp186:
+	.short	4360
+	.long	4253
+	.asciz	"core::ptr::NonNull<alloc::rc::RcBox<sdl2::sdl::SdlDrop>>"
+.Ltmp187:
+	.short	.Ltmp189-.Ltmp188
+.Ltmp188:
+	.short	4360
+	.long	4255
+	.asciz	"core::marker::PhantomData<sdl2::sdl::SdlDrop>"
+.Ltmp189:
+	.short	.Ltmp191-.Ltmp190
+.Ltmp190:
+	.short	4360
+	.long	4260
+	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::sdl::SdlDrop>*>"
+.Ltmp191:
+	.short	.Ltmp193-.Ltmp192
+.Ltmp192:
+	.short	4360
+	.long	4264
+	.asciz	"alloc::rc::RcBox<sdl2::sdl::SdlDrop>"
+.Ltmp193:
+	.short	.Ltmp195-.Ltmp194
+.Ltmp194:
+	.short	4360
+	.long	4266
+	.asciz	"sdl2::sdl::SdlDrop"
+.Ltmp195:
+	.short	.Ltmp197-.Ltmp196
+.Ltmp196:
+	.short	4360
+	.long	4290
+	.asciz	"core::nonzero::NonZero<const nccl::pair::Pair*>"
+.Ltmp197:
+	.short	.Ltmp199-.Ltmp198
+.Ltmp198:
+	.short	4360
+	.long	4294
+	.asciz	"nccl::pair::Pair"
+.Ltmp199:
+	.short	.Ltmp201-.Ltmp200
+.Ltmp200:
+	.short	4360
+	.long	4298
+	.asciz	"alloc::vec::Vec<nccl::pair::Pair>"
+.Ltmp201:
+	.short	.Ltmp203-.Ltmp202
+.Ltmp202:
+	.short	4360
+	.long	4302
+	.asciz	"alloc::raw_vec::RawVec<nccl::pair::Pair, alloc::heap::Heap>"
+.Ltmp203:
+	.short	.Ltmp205-.Ltmp204
+.Ltmp204:
+	.short	4360
+	.long	4306
+	.asciz	"core::ptr::Unique<nccl::pair::Pair>"
+.Ltmp205:
+	.short	.Ltmp207-.Ltmp206
+.Ltmp206:
+	.short	4360
+	.long	4308
+	.asciz	"core::marker::PhantomData<nccl::pair::Pair>"
+.Ltmp207:
+.Ltmp117:
 	.p2align	2
 	.cv_filechecksums
 	.cv_stringtable
@@ -3648,6 +3867,17 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0xae, 0x10, 0x00, 0x00
 	.byte	0x67, 0x65, 0x74, 0x00
 	.byte	0x1a, 0x00, 0x09, 0x10
+	.byte	0xa2, 0x10, 0x00, 0x00
+	.byte	0x9b, 0x10, 0x00, 0x00
+	.byte	0x9b, 0x10, 0x00, 0x00
+	.byte	0x00, 0x00, 0x00, 0x00
+	.byte	0x27, 0x10, 0x00, 0x00
+	.byte	0x00, 0x00, 0x00, 0x00
+	.byte	0x0e, 0x00, 0x02, 0x16
+	.byte	0x9b, 0x10, 0x00, 0x00
+	.byte	0xb0, 0x10, 0x00, 0x00
+	.byte	0x67, 0x65, 0x74, 0x00
+	.byte	0x1a, 0x00, 0x09, 0x10
 	.byte	0x38, 0x10, 0x00, 0x00
 	.byte	0x36, 0x10, 0x00, 0x00
 	.byte	0x36, 0x10, 0x00, 0x00
@@ -3656,7 +3886,7 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x0e, 0x00, 0x02, 0x16
 	.byte	0x36, 0x10, 0x00, 0x00
-	.byte	0xb0, 0x10, 0x00, 0x00
+	.byte	0xb2, 0x10, 0x00, 0x00
 	.byte	0x67, 0x65, 0x74, 0x00
 	.byte	0x1a, 0x00, 0x09, 0x10
 	.byte	0x23, 0x06, 0x00, 0x00
@@ -3667,7 +3897,7 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x0e, 0x00, 0x02, 0x16
 	.byte	0x2a, 0x10, 0x00, 0x00
-	.byte	0xb2, 0x10, 0x00, 0x00
+	.byte	0xb4, 0x10, 0x00, 0x00
 	.byte	0x67, 0x65, 0x74, 0x00
 	.byte	0x1a, 0x00, 0x09, 0x10
 	.byte	0x20, 0x06, 0x00, 0x00
@@ -3678,7 +3908,18 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x0e, 0x00, 0x02, 0x16
 	.byte	0x1a, 0x10, 0x00, 0x00
-	.byte	0xb4, 0x10, 0x00, 0x00
+	.byte	0xb6, 0x10, 0x00, 0x00
+	.byte	0x67, 0x65, 0x74, 0x00
+	.byte	0x1a, 0x00, 0x09, 0x10
+	.byte	0x8a, 0x10, 0x00, 0x00
+	.byte	0x83, 0x10, 0x00, 0x00
+	.byte	0x83, 0x10, 0x00, 0x00
+	.byte	0x00, 0x00, 0x00, 0x00
+	.byte	0x27, 0x10, 0x00, 0x00
+	.byte	0x00, 0x00, 0x00, 0x00
+	.byte	0x0e, 0x00, 0x02, 0x16
+	.byte	0x83, 0x10, 0x00, 0x00
+	.byte	0xb8, 0x10, 0x00, 0x00
 	.byte	0x67, 0x65, 0x74, 0x00
 	.byte	0x1a, 0x00, 0x09, 0x10
 	.byte	0x02, 0x10, 0x00, 0x00
@@ -3689,7 +3930,18 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x0e, 0x00, 0x02, 0x16
 	.byte	0x00, 0x10, 0x00, 0x00
-	.byte	0xb6, 0x10, 0x00, 0x00
+	.byte	0xba, 0x10, 0x00, 0x00
+	.byte	0x67, 0x65, 0x74, 0x00
+	.byte	0x1a, 0x00, 0x09, 0x10
+	.byte	0x6a, 0x10, 0x00, 0x00
+	.byte	0x63, 0x10, 0x00, 0x00
+	.byte	0x63, 0x10, 0x00, 0x00
+	.byte	0x00, 0x00, 0x00, 0x00
+	.byte	0x27, 0x10, 0x00, 0x00
+	.byte	0x00, 0x00, 0x00, 0x00
+	.byte	0x0e, 0x00, 0x02, 0x16
+	.byte	0x63, 0x10, 0x00, 0x00
+	.byte	0xbc, 0x10, 0x00, 0x00
 	.byte	0x67, 0x65, 0x74, 0x00
 	.byte	0x66, 0x00, 0x05, 0x15
 	.byte	0x00, 0x00, 0x80, 0x02
@@ -3736,16 +3988,16 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x30, 0x30, 0x66, 0x66
 	.byte	0x34, 0x37, 0x61, 0x00
 	.byte	0x0a, 0x00, 0x02, 0x10
-	.byte	0xb9, 0x10, 0x00, 0x00
+	.byte	0xbf, 0x10, 0x00, 0x00
 	.byte	0x0c, 0x00, 0x01, 0x00
 	.byte	0x12, 0x00, 0x03, 0x12
 	.byte	0x0d, 0x15, 0x03, 0x00
-	.byte	0xba, 0x10, 0x00, 0x00
+	.byte	0xc0, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x5f, 0x5f
 	.byte	0x30, 0x00, 0xf2, 0xf1
 	.byte	0x66, 0x00, 0x05, 0x15
 	.byte	0x01, 0x00, 0x00, 0x02
-	.byte	0xbb, 0x10, 0x00, 0x00
+	.byte	0xc1, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x08, 0x00, 0x63, 0x6f
@@ -3770,7 +4022,7 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x30, 0x31, 0x35, 0x35
 	.byte	0x39, 0x30, 0x00, 0xf1
 	.byte	0x0e, 0x00, 0x06, 0x16
-	.byte	0xbc, 0x10, 0x00, 0x00
+	.byte	0xc2, 0x10, 0x00, 0x00
 	.byte	0x05, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x5a, 0x00, 0x05, 0x15
@@ -3802,12 +4054,12 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x00, 0x00, 0x6b, 0x65
 	.byte	0x79, 0x00, 0xf2, 0xf1
 	.byte	0x0d, 0x15, 0x03, 0x00
-	.byte	0xbe, 0x10, 0x00, 0x00
+	.byte	0xc4, 0x10, 0x00, 0x00
 	.byte	0x20, 0x00, 0x76, 0x61
 	.byte	0x6c, 0x75, 0x65, 0x00
 	.byte	0x46, 0x00, 0x05, 0x15
 	.byte	0x02, 0x00, 0x00, 0x02
-	.byte	0xbf, 0x10, 0x00, 0x00
+	.byte	0xc5, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x38, 0x00, 0x6e, 0x63
@@ -3824,7 +4076,7 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x30, 0x30, 0x66, 0x66
 	.byte	0x34, 0x37, 0x61, 0x00
 	.byte	0x0e, 0x00, 0x06, 0x16
-	.byte	0xc0, 0x10, 0x00, 0x00
+	.byte	0xc6, 0x10, 0x00, 0x00
 	.byte	0x05, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x72, 0x00, 0x05, 0x15
@@ -3858,7 +4110,7 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x61, 0x39, 0x00, 0xf1
 	.byte	0x22, 0x00, 0x03, 0x12
 	.byte	0x0d, 0x15, 0x03, 0x00
-	.byte	0xc2, 0x10, 0x00, 0x00
+	.byte	0xc8, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x62, 0x75
 	.byte	0x66, 0x00, 0xf2, 0xf1
 	.byte	0x0d, 0x15, 0x03, 0x00
@@ -3867,7 +4119,7 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x6e, 0x00, 0xf2, 0xf1
 	.byte	0x5a, 0x00, 0x05, 0x15
 	.byte	0x02, 0x00, 0x00, 0x02
-	.byte	0xc3, 0x10, 0x00, 0x00
+	.byte	0xc9, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x18, 0x00, 0x61, 0x6c
@@ -3889,7 +4141,7 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x61, 0x66, 0x30, 0x39
 	.byte	0x00, 0xf3, 0xf2, 0xf1
 	.byte	0x0e, 0x00, 0x06, 0x16
-	.byte	0xc4, 0x10, 0x00, 0x00
+	.byte	0xca, 0x10, 0x00, 0x00
 	.byte	0x05, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x5a, 0x00, 0x05, 0x15
@@ -3917,7 +4169,7 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x30, 0x35, 0x00, 0xf1
 	.byte	0x2e, 0x00, 0x03, 0x12
 	.byte	0x0d, 0x15, 0x03, 0x00
-	.byte	0xc6, 0x10, 0x00, 0x00
+	.byte	0xcc, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x70, 0x74
 	.byte	0x72, 0x00, 0xf2, 0xf1
 	.byte	0x0d, 0x15, 0x03, 0x00
@@ -3929,7 +4181,7 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x00, 0x00, 0x61, 0x00
 	.byte	0x72, 0x00, 0x05, 0x15
 	.byte	0x03, 0x00, 0x00, 0x02
-	.byte	0xc7, 0x10, 0x00, 0x00
+	.byte	0xcd, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x10, 0x00, 0x61, 0x6c
@@ -3957,7 +4209,7 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x38, 0x30, 0x38, 0x35
 	.byte	0x61, 0x39, 0x00, 0xf1
 	.byte	0x0e, 0x00, 0x06, 0x16
-	.byte	0xc8, 0x10, 0x00, 0x00
+	.byte	0xce, 0x10, 0x00, 0x00
 	.byte	0x05, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x62, 0x00, 0x05, 0x15
@@ -3987,18 +4239,18 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x38, 0x35, 0x00, 0xf1
 	.byte	0x2a, 0x00, 0x03, 0x12
 	.byte	0x0d, 0x15, 0x03, 0x00
-	.byte	0xb8, 0x10, 0x00, 0x00
+	.byte	0xbe, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x70, 0x6f
 	.byte	0x69, 0x6e, 0x74, 0x65
 	.byte	0x72, 0x00, 0xf2, 0xf1
 	.byte	0x0d, 0x15, 0x03, 0x00
-	.byte	0xca, 0x10, 0x00, 0x00
+	.byte	0xd0, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x5f, 0x6d
 	.byte	0x61, 0x72, 0x6b, 0x65
 	.byte	0x72, 0x00, 0xf2, 0xf1
 	.byte	0x5a, 0x00, 0x05, 0x15
 	.byte	0x02, 0x00, 0x00, 0x02
-	.byte	0xcb, 0x10, 0x00, 0x00
+	.byte	0xd1, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x08, 0x00, 0x63, 0x6f
@@ -4020,7 +4272,7 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x62, 0x39, 0x31, 0x30
 	.byte	0x30, 0x35, 0x00, 0xf1
 	.byte	0x0e, 0x00, 0x06, 0x16
-	.byte	0xcc, 0x10, 0x00, 0x00
+	.byte	0xd2, 0x10, 0x00, 0x00
 	.byte	0x05, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x62, 0x00, 0x05, 0x15
@@ -4049,18 +4301,18 @@ _ZN40_$LT$core..nonzero..NonZero$LT$T$GT$$GT$3get17hdcb42aa5867b0d0aE:
 	.byte	0x33, 0x61, 0x36, 0x32
 	.byte	0x38, 0x35, 0x00, 0xf1
 	.byte	0x0e, 0x00, 0x06, 0x16
-	.byte	0xce, 0x10, 0x00, 0x00
+	.byte	0xd4, 0x10, 0x00, 0x00
 	.byte	0x05, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x1a, 0x00, 0x09, 0x10
-	.byte	0xba, 0x10, 0x00, 0x00
-	.byte	0xb8, 0x10, 0x00, 0x00
-	.byte	0xb8, 0x10, 0x00, 0x00
+	.byte	0xc0, 0x10, 0x00, 0x00
+	.byte	0xbe, 0x10, 0x00, 0x00
+	.byte	0xbe, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x27, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x0e, 0x00, 0x02, 0x16
-	.byte	0xb8, 0x10, 0x00, 0x00
-	.byte	0xd0, 0x10, 0x00, 0x00
+	.byte	0xbe, 0x10, 0x00, 0x00
+	.byte	0xd6, 0x10, 0x00, 0x00
 	.byte	0x67, 0x65, 0x74, 0x00
 

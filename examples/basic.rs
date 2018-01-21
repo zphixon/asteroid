@@ -64,6 +64,7 @@ fn main() {
         .build();
     //let settings = settings::open(settings_file).unwrap();
 
-    asteroid::game_loop(game, settings);
+    asteroid::game_loop_test(settings);
+    //asteroid::game_loop(game, settings);
 }
 

@@ -209,6 +209,244 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$14set_draw_color17ha1f3de5ffac9bc12E:
 .Lcfi11:
 	.seh_endproc
 
+	.def	 _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E;
+	.scl	2;
+	.type	32;
+	.endef
+	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E
+	.globl	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E
+	.p2align	4, 0x90
+_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E:
+.Lfunc_begin2:
+	.cv_func_id 4
+	.cv_loc	4 1 893 0
+.Lcfi12:
+.seh_proc _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E
+	.seh_handler __CxxFrameHandler3, @unwind, @except
+	pushq	%rbp
+.Lcfi13:
+	.seh_pushreg 5
+	subq	$224, %rsp
+.Lcfi14:
+	.seh_stackalloc 224
+	leaq	128(%rsp), %rbp
+.Lcfi15:
+	.seh_setframe 5, 128
+.Lcfi16:
+	.seh_endprologue
+	movq	$-2, 88(%rbp)
+	movq	%rcx, -48(%rbp)
+.Ltmp28:
+	.cv_loc	4 1 894 0
+	movq	-48(%rbp), %rcx
+	addq	$8, %rcx
+	movq	%rcx, 72(%rbp)
+.Ltmp29:
+	.cv_inline_site_id 5 within 4 inlined_at 1 894 0
+	.cv_loc	5 2 802 0
+	movq	72(%rbp), %rcx
+	movq	%rcx, 80(%rbp)
+.Ltmp30:
+	.cv_inline_site_id 6 within 5 inlined_at 2 802 0
+	.cv_loc	6 2 1377 0
+	movq	80(%rbp), %rcx
+	callq	_ZN36_$LT$core..ptr..NonNull$LT$T$GT$$GT$6as_ref17h1190cb24cc04b005E
+.Ltmp31:
+	.cv_loc	4 1 894 0
+	movq	16(%rax), %rcx
+	callq	SDL_RenderClear
+	movl	%eax, -36(%rbp)
+.Ltmp32:
+	.cv_loc	4 1 895 0
+	cmpl	$0, -36(%rbp)
+	je	.LBB2_2
+	leaq	40(%rbp), %rax
+	.cv_loc	4 1 896 0
+	movq	%rax, %rcx
+	movq	%rax, -56(%rbp)
+	callq	_ZN4sdl23sdl9get_error17h3db0674b72dfcaa2E
+	movq	-56(%rbp), %rax
+	movq	%rax, 32(%rbp)
+	.cv_file	4 "C:\\Users\\Zack\\.cargo\\registry\\src\\github.com-1ecc6299db9ec823\\sdl2-0.30.0\\src\\sdl2\\lib.rs"
+	.cv_loc	4 4 1 0
+	movq	32(%rbp), %rcx
+	movq	%rcx, 64(%rbp)
+.Ltmp33:
+	.cv_loc	4 1 896 0
+	movq	64(%rbp), %rcx
+	.cv_loc	4 3 8 0
+.Ltmp22:
+	leaq	_ZN60_$LT$alloc..string..String$u20$as$u20$core..fmt..Display$GT$3fmt17h7325f38dc6b69431E(%rip), %rdx
+	callq	_ZN4core3fmt10ArgumentV13new17h73728f1bc0b534d0E
+.Ltmp23:
+	movq	%rdx, -64(%rbp)
+	movq	%rax, -72(%rbp)
+	jmp	.LBB2_3
+.Ltmp34:
+.LBB2_2:
+	.cv_loc	4 1 898 0
+	addq	$224, %rsp
+	popq	%rbp
+	retq
+.LBB2_3:
+.Ltmp35:
+	.cv_loc	4 1 896 0
+	movq	-72(%rbp), %rax
+	movq	%rax, 16(%rbp)
+	movq	-64(%rbp), %rcx
+	movq	%rcx, 24(%rbp)
+.Ltmp36:
+	.cv_loc	4 3 8 0
+.Ltmp24:
+	leaq	ref.5(%rip), %rdx
+	movq	%rsp, %r8
+	movq	%rdx, 40(%r8)
+	movq	$1, 48(%r8)
+	movq	$1, 32(%r8)
+	leaq	ref.4(%rip), %rdx
+	movl	$1, %r9d
+	movl	%r9d, %r8d
+	leaq	-32(%rbp), %rcx
+	leaq	16(%rbp), %r9
+	callq	_ZN4core3fmt9Arguments16new_v1_formatted17h647572f4005f46b4E
+.Ltmp25:
+	jmp	.LBB2_4
+.LBB2_4:
+	.cv_loc	4 3 7 0
+.Ltmp26:
+	leaq	ref.7(%rip), %rdx
+	leaq	-32(%rbp), %rcx
+	callq	_ZN3std9panicking15begin_panic_fmt17hfbb7d0ccbb7102e9E
+.Ltmp27:
+	jmp	.LBB2_6
+.LBB2_6:
+	ud2
+	.seh_handlerdata
+	.long	($cppxdata$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E)@IMGREL
+	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E
+.Lcfi17:
+	.seh_endproc
+	.def	 "?dtor$5@?0?_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E@4HA";
+	.scl	3;
+	.type	32;
+	.endef
+	.p2align	4, 0x90
+"?dtor$5@?0?_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E@4HA":
+.Lcfi18:
+.seh_proc "?dtor$5@?0?_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E@4HA"
+.LBB2_5:
+	movq	%rdx, 16(%rsp)
+	pushq	%rbp
+.Lcfi19:
+	.seh_pushreg 5
+	subq	$64, %rsp
+.Lcfi20:
+	.seh_stackalloc 64
+	leaq	128(%rdx), %rbp
+.Lcfi21:
+	.seh_endprologue
+	leaq	40(%rbp), %rcx
+	.cv_loc	4 1 897 0
+	callq	_ZN4core3ptr13drop_in_place17h7c1ed1e97a94da88E
+.Ltmp37:
+	.cv_loc	4 1 893 0
+	nop
+	addq	$64, %rsp
+	popq	%rbp
+	retq
+.Ltmp38:
+.Lfunc_end2:
+	.seh_handlerdata
+	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E
+.Lcfi22:
+	.seh_endproc
+	.section	.xdata,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E
+	.p2align	2
+$cppxdata$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E:
+	.long	429065506
+	.long	1
+	.long	($stateUnwindMap$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E)@IMGREL
+	.long	0
+	.long	0
+	.long	3
+	.long	($ip2state$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E)@IMGREL
+	.long	216
+	.long	0
+	.long	1
+$stateUnwindMap$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E:
+	.long	-1
+	.long	"?dtor$5@?0?_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E@4HA"@IMGREL
+$ip2state$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E:
+	.long	.Lfunc_begin2@IMGREL
+	.long	-1
+	.long	.Ltmp22@IMGREL+1
+	.long	0
+	.long	.Ltmp27@IMGREL+1
+	.long	-1
+	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E
+
+	.def	 _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$7present17h75c6d76c72808fe0E;
+	.scl	2;
+	.type	32;
+	.endef
+	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$7present17h75c6d76c72808fe0E
+	.globl	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$7present17h75c6d76c72808fe0E
+	.p2align	4, 0x90
+_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$7present17h75c6d76c72808fe0E:
+.Lfunc_begin3:
+	.cv_func_id 7
+	.cv_loc	7 1 907 0
+.Lcfi23:
+.seh_proc _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$7present17h75c6d76c72808fe0E
+	pushq	%rbp
+.Lcfi24:
+	.seh_pushreg 5
+	subq	$64, %rsp
+.Lcfi25:
+	.seh_stackalloc 64
+	leaq	64(%rsp), %rbp
+.Lcfi26:
+	.seh_setframe 5, 64
+.Lcfi27:
+	.seh_endprologue
+	movq	%rcx, -24(%rbp)
+.Ltmp39:
+	.cv_loc	7 1 908 0
+	movq	-24(%rbp), %rcx
+	addq	$8, %rcx
+	movq	%rcx, -16(%rbp)
+.Ltmp40:
+	.cv_inline_site_id 8 within 7 inlined_at 1 908 0
+	.cv_loc	8 2 802 0
+	movq	-16(%rbp), %rcx
+	movq	%rcx, -8(%rbp)
+.Ltmp41:
+	.cv_inline_site_id 9 within 8 inlined_at 2 802 0
+	.cv_loc	9 2 1377 0
+	movq	-8(%rbp), %rcx
+	callq	_ZN36_$LT$core..ptr..NonNull$LT$T$GT$$GT$6as_ref17h1190cb24cc04b005E
+.Ltmp42:
+	.cv_loc	8 2 802 0
+	addq	$16, %rax
+	movq	%rax, -32(%rbp)
+.Ltmp43:
+	.cv_loc	7 1 908 0
+	movq	-32(%rbp), %rax
+	movq	(%rax), %rcx
+	callq	SDL_RenderPresent
+.Ltmp44:
+	.cv_loc	7 1 909 0
+	nop
+	addq	$64, %rsp
+	popq	%rbp
+	retq
+.Ltmp45:
+.Lfunc_end3:
+	.seh_handlerdata
+	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$7present17h75c6d76c72808fe0E
+.Lcfi28:
+	.seh_endproc
+
 	.def	 _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E;
 	.scl	2;
 	.type	32;
@@ -217,22 +455,22 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$14set_draw_color17ha1f3de5ffac9bc12E:
 	.globl	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
 	.p2align	4, 0x90
 _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E:
-.Lfunc_begin2:
-	.cv_func_id 4
-	.cv_loc	4 1 1041 0
-.Lcfi12:
+.Lfunc_begin4:
+	.cv_func_id 10
+	.cv_loc	10 1 1041 0
+.Lcfi29:
 .seh_proc _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
 	.seh_handler __CxxFrameHandler3, @unwind, @except
 	pushq	%rbp
-.Lcfi13:
+.Lcfi30:
 	.seh_pushreg 5
 	subq	$208, %rsp
-.Lcfi14:
+.Lcfi31:
 	.seh_stackalloc 208
 	leaq	128(%rsp), %rbp
-.Lcfi15:
+.Lcfi32:
 	.seh_setframe 5, 128
-.Lcfi16:
+.Lcfi33:
 	.seh_endprologue
 	movq	$-2, 72(%rbp)
 	movq	%rcx, %rax
@@ -243,102 +481,102 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E:
 	movl	%r9d, -12(%rbp)
 	movl	%r11d, -8(%rbp)
 	movl	%r10d, -4(%rbp)
-.Ltmp38:
-	.cv_loc	4 1 1045 0
+.Ltmp62:
+	.cv_loc	10 1 1045 0
 	movb	$0, 55(%rbp)
 	movb	$1, 55(%rbp)
 	movl	-16(%rbp), %r8d
 	movl	-12(%rbp), %edx
-.Ltmp22:
+.Ltmp46:
 	movq	%rcx, -32(%rbp)
 	movl	%r8d, %ecx
 	movq	%rax, -40(%rbp)
 	callq	_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h64744336e527990dE
-.Ltmp23:
+.Ltmp47:
 	movl	%edx, -44(%rbp)
 	movl	%eax, -48(%rbp)
-	jmp	.LBB2_2
-.Ltmp39:
-.LBB2_2:
+	jmp	.LBB4_2
+.Ltmp63:
+.LBB4_2:
 	movl	-48(%rbp), %eax
 	movl	%eax, (%rbp)
 	movl	-44(%rbp), %ecx
 	movl	%ecx, 4(%rbp)
-.Ltmp40:
-	.cv_loc	4 1 1046 0
+.Ltmp64:
+	.cv_loc	10 1 1046 0
 	movb	$0, 55(%rbp)
 	movl	-8(%rbp), %ecx
 	movl	-4(%rbp), %edx
-.Ltmp24:
+.Ltmp48:
 	callq	_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h64744336e527990dE
-.Ltmp25:
+.Ltmp49:
 	movl	%edx, -52(%rbp)
 	movl	%eax, -56(%rbp)
-	jmp	.LBB2_3
-.Ltmp41:
-.LBB2_3:
+	jmp	.LBB4_3
+.Ltmp65:
+.LBB4_3:
 	movl	-56(%rbp), %eax
 	movl	%eax, 8(%rbp)
 	movl	-52(%rbp), %ecx
 	movl	%ecx, 12(%rbp)
-.Ltmp42:
-	.cv_loc	4 1 1048 0
+.Ltmp66:
+	.cv_loc	10 1 1048 0
 	movq	-24(%rbp), %rdx
 	addq	$8, %rdx
 	movq	%rdx, 56(%rbp)
-.Ltmp43:
-	.cv_inline_site_id 5 within 4 inlined_at 1 1048 0
-	.cv_loc	5 2 802 0
+.Ltmp67:
+	.cv_inline_site_id 11 within 10 inlined_at 1 1048 0
+	.cv_loc	11 2 802 0
 	movq	56(%rbp), %rdx
 	movq	%rdx, 64(%rbp)
-.Ltmp44:
-	.cv_inline_site_id 6 within 5 inlined_at 2 802 0
-	.cv_loc	6 2 1377 0
+.Ltmp68:
+	.cv_inline_site_id 12 within 11 inlined_at 2 802 0
+	.cv_loc	12 2 1377 0
 	movq	64(%rbp), %rcx
-.Ltmp26:
+.Ltmp50:
 	callq	_ZN36_$LT$core..ptr..NonNull$LT$T$GT$$GT$6as_ref17h1190cb24cc04b005E
-.Ltmp27:
+.Ltmp51:
 	movq	%rax, -64(%rbp)
-	jmp	.LBB2_4
-.Ltmp45:
-.LBB2_4:
-	.cv_loc	4 1 1048 0
+	jmp	.LBB4_4
+.Ltmp69:
+.LBB4_4:
+	.cv_loc	10 1 1048 0
 	movq	-64(%rbp), %rax
 	movq	16(%rax), %rcx
-.Ltmp28:
+.Ltmp52:
 	movq	%rbp, %rdx
 	movq	%rcx, -72(%rbp)
 	movq	%rdx, %rcx
 	callq	_ZN4sdl24rect5Point1x17h43cd8ebaa107244fE
-.Ltmp29:
+.Ltmp53:
 	movl	%eax, -76(%rbp)
-	jmp	.LBB2_5
-.Ltmp46:
-.LBB2_5:
-.Ltmp30:
+	jmp	.LBB4_5
+.Ltmp70:
+.LBB4_5:
+.Ltmp54:
 	movq	%rbp, %rcx
 	callq	_ZN4sdl24rect5Point1y17h442377c40ddbdb8cE
-.Ltmp31:
+.Ltmp55:
 	movl	%eax, -80(%rbp)
-	jmp	.LBB2_6
-.Ltmp47:
-.LBB2_6:
-.Ltmp32:
+	jmp	.LBB4_6
+.Ltmp71:
+.LBB4_6:
+.Ltmp56:
 	leaq	8(%rbp), %rcx
 	callq	_ZN4sdl24rect5Point1x17h43cd8ebaa107244fE
-.Ltmp33:
+.Ltmp57:
 	movl	%eax, -84(%rbp)
-	jmp	.LBB2_7
-.Ltmp48:
-.LBB2_7:
-.Ltmp34:
+	jmp	.LBB4_7
+.Ltmp72:
+.LBB4_7:
+.Ltmp58:
 	leaq	8(%rbp), %rcx
 	callq	_ZN4sdl24rect5Point1y17h442377c40ddbdb8cE
-.Ltmp35:
+.Ltmp59:
 	movl	%eax, -88(%rbp)
-	jmp	.LBB2_8
-.Ltmp49:
-.LBB2_8:
+	jmp	.LBB4_8
+.Ltmp73:
+.LBB4_8:
 	movq	-72(%rbp), %rcx
 	movl	-76(%rbp), %edx
 	movl	-80(%rbp), %r8d
@@ -347,27 +585,27 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E:
 	movl	%eax, 32(%rsp)
 	callq	SDL_RenderDrawLine
 	movl	%eax, 20(%rbp)
-.Ltmp50:
-	.cv_loc	4 1 1050 0
+.Ltmp74:
+	.cv_loc	10 1 1050 0
 	cmpl	$0, 20(%rbp)
-	je	.LBB2_10
-.Ltmp51:
-	.cv_loc	4 1 1051 0
-.Ltmp36:
+	je	.LBB4_10
+.Ltmp75:
+	.cv_loc	10 1 1051 0
+.Ltmp60:
 	leaq	24(%rbp), %rcx
 	callq	_ZN4sdl23sdl9get_error17h3db0674b72dfcaa2E
-.Ltmp37:
-	jmp	.LBB2_11
-.Ltmp52:
-.LBB2_10:
-	.cv_loc	4 1 1053 0
+.Ltmp61:
+	jmp	.LBB4_11
+.Ltmp76:
+.LBB4_10:
+	.cv_loc	10 1 1053 0
 	movq	-32(%rbp), %rax
 	movq	$0, (%rax)
-	.cv_loc	4 1 1050 0
-	jmp	.LBB2_12
-.Ltmp53:
-.LBB2_11:
-	.cv_loc	4 1 1051 0
+	.cv_loc	10 1 1050 0
+	jmp	.LBB4_12
+.Ltmp77:
+.LBB4_11:
+	.cv_loc	10 1 1051 0
 	movq	24(%rbp), %rax
 	movq	-32(%rbp), %rcx
 	movq	%rax, (%rcx)
@@ -375,27 +613,27 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E:
 	movq	%rax, 8(%rcx)
 	movq	40(%rbp), %rax
 	movq	%rax, 16(%rcx)
-.Ltmp54:
-.LBB2_12:
-	.cv_loc	4 1 1055 0
+.Ltmp78:
+.LBB4_12:
+	.cv_loc	10 1 1055 0
 	movq	-40(%rbp), %rax
 	addq	$208, %rsp
 	popq	%rbp
-.Ltmp55:
+.Ltmp79:
 	retq
-.LBB2_1:
-	.cv_loc	4 1 1041 0
+.LBB4_1:
+	.cv_loc	10 1 1041 0
 	addq	$48, %rsp
 	popq	%rbp
 	retq
-.LBB2_13:
-	.cv_loc	4 1 1055 0
+.LBB4_13:
+	.cv_loc	10 1 1055 0
 	movb	$0, 55(%rbp)
-	jmp	.LBB2_1
+	jmp	.LBB4_1
 	.seh_handlerdata
 	.long	($cppxdata$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E)@IMGREL
 	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
-.Lcfi17:
+.Lcfi34:
 	.seh_endproc
 	.def	 "?dtor$14@?0?_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E@4HA";
 	.scl	3;
@@ -403,27 +641,27 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E:
 	.endef
 	.p2align	4, 0x90
 "?dtor$14@?0?_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E@4HA":
-.Lcfi18:
+.Lcfi35:
 .seh_proc "?dtor$14@?0?_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E@4HA"
-.LBB2_14:
+.LBB4_14:
 	movq	%rdx, 16(%rsp)
 	pushq	%rbp
-.Lcfi19:
+.Lcfi36:
 	.seh_pushreg 5
 	subq	$48, %rsp
-.Lcfi20:
+.Lcfi37:
 	.seh_stackalloc 48
 	leaq	128(%rdx), %rbp
-.Lcfi21:
+.Lcfi38:
 	.seh_endprologue
 	testb	$1, 55(%rbp)
-	jne	.LBB2_13
-	jmp	.LBB2_1
-.Ltmp56:
-.Lfunc_end2:
+	jne	.LBB4_13
+	jmp	.LBB4_1
+.Ltmp80:
+.Lfunc_end4:
 	.seh_handlerdata
 	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
-.Lcfi22:
+.Lcfi39:
 	.seh_endproc
 	.section	.xdata,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
 	.p2align	2
@@ -442,11 +680,11 @@ $stateUnwindMap$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f176
 	.long	-1
 	.long	"?dtor$14@?0?_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E@4HA"@IMGREL
 $ip2state$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E:
-	.long	.Lfunc_begin2@IMGREL
+	.long	.Lfunc_begin4@IMGREL
 	.long	-1
-	.long	.Ltmp22@IMGREL+1
+	.long	.Ltmp46@IMGREL+1
 	.long	0
-	.long	.Ltmp37@IMGREL+1
+	.long	.Ltmp61@IMGREL+1
 	.long	-1
 	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
 
@@ -458,50 +696,50 @@ $ip2state$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c7
 	.globl	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E
 	.p2align	4, 0x90
 _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E:
-.Lfunc_begin3:
-	.cv_func_id 7
-	.cv_loc	7 1 1075 0
-.Lcfi23:
+.Lfunc_begin5:
+	.cv_func_id 13
+	.cv_loc	13 1 1075 0
+.Lcfi40:
 .seh_proc _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E
 	pushq	%rbp
-.Lcfi24:
+.Lcfi41:
 	.seh_pushreg 5
 	subq	$144, %rsp
-.Lcfi25:
+.Lcfi42:
 	.seh_stackalloc 144
 	leaq	128(%rsp), %rbp
-.Lcfi26:
+.Lcfi43:
 	.seh_setframe 5, 128
-.Lcfi27:
+.Lcfi44:
 	.seh_endprologue
 	movq	%rcx, %rax
 	movq	%rdx, -40(%rbp)
-.Ltmp57:
-	.cv_loc	7 1 1076 0
+.Ltmp81:
+	.cv_loc	13 1 1076 0
 	movq	-40(%rbp), %rdx
 	addq	$8, %rdx
 	movq	%rdx, (%rbp)
-.Ltmp58:
-	.cv_inline_site_id 8 within 7 inlined_at 1 1076 0
-	.cv_loc	8 2 802 0
+.Ltmp82:
+	.cv_inline_site_id 14 within 13 inlined_at 1 1076 0
+	.cv_loc	14 2 802 0
 	movq	(%rbp), %rdx
 	movq	%rdx, 8(%rbp)
-.Ltmp59:
-	.cv_inline_site_id 9 within 8 inlined_at 2 802 0
-	.cv_loc	9 2 1377 0
+.Ltmp83:
+	.cv_inline_site_id 15 within 14 inlined_at 2 802 0
+	.cv_loc	15 2 1377 0
 	movq	8(%rbp), %rdx
 	movq	%rcx, -48(%rbp)
 	movq	%rdx, %rcx
 	movq	%rax, -56(%rbp)
 	movq	%r8, -64(%rbp)
-.Ltmp60:
+.Ltmp84:
 	callq	_ZN36_$LT$core..ptr..NonNull$LT$T$GT$$GT$6as_ref17h1190cb24cc04b005E
-.Ltmp61:
-	.cv_loc	8 2 802 0
+.Ltmp85:
+	.cv_loc	14 2 802 0
 	addq	$16, %rax
 	movq	%rax, -72(%rbp)
-.Ltmp62:
-	.cv_loc	7 1 1076 0
+.Ltmp86:
+	.cv_loc	13 1 1076 0
 	movq	-72(%rbp), %rax
 	movq	(%rax), %rcx
 	movq	-64(%rbp), %rdx
@@ -509,30 +747,30 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E:
 	movq	%rdx, %rcx
 	callq	_ZN4sdl24rect4Rect3raw17h851006e8f1581494E
 	movq	%rax, -88(%rbp)
-.Ltmp63:
+.Ltmp87:
 	movq	-80(%rbp), %rcx
 	movq	-88(%rbp), %rdx
 	callq	SDL_RenderDrawRect
 	movl	%eax, -28(%rbp)
-.Ltmp64:
-	.cv_loc	7 1 1077 0
+.Ltmp88:
+	.cv_loc	13 1 1077 0
 	cmpl	$0, -28(%rbp)
-	je	.LBB3_5
-.Ltmp65:
+	je	.LBB5_5
+.Ltmp89:
 	leaq	-24(%rbp), %rcx
-	.cv_loc	7 1 1078 0
+	.cv_loc	13 1 1078 0
 	callq	_ZN4sdl23sdl9get_error17h3db0674b72dfcaa2E
-	jmp	.LBB3_6
-.Ltmp66:
-.LBB3_5:
-	.cv_loc	7 1 1080 0
+	jmp	.LBB5_6
+.Ltmp90:
+.LBB5_5:
+	.cv_loc	13 1 1080 0
 	movq	-48(%rbp), %rax
 	movq	$0, (%rax)
-	.cv_loc	7 1 1077 0
-	jmp	.LBB3_7
-.Ltmp67:
-.LBB3_6:
-	.cv_loc	7 1 1078 0
+	.cv_loc	13 1 1077 0
+	jmp	.LBB5_7
+.Ltmp91:
+.LBB5_6:
+	.cv_loc	13 1 1078 0
 	movq	-24(%rbp), %rax
 	movq	-48(%rbp), %rcx
 	movq	%rax, (%rcx)
@@ -540,19 +778,19 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E:
 	movq	%rax, 8(%rcx)
 	movq	-8(%rbp), %rax
 	movq	%rax, 16(%rcx)
-.Ltmp68:
-.LBB3_7:
-	.cv_loc	7 1 1082 0
+.Ltmp92:
+.LBB5_7:
+	.cv_loc	13 1 1082 0
 	movq	-56(%rbp), %rax
 	addq	$144, %rsp
 	popq	%rbp
-.Ltmp69:
+.Ltmp93:
 	retq
-.Ltmp70:
-.Lfunc_end3:
+.Ltmp94:
+.Lfunc_end5:
 	.seh_handlerdata
 	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E
-.Lcfi28:
+.Lcfi45:
 	.seh_endproc
 
 	.def	 _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE;
@@ -563,134 +801,134 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E:
 	.globl	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
 	.p2align	4, 0x90
 _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE:
-.Lfunc_begin4:
-	.cv_func_id 10
-	.cv_loc	10 1 1103 0
-.Lcfi29:
+.Lfunc_begin6:
+	.cv_func_id 16
+	.cv_loc	16 1 1103 0
+.Lcfi46:
 .seh_proc _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
 	.seh_handler __CxxFrameHandler3, @unwind, @except
 	pushq	%rbp
-.Lcfi30:
+.Lcfi47:
 	.seh_pushreg 5
 	subq	$240, %rsp
-.Lcfi31:
+.Lcfi48:
 	.seh_stackalloc 240
 	leaq	128(%rsp), %rbp
-.Lcfi32:
+.Lcfi49:
 	.seh_setframe 5, 128
-.Lcfi33:
+.Lcfi50:
 	.seh_endprologue
 	movq	$-2, 104(%rbp)
 	movq	%rcx, %rax
 	movq	%rdx, -24(%rbp)
-.Ltmp85:
-	.cv_loc	10 1 1104 0
+.Ltmp109:
+	.cv_loc	16 1 1104 0
 	movb	$0, 87(%rbp)
 	movb	$1, 87(%rbp)
-.Ltmp86:
-	.cv_loc	10 1 1105 0
+.Ltmp110:
+	.cv_loc	16 1 1105 0
 	movq	-24(%rbp), %rdx
 	addq	$8, %rdx
 	movq	%rdx, 88(%rbp)
-.Ltmp87:
-	.cv_inline_site_id 11 within 10 inlined_at 1 1105 0
-	.cv_loc	11 2 802 0
+.Ltmp111:
+	.cv_inline_site_id 17 within 16 inlined_at 1 1105 0
+	.cv_loc	17 2 802 0
 	movq	88(%rbp), %rdx
 	movq	%rdx, 96(%rbp)
-.Ltmp88:
-	.cv_inline_site_id 12 within 11 inlined_at 2 802 0
-	.cv_loc	12 2 1377 0
+.Ltmp112:
+	.cv_inline_site_id 18 within 17 inlined_at 2 802 0
+	.cv_loc	18 2 1377 0
 	movq	96(%rbp), %rdx
-.Ltmp71:
+.Ltmp95:
 	movq	%rcx, -32(%rbp)
 	movq	%rdx, %rcx
 	movq	%rax, -40(%rbp)
 	movq	%r8, -48(%rbp)
-.Ltmp89:
+.Ltmp113:
 	callq	_ZN36_$LT$core..ptr..NonNull$LT$T$GT$$GT$6as_ref17h1190cb24cc04b005E
-.Ltmp72:
+.Ltmp96:
 	movq	%rax, -56(%rbp)
-	jmp	.LBB4_1
-.Ltmp90:
-.LBB4_1:
-	.cv_loc	10 1 1105 0
+	jmp	.LBB6_1
+.Ltmp114:
+.LBB6_1:
+	.cv_loc	16 1 1105 0
 	movq	-56(%rbp), %rax
 	movq	16(%rax), %rcx
-	.cv_loc	10 1 1106 0
+	.cv_loc	16 1 1106 0
 	movb	$0, 87(%rbp)
 	movq	-48(%rbp), %rdx
 	movups	(%rdx), %xmm0
 	movaps	%xmm0, 32(%rbp)
-.Ltmp73:
+.Ltmp97:
 	leaq	8(%rbp), %r8
 	leaq	32(%rbp), %rdx
 	movq	%rcx, -64(%rbp)
 	movq	%r8, %rcx
 	callq	_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h0c0122f485ed3fa7E
-.Ltmp74:
-	jmp	.LBB4_3
-.Ltmp91:
-.LBB4_3:
-.Ltmp75:
+.Ltmp98:
+	jmp	.LBB6_3
+.Ltmp115:
+.LBB6_3:
+.Ltmp99:
 	leaq	8(%rbp), %rcx
 	callq	_ZN38_$LT$core..option..Option$LT$T$GT$$GT$6as_ref17h976aac3cda136c4bE
-.Ltmp76:
+.Ltmp100:
 	movq	%rax, -72(%rbp)
-	jmp	.LBB4_4
-.Ltmp92:
-.LBB4_4:
-.Ltmp77:
+	jmp	.LBB6_4
+.Ltmp116:
+.LBB6_4:
+.Ltmp101:
 	leaq	-8(%rbp), %rcx
 	movq	-72(%rbp), %rdx
 	callq	_ZN38_$LT$core..option..Option$LT$T$GT$$GT$3map17ha8ea4e4544920cedE
-.Ltmp78:
-	jmp	.LBB4_5
-.Ltmp93:
-.LBB4_5:
-	.cv_loc	10 1 1109 0
-.Ltmp79:
+.Ltmp102:
+	jmp	.LBB6_5
+.Ltmp117:
+.LBB6_5:
+	.cv_loc	16 1 1109 0
+.Ltmp103:
 	callq	_ZN4core3ptr4null17h812594e02d3b2588E
-.Ltmp80:
+.Ltmp104:
 	movq	%rax, -80(%rbp)
-	jmp	.LBB4_6
-.Ltmp94:
-.LBB4_6:
-	.cv_loc	10 1 1106 0
-.Ltmp81:
+	jmp	.LBB6_6
+.Ltmp118:
+.LBB6_6:
+	.cv_loc	16 1 1106 0
+.Ltmp105:
 	leaq	-8(%rbp), %rcx
 	movq	-80(%rbp), %rdx
 	callq	_ZN38_$LT$core..option..Option$LT$T$GT$$GT$9unwrap_or17h3fb47e26adfdb868E
-.Ltmp82:
+.Ltmp106:
 	movq	%rax, -88(%rbp)
-	jmp	.LBB4_7
-.Ltmp95:
-.LBB4_7:
-	.cv_loc	10 1 1105 0
+	jmp	.LBB6_7
+.Ltmp119:
+.LBB6_7:
+	.cv_loc	16 1 1105 0
 	movq	-64(%rbp), %rcx
 	movq	-88(%rbp), %rdx
 	callq	SDL_RenderFillRect
 	movl	%eax, -12(%rbp)
-.Ltmp96:
-	.cv_loc	10 1 1111 0
+.Ltmp120:
+	.cv_loc	16 1 1111 0
 	cmpl	$0, -12(%rbp)
-	je	.LBB4_9
-.Ltmp97:
-	.cv_loc	10 1 1112 0
-.Ltmp83:
+	je	.LBB6_9
+.Ltmp121:
+	.cv_loc	16 1 1112 0
+.Ltmp107:
 	leaq	56(%rbp), %rcx
 	callq	_ZN4sdl23sdl9get_error17h3db0674b72dfcaa2E
-.Ltmp84:
-	jmp	.LBB4_10
-.Ltmp98:
-.LBB4_9:
-	.cv_loc	10 1 1114 0
+.Ltmp108:
+	jmp	.LBB6_10
+.Ltmp122:
+.LBB6_9:
+	.cv_loc	16 1 1114 0
 	movq	-32(%rbp), %rax
 	movq	$0, (%rax)
-	.cv_loc	10 1 1111 0
-	jmp	.LBB4_11
-.Ltmp99:
-.LBB4_10:
-	.cv_loc	10 1 1112 0
+	.cv_loc	16 1 1111 0
+	jmp	.LBB6_11
+.Ltmp123:
+.LBB6_10:
+	.cv_loc	16 1 1112 0
 	movq	56(%rbp), %rax
 	movq	-32(%rbp), %rcx
 	movq	%rax, (%rcx)
@@ -698,27 +936,27 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE:
 	movq	%rax, 8(%rcx)
 	movq	72(%rbp), %rax
 	movq	%rax, 16(%rcx)
-.Ltmp100:
-.LBB4_11:
-	.cv_loc	10 1 1116 0
+.Ltmp124:
+.LBB6_11:
+	.cv_loc	16 1 1116 0
 	movq	-40(%rbp), %rax
 	addq	$240, %rsp
 	popq	%rbp
-.Ltmp101:
+.Ltmp125:
 	retq
-.LBB4_2:
-	.cv_loc	10 1 1103 0
+.LBB6_2:
+	.cv_loc	16 1 1103 0
 	addq	$32, %rsp
 	popq	%rbp
 	retq
-.LBB4_12:
-	.cv_loc	10 1 1116 0
+.LBB6_12:
+	.cv_loc	16 1 1116 0
 	movb	$0, 87(%rbp)
-	jmp	.LBB4_2
+	jmp	.LBB6_2
 	.seh_handlerdata
 	.long	($cppxdata$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE)@IMGREL
 	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
-.Lcfi34:
+.Lcfi51:
 	.seh_endproc
 	.def	 "?dtor$13@?0?_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE@4HA";
 	.scl	3;
@@ -726,27 +964,27 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE:
 	.endef
 	.p2align	4, 0x90
 "?dtor$13@?0?_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE@4HA":
-.Lcfi35:
+.Lcfi52:
 .seh_proc "?dtor$13@?0?_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE@4HA"
-.LBB4_13:
+.LBB6_13:
 	movq	%rdx, 16(%rsp)
 	pushq	%rbp
-.Lcfi36:
+.Lcfi53:
 	.seh_pushreg 5
 	subq	$32, %rsp
-.Lcfi37:
+.Lcfi54:
 	.seh_stackalloc 32
 	leaq	128(%rdx), %rbp
-.Lcfi38:
+.Lcfi55:
 	.seh_endprologue
 	testb	$1, 87(%rbp)
-	jne	.LBB4_12
-	jmp	.LBB4_2
-.Ltmp102:
-.Lfunc_end4:
+	jne	.LBB6_12
+	jmp	.LBB6_2
+.Ltmp126:
+.Lfunc_end6:
 	.seh_handlerdata
 	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
-.Lcfi39:
+.Lcfi56:
 	.seh_endproc
 	.section	.xdata,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
 	.p2align	2
@@ -765,11 +1003,11 @@ $stateUnwindMap$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff
 	.long	-1
 	.long	"?dtor$13@?0?_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE@4HA"@IMGREL
 $ip2state$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE:
-	.long	.Lfunc_begin4@IMGREL
+	.long	.Lfunc_begin6@IMGREL
 	.long	-1
-	.long	.Ltmp71@IMGREL+1
+	.long	.Ltmp95@IMGREL+1
 	.long	0
-	.long	.Ltmp84@IMGREL+1
+	.long	.Ltmp108@IMGREL+1
 	.long	-1
 	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
 
@@ -781,24 +1019,24 @@ $ip2state$_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf962
 	.globl	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE
 	.p2align	4, 0x90
 _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE:
-.Lfunc_begin5:
-	.cv_func_id 13
-	.cv_loc	13 1 1108 0
-.Lcfi40:
+.Lfunc_begin7:
+	.cv_func_id 19
+	.cv_loc	19 1 1108 0
+.Lcfi57:
 .seh_proc _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE
 	pushq	%rbp
-.Lcfi41:
+.Lcfi58:
 	.seh_pushreg 5
 	subq	$64, %rsp
-.Lcfi42:
+.Lcfi59:
 	.seh_stackalloc 64
 	leaq	64(%rsp), %rbp
-.Lcfi43:
+.Lcfi60:
 	.seh_setframe 5, 64
-.Lcfi44:
+.Lcfi61:
 	.seh_endprologue
 	movq	%rcx, -8(%rbp)
-.Ltmp103:
+.Ltmp127:
 	movq	-8(%rbp), %rcx
 	callq	_ZN4sdl24rect4Rect3raw17h851006e8f1581494E
 	movq	%rax, -24(%rbp)
@@ -806,11 +1044,11 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u
 	addq	$64, %rsp
 	popq	%rbp
 	retq
-.Ltmp104:
-.Lfunc_end5:
+.Ltmp128:
+.Lfunc_end7:
 	.seh_handlerdata
 	.section	.text,"xr",one_only,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE
-.Lcfi45:
+.Lcfi62:
 	.seh_endproc
 
 	.def	 _ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE;
@@ -820,39 +1058,82 @@ _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u
 	.section	.text,"xr",one_only,_ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE
 	.p2align	4, 0x90
 _ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE:
-.Lfunc_begin6:
-	.cv_func_id 14
-	.cv_loc	14 1 240 0
-.Lcfi46:
+.Lfunc_begin8:
+	.cv_func_id 20
+	.cv_loc	20 1 240 0
+.Lcfi63:
 .seh_proc _ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE
 	pushq	%rbp
-.Lcfi47:
+.Lcfi64:
 	.seh_pushreg 5
 	subq	$48, %rsp
-.Lcfi48:
+.Lcfi65:
 	.seh_stackalloc 48
 	leaq	48(%rsp), %rbp
-.Lcfi49:
+.Lcfi66:
 	.seh_setframe 5, 48
-.Lcfi50:
+.Lcfi67:
 	.seh_endprologue
 	movq	%rcx, -8(%rbp)
-.Ltmp105:
-	.cv_loc	14 1 241 0
+.Ltmp129:
+	.cv_loc	20 1 241 0
 	movq	-8(%rbp), %rcx
 	addq	$8, %rcx
 	callq	_ZN72_$LT$alloc..rc..Rc$LT$T$GT$$u20$as$u20$core..convert..AsRef$LT$T$GT$$GT$6as_ref17hc415fe0dfe8f3c33E
 	movq	%rax, -16(%rbp)
-	.cv_loc	14 1 242 0
+	.cv_loc	20 1 242 0
 	movq	-16(%rbp), %rax
 	addq	$48, %rsp
 	popq	%rbp
 	retq
-.Ltmp106:
-.Lfunc_end6:
+.Ltmp130:
+.Lfunc_end8:
 	.seh_handlerdata
 	.section	.text,"xr",one_only,_ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE
-.Lcfi51:
+.Lcfi68:
+	.seh_endproc
+
+	.def	 _ZN80_$LT$sdl2..render..RendererContext$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h5d636aa6b67e5544E;
+	.scl	2;
+	.type	32;
+	.endef
+	.section	.text,"xr",one_only,_ZN80_$LT$sdl2..render..RendererContext$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h5d636aa6b67e5544E
+	.globl	_ZN80_$LT$sdl2..render..RendererContext$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h5d636aa6b67e5544E
+	.p2align	4, 0x90
+_ZN80_$LT$sdl2..render..RendererContext$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h5d636aa6b67e5544E:
+.Lfunc_begin9:
+	.cv_func_id 21
+	.cv_loc	21 1 195 0
+.Lcfi69:
+.seh_proc _ZN80_$LT$sdl2..render..RendererContext$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h5d636aa6b67e5544E
+	pushq	%rbp
+.Lcfi70:
+	.seh_pushreg 5
+	subq	$48, %rsp
+.Lcfi71:
+	.seh_stackalloc 48
+	leaq	48(%rsp), %rbp
+.Lcfi72:
+	.seh_setframe 5, 48
+.Lcfi73:
+	.seh_endprologue
+	movq	%rcx, -8(%rbp)
+.Ltmp131:
+	.cv_loc	21 1 197 0
+	movq	-8(%rbp), %rcx
+	movq	(%rcx), %rcx
+	callq	SDL_DestroyRenderer
+.Ltmp132:
+	.cv_loc	21 1 199 0
+	nop
+	addq	$48, %rsp
+	popq	%rbp
+	retq
+.Ltmp133:
+.Lfunc_end9:
+	.seh_handlerdata
+	.section	.text,"xr",one_only,_ZN80_$LT$sdl2..render..RendererContext$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h5d636aa6b67e5544E
+.Lcfi74:
 	.seh_endproc
 
 	.section	.rdata,"dr",one_only,str.0
@@ -873,14 +1154,57 @@ ref.1:
 const.2:
 	.quad	ref.1
 
+	.section	.rdata,"dr",one_only,str.3
+	.p2align	4
+str.3:
+	.ascii	"Could not clear: "
+
+	.section	.rdata,"dr",one_only,ref.4
+	.p2align	3
+ref.4:
+	.quad	str.3
+	.quad	17
+
+	.section	.rdata,"dr",one_only,ref.5
+	.p2align	3
+ref.5:
+	.quad	1
+	.quad	0
+	.quad	3
+	.zero	8
+	.quad	3
+	.zero	8
+	.long	32
+	.long	0
+	.byte	3
+	.zero	7
+
+	.section	.rdata,"dr",one_only,const.6
+	.p2align	3
+const.6:
+	.quad	ref.5
+
+	.section	.rdata,"dr",one_only,ref.7
+	.p2align	3
+ref.7:
+	.quad	str.0
+	.quad	92
+	.long	896
+	.long	13
+
+	.section	.rdata,"dr",one_only,const.8
+	.p2align	3
+const.8:
+	.quad	ref.7
+
 	.section	.debug$S,"dr"
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp108-.Ltmp107
-.Ltmp107:
-	.short	.Ltmp110-.Ltmp109
-.Ltmp109:
+	.long	.Ltmp135-.Ltmp134
+.Ltmp134:
+	.short	.Ltmp137-.Ltmp136
+.Ltmp136:
 	.short	4412
 	.long	3
 	.short	208
@@ -893,12 +1217,12 @@ const.2:
 	.short	0
 	.short	0
 	.asciz	"clang LLVM (rustc version 1.25.0-nightly (15a1e2844 2018-01-20))"
-.Ltmp110:
-.Ltmp108:
+.Ltmp137:
+.Ltmp135:
 	.p2align	2
 	.long	246
-	.long	.Ltmp112-.Ltmp111
-.Ltmp111:
+	.long	.Ltmp139-.Ltmp138
+.Ltmp138:
 	.long	0
 
 
@@ -910,16 +1234,16 @@ const.2:
 	.long	4223
 	.long	8
 	.long	1375
-.Ltmp112:
+.Ltmp139:
 	.p2align	2
 	.section	.debug$S,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$10draw_point17h3ac267d0c38d8f7cE
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp114-.Ltmp113
-.Ltmp113:
-	.short	.Ltmp116-.Ltmp115
-.Ltmp115:
+	.long	.Ltmp141-.Ltmp140
+.Ltmp140:
+	.short	.Ltmp143-.Ltmp142
+.Ltmp142:
 	.short	4423
 	.long	0
 	.long	0
@@ -932,70 +1256,70 @@ const.2:
 	.secidx	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$10draw_point17h3ac267d0c38d8f7cE
 	.byte	0
 	.asciz	"sdl2::render::Canvas<sdl2::video::Window>::draw_point<sdl2::video::Window,sdl2::rect::Point>"
-.Ltmp116:
-	.short	.Ltmp118-.Ltmp117
-.Ltmp117:
+.Ltmp143:
+	.short	.Ltmp145-.Ltmp144
+.Ltmp144:
 	.short	4414
 	.long	4233
 	.short	1
 	.asciz	"self"
-.Ltmp118:
+.Ltmp145:
 	.cv_def_range	 .Ltmp0 .Ltmp14, "E\021N\001\000\000\310\377\377\377"
-	.short	.Ltmp120-.Ltmp119
-.Ltmp119:
+	.short	.Ltmp147-.Ltmp146
+.Ltmp146:
 	.short	4414
 	.long	4243
 	.short	1
 	.asciz	"point"
-.Ltmp120:
+.Ltmp147:
 	.cv_def_range	 .Ltmp0 .Ltmp14, "E\021N\001\000\000\320\377\377\377"
-	.short	.Ltmp122-.Ltmp121
-.Ltmp121:
+	.short	.Ltmp149-.Ltmp148
+.Ltmp148:
 	.short	4414
 	.long	4243
 	.short	0
 	.asciz	"point"
-.Ltmp122:
+.Ltmp149:
 	.cv_def_range	 .Ltmp1 .Ltmp12, "E\021N\001\000\000\330\377\377\377"
-	.short	.Ltmp124-.Ltmp123
-.Ltmp123:
+	.short	.Ltmp151-.Ltmp150
+.Ltmp150:
 	.short	4414
 	.long	116
 	.short	0
 	.asciz	"result"
-.Ltmp124:
+.Ltmp151:
 	.cv_def_range	 .Ltmp8 .Ltmp12, "E\021N\001\000\000\344\377\377\377"
-	.short	.Ltmp126-.Ltmp125
-.Ltmp125:
+	.short	.Ltmp153-.Ltmp152
+.Ltmp152:
 	.short	4429
 	.long	0
 	.long	0
 	.long	4221
 	.cv_inline_linetable	1 2 801 .Lfunc_begin0 .Lfunc_end0
-.Ltmp126:
-	.short	.Ltmp128-.Ltmp127
-.Ltmp127:
+.Ltmp153:
+	.short	.Ltmp155-.Ltmp154
+.Ltmp154:
 	.short	4414
 	.long	4100
 	.short	1
 	.asciz	"self"
-.Ltmp128:
+.Ltmp155:
 	.cv_def_range	 .Ltmp2 .Ltmp5, "E\021N\001\000\000\000\000\000\000"
-	.short	.Ltmp130-.Ltmp129
-.Ltmp129:
+	.short	.Ltmp157-.Ltmp156
+.Ltmp156:
 	.short	4429
 	.long	0
 	.long	0
 	.long	4223
 	.cv_inline_linetable	2 2 1375 .Lfunc_begin0 .Lfunc_end0
-.Ltmp130:
-	.short	.Ltmp132-.Ltmp131
-.Ltmp131:
+.Ltmp157:
+	.short	.Ltmp159-.Ltmp158
+.Ltmp158:
 	.short	4414
 	.long	4100
 	.short	1
 	.asciz	"self"
-.Ltmp132:
+.Ltmp159:
 	.cv_def_range	 .Ltmp3 .Ltmp4, "E\021N\001\000\000\b\000\000\000"
 	.short	2
 	.short	4430
@@ -1003,17 +1327,17 @@ const.2:
 	.short	4430
 	.short	2
 	.short	4431
-.Ltmp114:
+.Ltmp141:
 	.p2align	2
 	.cv_linetable	0, _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$10draw_point17h3ac267d0c38d8f7cE, .Lfunc_end0
 	.section	.debug$S,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$14set_draw_color17ha1f3de5ffac9bc12E
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp134-.Ltmp133
-.Ltmp133:
-	.short	.Ltmp136-.Ltmp135
-.Ltmp135:
+	.long	.Ltmp161-.Ltmp160
+.Ltmp160:
+	.short	.Ltmp163-.Ltmp162
+.Ltmp162:
 	.short	4423
 	.long	0
 	.long	0
@@ -1026,705 +1350,895 @@ const.2:
 	.secidx	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$14set_draw_color17ha1f3de5ffac9bc12E
 	.byte	0
 	.asciz	"sdl2::render::Canvas<sdl2::video::Window>::set_draw_color<sdl2::video::Window>"
-.Ltmp136:
-	.short	.Ltmp138-.Ltmp137
-.Ltmp137:
+.Ltmp163:
+	.short	.Ltmp165-.Ltmp164
+.Ltmp164:
 	.short	4414
 	.long	4233
 	.short	1
 	.asciz	"self"
-.Ltmp138:
+.Ltmp165:
 	.cv_def_range	 .Ltmp15 .Ltmp21, "E\021N\001\000\000\300\377\377\377"
-	.short	.Ltmp140-.Ltmp139
-.Ltmp139:
+	.short	.Ltmp167-.Ltmp166
+.Ltmp166:
 	.short	4414
 	.long	4282
 	.short	1
 	.asciz	"color"
-.Ltmp140:
+.Ltmp167:
 	.cv_def_range	 .Ltmp15 .Ltmp21, "E\021N\001\000\000\310\377\377\377"
-	.short	.Ltmp142-.Ltmp141
-.Ltmp141:
+	.short	.Ltmp169-.Ltmp168
+.Ltmp168:
 	.short	4414
 	.long	32
 	.short	0
 	.asciz	"r"
-.Ltmp142:
+.Ltmp169:
 	.cv_def_range	 .Ltmp17 .Ltmp19 .Ltmp20 .Ltmp21, "E\021N\001\000\000\324\377\377\377"
-	.short	.Ltmp144-.Ltmp143
-.Ltmp143:
+	.short	.Ltmp171-.Ltmp170
+.Ltmp170:
 	.short	4414
 	.long	32
 	.short	0
 	.asciz	"g"
-.Ltmp144:
+.Ltmp171:
 	.cv_def_range	 .Ltmp17 .Ltmp19 .Ltmp20 .Ltmp21, "E\021N\001\000\000\325\377\377\377"
-	.short	.Ltmp146-.Ltmp145
-.Ltmp145:
+	.short	.Ltmp173-.Ltmp172
+.Ltmp172:
 	.short	4414
 	.long	32
 	.short	0
 	.asciz	"b"
-.Ltmp146:
+.Ltmp173:
 	.cv_def_range	 .Ltmp17 .Ltmp19 .Ltmp20 .Ltmp21, "E\021N\001\000\000\326\377\377\377"
-	.short	.Ltmp148-.Ltmp147
-.Ltmp147:
+	.short	.Ltmp175-.Ltmp174
+.Ltmp174:
 	.short	4414
 	.long	32
 	.short	0
 	.asciz	"a"
-.Ltmp148:
+.Ltmp175:
 	.cv_def_range	 .Ltmp17 .Ltmp19 .Ltmp20 .Ltmp21, "E\021N\001\000\000\327\377\377\377"
-	.short	.Ltmp150-.Ltmp149
-.Ltmp149:
+	.short	.Ltmp177-.Ltmp176
+.Ltmp176:
 	.short	4414
 	.long	116
 	.short	0
 	.asciz	"ret"
-.Ltmp150:
+.Ltmp177:
 	.cv_def_range	 .Ltmp18 .Ltmp19 .Ltmp20 .Ltmp21, "E\021N\001\000\000\334\377\377\377"
 	.short	2
 	.short	4431
-.Ltmp134:
+.Ltmp161:
 	.p2align	2
 	.cv_linetable	3, _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$14set_draw_color17ha1f3de5ffac9bc12E, .Lfunc_end1
-	.section	.debug$S,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
+	.section	.debug$S,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp152-.Ltmp151
-.Ltmp151:
-	.short	.Ltmp154-.Ltmp153
-.Ltmp153:
+	.long	.Ltmp179-.Ltmp178
+.Ltmp178:
+	.short	.Ltmp181-.Ltmp180
+.Ltmp180:
 	.short	4423
 	.long	0
 	.long	0
 	.long	0
-	.long	.Lfunc_end2-_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
+	.long	.Lfunc_end2-_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E
 	.long	0
 	.long	0
 	.long	4287
-	.secrel32	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
-	.secidx	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
+	.secrel32	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E
+	.secidx	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E
 	.byte	0
-	.asciz	"sdl2::render::Canvas<sdl2::video::Window>::draw_line<sdl2::video::Window,sdl2::rect::Point,sdl2::rect::Point>"
-.Ltmp154:
-	.short	.Ltmp156-.Ltmp155
-.Ltmp155:
+	.asciz	"sdl2::render::Canvas<sdl2::video::Window>::clear<sdl2::video::Window>"
+.Ltmp181:
+	.short	.Ltmp183-.Ltmp182
+.Ltmp182:
 	.short	4414
 	.long	4233
 	.short	1
 	.asciz	"self"
-.Ltmp156:
-	.cv_def_range	 .Ltmp38 .Ltmp56, "E\021N\001\000\000\350\377\377\377"
-	.short	.Ltmp158-.Ltmp157
-.Ltmp157:
-	.short	4414
-	.long	4243
-	.short	1
-	.asciz	"start"
-.Ltmp158:
-	.cv_def_range	 .Ltmp38 .Ltmp56, "E\021N\001\000\000\360\377\377\377"
-	.short	.Ltmp160-.Ltmp159
-.Ltmp159:
-	.short	4414
-	.long	4243
-	.short	1
-	.asciz	"end"
-.Ltmp160:
-	.cv_def_range	 .Ltmp38 .Ltmp56, "E\021N\001\000\000\370\377\377\377"
-	.short	.Ltmp162-.Ltmp161
-.Ltmp161:
-	.short	4414
-	.long	4243
-	.short	0
-	.asciz	"start"
-.Ltmp162:
-	.cv_def_range	 .Ltmp40 .Ltmp54, "E\021N\001\000\000\000\000\000\000"
-	.short	.Ltmp164-.Ltmp163
-.Ltmp163:
-	.short	4414
-	.long	4243
-	.short	0
-	.asciz	"end"
-.Ltmp164:
-	.cv_def_range	 .Ltmp42 .Ltmp54, "E\021N\001\000\000\b\000\000\000"
-	.short	.Ltmp166-.Ltmp165
-.Ltmp165:
+.Ltmp183:
+	.cv_def_range	 .Ltmp28 .Ltmp38, "E\021N\001\000\000\320\377\377\377"
+	.short	.Ltmp185-.Ltmp184
+.Ltmp184:
 	.short	4414
 	.long	116
 	.short	0
-	.asciz	"result"
-.Ltmp166:
-	.cv_def_range	 .Ltmp50 .Ltmp54, "E\021N\001\000\000\024\000\000\000"
-	.short	.Ltmp168-.Ltmp167
-.Ltmp167:
+	.asciz	"ret"
+.Ltmp185:
+	.cv_def_range	 .Ltmp32 .Ltmp34 .Ltmp35 .Ltmp37, "E\021N\001\000\000\334\377\377\377"
+	.short	.Ltmp187-.Ltmp186
+.Ltmp186:
+	.short	4414
+	.long	4288
+	.short	0
+	.asciz	"__arg0"
+.Ltmp187:
+	.cv_def_range	 .Ltmp33 .Ltmp34 .Ltmp35 .Ltmp36, "E\021N\001\000\000@\000\000\000"
+	.short	.Ltmp189-.Ltmp188
+.Ltmp188:
 	.short	4429
 	.long	0
 	.long	0
 	.long	4221
 	.cv_inline_linetable	5 2 801 .Lfunc_begin2 .Lfunc_end2
-.Ltmp168:
-	.short	.Ltmp170-.Ltmp169
-.Ltmp169:
+.Ltmp189:
+	.short	.Ltmp191-.Ltmp190
+.Ltmp190:
 	.short	4414
 	.long	4100
 	.short	1
 	.asciz	"self"
-.Ltmp170:
-	.cv_def_range	 .Ltmp43 .Ltmp45, "E\021N\001\000\0008\000\000\000"
-	.short	.Ltmp172-.Ltmp171
-.Ltmp171:
+.Ltmp191:
+	.cv_def_range	 .Ltmp29 .Ltmp31, "E\021N\001\000\000H\000\000\000"
+	.short	.Ltmp193-.Ltmp192
+.Ltmp192:
 	.short	4429
 	.long	0
 	.long	0
 	.long	4223
 	.cv_inline_linetable	6 2 1375 .Lfunc_begin2 .Lfunc_end2
-.Ltmp172:
-	.short	.Ltmp174-.Ltmp173
-.Ltmp173:
+.Ltmp193:
+	.short	.Ltmp195-.Ltmp194
+.Ltmp194:
 	.short	4414
 	.long	4100
 	.short	1
 	.asciz	"self"
-.Ltmp174:
-	.cv_def_range	 .Ltmp44 .Ltmp45, "E\021N\001\000\000@\000\000\000"
+.Ltmp195:
+	.cv_def_range	 .Ltmp30 .Ltmp31, "E\021N\001\000\000P\000\000\000"
 	.short	2
 	.short	4430
 	.short	2
 	.short	4430
 	.short	2
 	.short	4431
-.Ltmp152:
+.Ltmp179:
 	.p2align	2
-	.cv_linetable	4, _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E, .Lfunc_end2
-	.section	.debug$S,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E
+	.cv_linetable	4, _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$5clear17hd108fe3307669b49E, .Lfunc_end2
+	.section	.debug$S,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$7present17h75c6d76c72808fe0E
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp176-.Ltmp175
-.Ltmp175:
-	.short	.Ltmp178-.Ltmp177
-.Ltmp177:
+	.long	.Ltmp197-.Ltmp196
+.Ltmp196:
+	.short	.Ltmp199-.Ltmp198
+.Ltmp198:
 	.short	4423
 	.long	0
 	.long	0
 	.long	0
-	.long	.Lfunc_end3-_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E
+	.long	.Lfunc_end3-_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$7present17h75c6d76c72808fe0E
 	.long	0
 	.long	0
-	.long	4298
-	.secrel32	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E
-	.secidx	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E
+	.long	4289
+	.secrel32	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$7present17h75c6d76c72808fe0E
+	.secidx	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$7present17h75c6d76c72808fe0E
 	.byte	0
-	.asciz	"sdl2::render::Canvas<sdl2::video::Window>::draw_rect<sdl2::video::Window>"
-.Ltmp178:
-	.short	.Ltmp180-.Ltmp179
-.Ltmp179:
+	.asciz	"sdl2::render::Canvas<sdl2::video::Window>::present<sdl2::video::Window>"
+.Ltmp199:
+	.short	.Ltmp201-.Ltmp200
+.Ltmp200:
 	.short	4414
 	.long	4233
 	.short	1
 	.asciz	"self"
-.Ltmp180:
-	.cv_def_range	 .Ltmp57 .Ltmp70, "E\021N\001\000\000\330\377\377\377"
-	.short	.Ltmp182-.Ltmp181
-.Ltmp181:
-	.short	4414
-	.long	4293
-	.short	257
-	.asciz	"rect"
-.Ltmp182:
-	.short	.Ltmp184-.Ltmp183
-.Ltmp183:
-	.short	4414
-	.long	116
-	.short	0
-	.asciz	"result"
-.Ltmp184:
-	.cv_def_range	 .Ltmp64 .Ltmp68, "E\021N\001\000\000\344\377\377\377"
-	.short	.Ltmp186-.Ltmp185
-.Ltmp185:
+.Ltmp201:
+	.cv_def_range	 .Ltmp39 .Ltmp45, "E\021N\001\000\000\350\377\377\377"
+	.short	.Ltmp203-.Ltmp202
+.Ltmp202:
 	.short	4429
 	.long	0
 	.long	0
 	.long	4221
 	.cv_inline_linetable	8 2 801 .Lfunc_begin3 .Lfunc_end3
-.Ltmp186:
-	.short	.Ltmp188-.Ltmp187
-.Ltmp187:
+.Ltmp203:
+	.short	.Ltmp205-.Ltmp204
+.Ltmp204:
 	.short	4414
 	.long	4100
 	.short	1
 	.asciz	"self"
-.Ltmp188:
-	.cv_def_range	 .Ltmp58 .Ltmp62, "E\021N\001\000\000\000\000\000\000"
-	.short	.Ltmp190-.Ltmp189
-.Ltmp189:
+.Ltmp205:
+	.cv_def_range	 .Ltmp40 .Ltmp43, "E\021N\001\000\000\360\377\377\377"
+	.short	.Ltmp207-.Ltmp206
+.Ltmp206:
 	.short	4429
 	.long	0
 	.long	0
 	.long	4223
 	.cv_inline_linetable	9 2 1375 .Lfunc_begin3 .Lfunc_end3
-.Ltmp190:
-	.short	.Ltmp192-.Ltmp191
-.Ltmp191:
+.Ltmp207:
+	.short	.Ltmp209-.Ltmp208
+.Ltmp208:
 	.short	4414
 	.long	4100
 	.short	1
 	.asciz	"self"
-.Ltmp192:
-	.cv_def_range	 .Ltmp59 .Ltmp61, "E\021N\001\000\000\b\000\000\000"
+.Ltmp209:
+	.cv_def_range	 .Ltmp41 .Ltmp42, "E\021N\001\000\000\370\377\377\377"
 	.short	2
 	.short	4430
 	.short	2
 	.short	4430
 	.short	2
 	.short	4431
-.Ltmp176:
+.Ltmp197:
 	.p2align	2
-	.cv_linetable	7, _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E, .Lfunc_end3
-	.section	.debug$S,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
+	.cv_linetable	7, _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$7present17h75c6d76c72808fe0E, .Lfunc_end3
+	.section	.debug$S,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp194-.Ltmp193
-.Ltmp193:
-	.short	.Ltmp196-.Ltmp195
-.Ltmp195:
+	.long	.Ltmp211-.Ltmp210
+.Ltmp210:
+	.short	.Ltmp213-.Ltmp212
+.Ltmp212:
 	.short	4423
 	.long	0
 	.long	0
 	.long	0
-	.long	.Lfunc_end4-_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
+	.long	.Lfunc_end4-_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
 	.long	0
 	.long	0
-	.long	4299
-	.secrel32	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
-	.secidx	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
+	.long	4292
+	.secrel32	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
+	.secidx	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E
 	.byte	0
-	.asciz	"sdl2::render::Canvas<sdl2::video::Window>::fill_rect<sdl2::video::Window,sdl2::rect::Rect>"
-.Ltmp196:
-	.short	.Ltmp198-.Ltmp197
-.Ltmp197:
+	.asciz	"sdl2::render::Canvas<sdl2::video::Window>::draw_line<sdl2::video::Window,sdl2::rect::Point,sdl2::rect::Point>"
+.Ltmp213:
+	.short	.Ltmp215-.Ltmp214
+.Ltmp214:
 	.short	4414
 	.long	4233
 	.short	1
 	.asciz	"self"
-.Ltmp198:
-	.cv_def_range	 .Ltmp85 .Ltmp102, "E\021N\001\000\000\350\377\377\377"
-	.short	.Ltmp200-.Ltmp199
-.Ltmp199:
+.Ltmp215:
+	.cv_def_range	 .Ltmp62 .Ltmp80, "E\021N\001\000\000\350\377\377\377"
+	.short	.Ltmp217-.Ltmp216
+.Ltmp216:
 	.short	4414
-	.long	4293
-	.short	257
-	.asciz	"rect"
-.Ltmp200:
-	.short	.Ltmp202-.Ltmp201
-.Ltmp201:
+	.long	4243
+	.short	1
+	.asciz	"start"
+.Ltmp217:
+	.cv_def_range	 .Ltmp62 .Ltmp80, "E\021N\001\000\000\360\377\377\377"
+	.short	.Ltmp219-.Ltmp218
+.Ltmp218:
+	.short	4414
+	.long	4243
+	.short	1
+	.asciz	"end"
+.Ltmp219:
+	.cv_def_range	 .Ltmp62 .Ltmp80, "E\021N\001\000\000\370\377\377\377"
+	.short	.Ltmp221-.Ltmp220
+.Ltmp220:
+	.short	4414
+	.long	4243
+	.short	0
+	.asciz	"start"
+.Ltmp221:
+	.cv_def_range	 .Ltmp64 .Ltmp78, "E\021N\001\000\000\000\000\000\000"
+	.short	.Ltmp223-.Ltmp222
+.Ltmp222:
+	.short	4414
+	.long	4243
+	.short	0
+	.asciz	"end"
+.Ltmp223:
+	.cv_def_range	 .Ltmp66 .Ltmp78, "E\021N\001\000\000\b\000\000\000"
+	.short	.Ltmp225-.Ltmp224
+.Ltmp224:
 	.short	4414
 	.long	116
 	.short	0
 	.asciz	"result"
-.Ltmp202:
-	.cv_def_range	 .Ltmp96 .Ltmp100, "E\021N\001\000\000\364\377\377\377"
-	.short	.Ltmp204-.Ltmp203
-.Ltmp203:
+.Ltmp225:
+	.cv_def_range	 .Ltmp74 .Ltmp78, "E\021N\001\000\000\024\000\000\000"
+	.short	.Ltmp227-.Ltmp226
+.Ltmp226:
 	.short	4429
 	.long	0
 	.long	0
 	.long	4221
 	.cv_inline_linetable	11 2 801 .Lfunc_begin4 .Lfunc_end4
-.Ltmp204:
-	.short	.Ltmp206-.Ltmp205
-.Ltmp205:
+.Ltmp227:
+	.short	.Ltmp229-.Ltmp228
+.Ltmp228:
 	.short	4414
 	.long	4100
 	.short	1
 	.asciz	"self"
-.Ltmp206:
-	.cv_def_range	 .Ltmp87 .Ltmp90, "E\021N\001\000\000X\000\000\000"
-	.short	.Ltmp208-.Ltmp207
-.Ltmp207:
+.Ltmp229:
+	.cv_def_range	 .Ltmp67 .Ltmp69, "E\021N\001\000\0008\000\000\000"
+	.short	.Ltmp231-.Ltmp230
+.Ltmp230:
 	.short	4429
 	.long	0
 	.long	0
 	.long	4223
 	.cv_inline_linetable	12 2 1375 .Lfunc_begin4 .Lfunc_end4
-.Ltmp208:
-	.short	.Ltmp210-.Ltmp209
-.Ltmp209:
+.Ltmp231:
+	.short	.Ltmp233-.Ltmp232
+.Ltmp232:
 	.short	4414
 	.long	4100
 	.short	1
 	.asciz	"self"
-.Ltmp210:
-	.cv_def_range	 .Ltmp88 .Ltmp90, "E\021N\001\000\000`\000\000\000"
+.Ltmp233:
+	.cv_def_range	 .Ltmp68 .Ltmp69, "E\021N\001\000\000@\000\000\000"
 	.short	2
 	.short	4430
 	.short	2
 	.short	4430
 	.short	2
 	.short	4431
-.Ltmp194:
+.Ltmp211:
 	.p2align	2
-	.cv_linetable	10, _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE, .Lfunc_end4
-	.section	.debug$S,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE
+	.cv_linetable	10, _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_line17h4436f1769420c747E, .Lfunc_end4
+	.section	.debug$S,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E
 	.p2align	2
 	.long	4
 	.long	241
-	.long	.Ltmp212-.Ltmp211
-.Ltmp211:
-	.short	.Ltmp214-.Ltmp213
-.Ltmp213:
+	.long	.Ltmp235-.Ltmp234
+.Ltmp234:
+	.short	.Ltmp237-.Ltmp236
+.Ltmp236:
 	.short	4423
 	.long	0
 	.long	0
 	.long	0
-	.long	.Lfunc_end5-_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE
+	.long	.Lfunc_end5-_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E
 	.long	0
 	.long	0
-	.long	4308
-	.secrel32	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE
-	.secidx	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE
-	.byte	0
-	.asciz	"sdl2::render::{{impl}}::fill_rect::{{closure}}<sdl2::video::Window,sdl2::rect::Rect>"
-.Ltmp214:
-	.short	.Ltmp216-.Ltmp215
-.Ltmp215:
-	.short	4414
-	.long	4306
-	.short	1
-	.byte	0
-.Ltmp216:
-	.cv_def_range	 .Ltmp103 .Ltmp104, "E\021N\001\000\000\360\377\377\377"
-	.short	.Ltmp218-.Ltmp217
-.Ltmp217:
-	.short	4414
 	.long	4303
-	.short	1
-	.asciz	"r"
-.Ltmp218:
-	.cv_def_range	 .Ltmp103 .Ltmp104, "E\021N\001\000\000\370\377\377\377"
-	.short	2
-	.short	4431
-.Ltmp212:
-	.p2align	2
-	.cv_linetable	13, _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE, .Lfunc_end5
-	.section	.debug$S,"dr",associative,_ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE
-	.p2align	2
-	.long	4
-	.long	241
-	.long	.Ltmp220-.Ltmp219
-.Ltmp219:
-	.short	.Ltmp222-.Ltmp221
-.Ltmp221:
-	.short	4422
-	.long	0
-	.long	0
-	.long	0
-	.long	.Lfunc_end6-_ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE
-	.long	0
-	.long	0
-	.long	4312
-	.secrel32	_ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE
-	.secidx	_ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE
+	.secrel32	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E
+	.secidx	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E
 	.byte	0
-	.asciz	"sdl2::render::{{impl}}::deref<sdl2::video::Window>"
-.Ltmp222:
-	.short	.Ltmp224-.Ltmp223
-.Ltmp223:
+	.asciz	"sdl2::render::Canvas<sdl2::video::Window>::draw_rect<sdl2::video::Window>"
+.Ltmp237:
+	.short	.Ltmp239-.Ltmp238
+.Ltmp238:
 	.short	4414
 	.long	4233
 	.short	1
 	.asciz	"self"
-.Ltmp224:
-	.cv_def_range	 .Ltmp105 .Ltmp106, "E\021N\001\000\000\370\377\377\377"
+.Ltmp239:
+	.cv_def_range	 .Ltmp81 .Ltmp94, "E\021N\001\000\000\330\377\377\377"
+	.short	.Ltmp241-.Ltmp240
+.Ltmp240:
+	.short	4414
+	.long	4298
+	.short	257
+	.asciz	"rect"
+.Ltmp241:
+	.short	.Ltmp243-.Ltmp242
+.Ltmp242:
+	.short	4414
+	.long	116
+	.short	0
+	.asciz	"result"
+.Ltmp243:
+	.cv_def_range	 .Ltmp88 .Ltmp92, "E\021N\001\000\000\344\377\377\377"
+	.short	.Ltmp245-.Ltmp244
+.Ltmp244:
+	.short	4429
+	.long	0
+	.long	0
+	.long	4221
+	.cv_inline_linetable	14 2 801 .Lfunc_begin5 .Lfunc_end5
+.Ltmp245:
+	.short	.Ltmp247-.Ltmp246
+.Ltmp246:
+	.short	4414
+	.long	4100
+	.short	1
+	.asciz	"self"
+.Ltmp247:
+	.cv_def_range	 .Ltmp82 .Ltmp86, "E\021N\001\000\000\000\000\000\000"
+	.short	.Ltmp249-.Ltmp248
+.Ltmp248:
+	.short	4429
+	.long	0
+	.long	0
+	.long	4223
+	.cv_inline_linetable	15 2 1375 .Lfunc_begin5 .Lfunc_end5
+.Ltmp249:
+	.short	.Ltmp251-.Ltmp250
+.Ltmp250:
+	.short	4414
+	.long	4100
+	.short	1
+	.asciz	"self"
+.Ltmp251:
+	.cv_def_range	 .Ltmp83 .Ltmp85, "E\021N\001\000\000\b\000\000\000"
+	.short	2
+	.short	4430
+	.short	2
+	.short	4430
 	.short	2
 	.short	4431
-.Ltmp220:
+.Ltmp235:
 	.p2align	2
-	.cv_linetable	14, _ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE, .Lfunc_end6
+	.cv_linetable	13, _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9draw_rect17ha9498369d395c7f4E, .Lfunc_end5
+	.section	.debug$S,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
+	.p2align	2
+	.long	4
+	.long	241
+	.long	.Ltmp253-.Ltmp252
+.Ltmp252:
+	.short	.Ltmp255-.Ltmp254
+.Ltmp254:
+	.short	4423
+	.long	0
+	.long	0
+	.long	0
+	.long	.Lfunc_end6-_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
+	.long	0
+	.long	0
+	.long	4304
+	.secrel32	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
+	.secidx	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE
+	.byte	0
+	.asciz	"sdl2::render::Canvas<sdl2::video::Window>::fill_rect<sdl2::video::Window,sdl2::rect::Rect>"
+.Ltmp255:
+	.short	.Ltmp257-.Ltmp256
+.Ltmp256:
+	.short	4414
+	.long	4233
+	.short	1
+	.asciz	"self"
+.Ltmp257:
+	.cv_def_range	 .Ltmp109 .Ltmp126, "E\021N\001\000\000\350\377\377\377"
+	.short	.Ltmp259-.Ltmp258
+.Ltmp258:
+	.short	4414
+	.long	4298
+	.short	257
+	.asciz	"rect"
+.Ltmp259:
+	.short	.Ltmp261-.Ltmp260
+.Ltmp260:
+	.short	4414
+	.long	116
+	.short	0
+	.asciz	"result"
+.Ltmp261:
+	.cv_def_range	 .Ltmp120 .Ltmp124, "E\021N\001\000\000\364\377\377\377"
+	.short	.Ltmp263-.Ltmp262
+.Ltmp262:
+	.short	4429
+	.long	0
+	.long	0
+	.long	4221
+	.cv_inline_linetable	17 2 801 .Lfunc_begin6 .Lfunc_end6
+.Ltmp263:
+	.short	.Ltmp265-.Ltmp264
+.Ltmp264:
+	.short	4414
+	.long	4100
+	.short	1
+	.asciz	"self"
+.Ltmp265:
+	.cv_def_range	 .Ltmp111 .Ltmp114, "E\021N\001\000\000X\000\000\000"
+	.short	.Ltmp267-.Ltmp266
+.Ltmp266:
+	.short	4429
+	.long	0
+	.long	0
+	.long	4223
+	.cv_inline_linetable	18 2 1375 .Lfunc_begin6 .Lfunc_end6
+.Ltmp267:
+	.short	.Ltmp269-.Ltmp268
+.Ltmp268:
+	.short	4414
+	.long	4100
+	.short	1
+	.asciz	"self"
+.Ltmp269:
+	.cv_def_range	 .Ltmp112 .Ltmp114, "E\021N\001\000\000`\000\000\000"
+	.short	2
+	.short	4430
+	.short	2
+	.short	4430
+	.short	2
+	.short	4431
+.Ltmp253:
+	.p2align	2
+	.cv_linetable	16, _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect17hf13f44ff9bf9629fE, .Lfunc_end6
+	.section	.debug$S,"dr",associative,_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE
+	.p2align	2
+	.long	4
+	.long	241
+	.long	.Ltmp271-.Ltmp270
+.Ltmp270:
+	.short	.Ltmp273-.Ltmp272
+.Ltmp272:
+	.short	4423
+	.long	0
+	.long	0
+	.long	0
+	.long	.Lfunc_end7-_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE
+	.long	0
+	.long	0
+	.long	4313
+	.secrel32	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE
+	.secidx	_ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE
+	.byte	0
+	.asciz	"sdl2::render::{{impl}}::fill_rect::{{closure}}<sdl2::video::Window,sdl2::rect::Rect>"
+.Ltmp273:
+	.short	.Ltmp275-.Ltmp274
+.Ltmp274:
+	.short	4414
+	.long	4311
+	.short	1
+	.byte	0
+.Ltmp275:
+	.cv_def_range	 .Ltmp127 .Ltmp128, "E\021N\001\000\000\360\377\377\377"
+	.short	.Ltmp277-.Ltmp276
+.Ltmp276:
+	.short	4414
+	.long	4308
+	.short	1
+	.asciz	"r"
+.Ltmp277:
+	.cv_def_range	 .Ltmp127 .Ltmp128, "E\021N\001\000\000\370\377\377\377"
+	.short	2
+	.short	4431
+.Ltmp271:
+	.p2align	2
+	.cv_linetable	19, _ZN38_$LT$sdl2..render..Canvas$LT$T$GT$$GT$9fill_rect28_$u7b$$u7b$closure$u7d$$u7d$17h24fbd5b2d8158cbdE, .Lfunc_end7
+	.section	.debug$S,"dr",associative,_ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE
+	.p2align	2
+	.long	4
+	.long	241
+	.long	.Ltmp279-.Ltmp278
+.Ltmp278:
+	.short	.Ltmp281-.Ltmp280
+.Ltmp280:
+	.short	4422
+	.long	0
+	.long	0
+	.long	0
+	.long	.Lfunc_end8-_ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE
+	.long	0
+	.long	0
+	.long	4317
+	.secrel32	_ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE
+	.secidx	_ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE
+	.byte	0
+	.asciz	"sdl2::render::{{impl}}::deref<sdl2::video::Window>"
+.Ltmp281:
+	.short	.Ltmp283-.Ltmp282
+.Ltmp282:
+	.short	4414
+	.long	4233
+	.short	1
+	.asciz	"self"
+.Ltmp283:
+	.cv_def_range	 .Ltmp129 .Ltmp130, "E\021N\001\000\000\370\377\377\377"
+	.short	2
+	.short	4431
+.Ltmp279:
+	.p2align	2
+	.cv_linetable	20, _ZN73_$LT$sdl2..render..Canvas$LT$T$GT$$u20$as$u20$core..ops..deref..Deref$GT$5deref17h1667166654b25d3bE, .Lfunc_end8
+	.section	.debug$S,"dr",associative,_ZN80_$LT$sdl2..render..RendererContext$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h5d636aa6b67e5544E
+	.p2align	2
+	.long	4
+	.long	241
+	.long	.Ltmp285-.Ltmp284
+.Ltmp284:
+	.short	.Ltmp287-.Ltmp286
+.Ltmp286:
+	.short	4423
+	.long	0
+	.long	0
+	.long	0
+	.long	.Lfunc_end9-_ZN80_$LT$sdl2..render..RendererContext$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h5d636aa6b67e5544E
+	.long	0
+	.long	0
+	.long	4320
+	.secrel32	_ZN80_$LT$sdl2..render..RendererContext$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h5d636aa6b67e5544E
+	.secidx	_ZN80_$LT$sdl2..render..RendererContext$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h5d636aa6b67e5544E
+	.byte	0
+	.asciz	"sdl2::render::{{impl}}::drop<sdl2::video::WindowContext>"
+.Ltmp287:
+	.short	.Ltmp289-.Ltmp288
+.Ltmp288:
+	.short	4414
+	.long	4098
+	.short	1
+	.asciz	"self"
+.Ltmp289:
+	.cv_def_range	 .Ltmp131 .Ltmp133, "E\021N\001\000\000\370\377\377\377"
+	.short	2
+	.short	4431
+.Ltmp285:
+	.p2align	2
+	.cv_linetable	21, _ZN80_$LT$sdl2..render..RendererContext$LT$T$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h5d636aa6b67e5544E, .Lfunc_end9
 	.section	.debug$S,"dr"
 	.long	241
-	.long	.Ltmp226-.Ltmp225
-.Ltmp225:
-	.short	.Ltmp228-.Ltmp227
-.Ltmp227:
+	.long	.Ltmp291-.Ltmp290
+.Ltmp290:
+	.short	.Ltmp293-.Ltmp292
+.Ltmp292:
 	.short	4360
 	.long	4107
 	.asciz	"sdl2::render::RendererContext<sdl2::video::WindowContext>"
-.Ltmp228:
-	.short	.Ltmp230-.Ltmp229
-.Ltmp229:
+.Ltmp293:
+	.short	.Ltmp295-.Ltmp294
+.Ltmp294:
 	.short	4360
 	.long	4113
 	.asciz	"alloc::rc::Rc<sdl2::render::RendererContext<sdl2::video::WindowContext>>"
-.Ltmp230:
-	.short	.Ltmp232-.Ltmp231
-.Ltmp231:
+.Ltmp295:
+	.short	.Ltmp297-.Ltmp296
+.Ltmp296:
 	.short	4360
 	.long	4118
 	.asciz	"sdl2_sys::render::SDL_Renderer"
-.Ltmp232:
-	.short	.Ltmp234-.Ltmp233
-.Ltmp233:
+.Ltmp297:
+	.short	.Ltmp299-.Ltmp298
+.Ltmp298:
 	.short	4360
 	.long	4123
 	.asciz	"alloc::rc::Rc<sdl2::video::WindowContext>"
-.Ltmp234:
-	.short	.Ltmp236-.Ltmp235
-.Ltmp235:
+.Ltmp299:
+	.short	.Ltmp301-.Ltmp300
+.Ltmp300:
 	.short	4360
 	.long	4127
 	.asciz	"core::ptr::NonNull<alloc::rc::RcBox<sdl2::render::RendererContext<sdl2::video::WindowContext>>>"
-.Ltmp236:
-	.short	.Ltmp238-.Ltmp237
-.Ltmp237:
+.Ltmp301:
+	.short	.Ltmp303-.Ltmp302
+.Ltmp302:
 	.short	4360
 	.long	4130
 	.asciz	"core::marker::PhantomData<sdl2::render::RendererContext<sdl2::video::WindowContext>>"
-.Ltmp238:
-	.short	.Ltmp240-.Ltmp239
-.Ltmp239:
+.Ltmp303:
+	.short	.Ltmp305-.Ltmp304
+.Ltmp304:
 	.short	4360
 	.long	4134
 	.asciz	"core::ptr::NonNull<alloc::rc::RcBox<sdl2::video::WindowContext>>"
-.Ltmp240:
-	.short	.Ltmp242-.Ltmp241
-.Ltmp241:
+.Ltmp305:
+	.short	.Ltmp307-.Ltmp306
+.Ltmp306:
 	.short	4360
 	.long	4136
 	.asciz	"core::marker::PhantomData<sdl2::video::WindowContext>"
-.Ltmp242:
-	.short	.Ltmp244-.Ltmp243
-.Ltmp243:
+.Ltmp307:
+	.short	.Ltmp309-.Ltmp308
+.Ltmp308:
 	.short	4360
 	.long	4141
 	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::render::RendererContext<sdl2::video::WindowContext>>*>"
-.Ltmp244:
-	.short	.Ltmp246-.Ltmp245
-.Ltmp245:
+.Ltmp309:
+	.short	.Ltmp311-.Ltmp310
+.Ltmp310:
 	.short	4360
 	.long	4146
 	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::video::WindowContext>*>"
-.Ltmp246:
-	.short	.Ltmp248-.Ltmp247
-.Ltmp247:
+.Ltmp311:
+	.short	.Ltmp313-.Ltmp312
+.Ltmp312:
 	.short	4360
 	.long	4150
 	.asciz	"alloc::rc::RcBox<sdl2::render::RendererContext<sdl2::video::WindowContext>>"
-.Ltmp248:
-	.short	.Ltmp250-.Ltmp249
-.Ltmp249:
+.Ltmp313:
+	.short	.Ltmp315-.Ltmp314
+.Ltmp314:
 	.short	4360
 	.long	4154
 	.asciz	"alloc::rc::RcBox<sdl2::video::WindowContext>"
-.Ltmp250:
-	.short	.Ltmp252-.Ltmp251
-.Ltmp251:
+.Ltmp315:
+	.short	.Ltmp317-.Ltmp316
+.Ltmp316:
 	.short	4360
 	.long	4158
 	.asciz	"core::cell::Cell<usize>"
-.Ltmp252:
-	.short	.Ltmp254-.Ltmp253
-.Ltmp253:
+.Ltmp317:
+	.short	.Ltmp319-.Ltmp318
+.Ltmp318:
 	.short	4360
 	.long	4164
 	.asciz	"sdl2::video::WindowContext"
-.Ltmp254:
-	.short	.Ltmp256-.Ltmp255
-.Ltmp255:
+.Ltmp319:
+	.short	.Ltmp321-.Ltmp320
+.Ltmp320:
 	.short	4360
 	.long	4167
 	.asciz	"core::cell::UnsafeCell<usize>"
-.Ltmp256:
-	.short	.Ltmp258-.Ltmp257
-.Ltmp257:
+.Ltmp321:
+	.short	.Ltmp323-.Ltmp322
+.Ltmp322:
 	.short	4360
 	.long	4171
 	.asciz	"sdl2::sdl::VideoSubsystem"
-.Ltmp258:
-	.short	.Ltmp260-.Ltmp259
-.Ltmp259:
+.Ltmp323:
+	.short	.Ltmp325-.Ltmp324
+.Ltmp324:
 	.short	4360
 	.long	4173
 	.asciz	"sdl2_sys::video::SDL_Window"
-.Ltmp260:
-	.short	.Ltmp262-.Ltmp261
-.Ltmp261:
+.Ltmp325:
+	.short	.Ltmp327-.Ltmp326
+.Ltmp326:
 	.short	4360
 	.long	4178
 	.asciz	"alloc::rc::Rc<sdl2::sdl::SubsystemDrop>"
-.Ltmp262:
-	.short	.Ltmp264-.Ltmp263
-.Ltmp263:
+.Ltmp327:
+	.short	.Ltmp329-.Ltmp328
+.Ltmp328:
 	.short	4360
 	.long	4182
 	.asciz	"core::ptr::NonNull<alloc::rc::RcBox<sdl2::sdl::SubsystemDrop>>"
-.Ltmp264:
-	.short	.Ltmp266-.Ltmp265
-.Ltmp265:
+.Ltmp329:
+	.short	.Ltmp331-.Ltmp330
+.Ltmp330:
 	.short	4360
 	.long	4184
 	.asciz	"core::marker::PhantomData<sdl2::sdl::SubsystemDrop>"
-.Ltmp266:
-	.short	.Ltmp268-.Ltmp267
-.Ltmp267:
+.Ltmp331:
+	.short	.Ltmp333-.Ltmp332
+.Ltmp332:
 	.short	4360
 	.long	4189
 	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::sdl::SubsystemDrop>*>"
-.Ltmp268:
-	.short	.Ltmp270-.Ltmp269
-.Ltmp269:
+.Ltmp333:
+	.short	.Ltmp335-.Ltmp334
+.Ltmp334:
 	.short	4360
 	.long	4193
 	.asciz	"alloc::rc::RcBox<sdl2::sdl::SubsystemDrop>"
-.Ltmp270:
-	.short	.Ltmp272-.Ltmp271
-.Ltmp271:
+.Ltmp335:
+	.short	.Ltmp337-.Ltmp336
+.Ltmp336:
 	.short	4360
 	.long	4197
 	.asciz	"sdl2::sdl::SubsystemDrop"
-.Ltmp272:
-	.short	.Ltmp274-.Ltmp273
-.Ltmp273:
+.Ltmp337:
+	.short	.Ltmp339-.Ltmp338
+.Ltmp338:
 	.short	4360
 	.long	4202
 	.asciz	"alloc::rc::Rc<sdl2::sdl::SdlDrop>"
-.Ltmp274:
-	.short	.Ltmp276-.Ltmp275
-.Ltmp275:
+.Ltmp339:
+	.short	.Ltmp341-.Ltmp340
+.Ltmp340:
 	.short	4360
 	.long	4206
 	.asciz	"core::ptr::NonNull<alloc::rc::RcBox<sdl2::sdl::SdlDrop>>"
-.Ltmp276:
-	.short	.Ltmp278-.Ltmp277
-.Ltmp277:
+.Ltmp341:
+	.short	.Ltmp343-.Ltmp342
+.Ltmp342:
 	.short	4360
 	.long	4208
 	.asciz	"core::marker::PhantomData<sdl2::sdl::SdlDrop>"
-.Ltmp278:
-	.short	.Ltmp280-.Ltmp279
-.Ltmp279:
+.Ltmp343:
+	.short	.Ltmp345-.Ltmp344
+.Ltmp344:
 	.short	4360
 	.long	4213
 	.asciz	"core::nonzero::NonZero<const alloc::rc::RcBox<sdl2::sdl::SdlDrop>*>"
-.Ltmp280:
-	.short	.Ltmp282-.Ltmp281
-.Ltmp281:
+.Ltmp345:
+	.short	.Ltmp347-.Ltmp346
+.Ltmp346:
 	.short	4360
 	.long	4217
 	.asciz	"alloc::rc::RcBox<sdl2::sdl::SdlDrop>"
-.Ltmp282:
-	.short	.Ltmp284-.Ltmp283
-.Ltmp283:
+.Ltmp347:
+	.short	.Ltmp349-.Ltmp348
+.Ltmp348:
 	.short	4360
 	.long	4219
 	.asciz	"sdl2::sdl::SdlDrop"
-.Ltmp284:
-	.short	.Ltmp286-.Ltmp285
-.Ltmp285:
+.Ltmp349:
+	.short	.Ltmp351-.Ltmp350
+.Ltmp350:
 	.short	4360
 	.long	4227
 	.asciz	"sdl2::render::Canvas<sdl2::video::Window>"
-.Ltmp286:
-	.short	.Ltmp288-.Ltmp287
-.Ltmp287:
+.Ltmp351:
+	.short	.Ltmp353-.Ltmp352
+.Ltmp352:
 	.short	4360
 	.long	4230
 	.asciz	"sdl2::video::Window"
-.Ltmp288:
-	.short	.Ltmp290-.Ltmp289
-.Ltmp289:
+.Ltmp353:
+	.short	.Ltmp355-.Ltmp354
+.Ltmp354:
 	.short	4360
 	.long	4239
 	.asciz	"core::result::Result<(), alloc::string::String>"
-.Ltmp290:
-	.short	.Ltmp292-.Ltmp291
-.Ltmp291:
+.Ltmp355:
+	.short	.Ltmp357-.Ltmp356
+.Ltmp356:
 	.short	4360
 	.long	4243
 	.asciz	"sdl2::rect::Point"
-.Ltmp292:
-	.short	.Ltmp294-.Ltmp293
-.Ltmp293:
+.Ltmp357:
+	.short	.Ltmp359-.Ltmp358
+.Ltmp358:
 	.short	4360
 	.long	4247
 	.asciz	"core::result::Err"
-.Ltmp294:
-	.short	.Ltmp296-.Ltmp295
-.Ltmp295:
+.Ltmp359:
+	.short	.Ltmp361-.Ltmp360
+.Ltmp360:
 	.short	4360
 	.long	4250
 	.asciz	"sdl2_sys::rect::SDL_Point"
-.Ltmp296:
-	.short	.Ltmp298-.Ltmp297
-.Ltmp297:
+.Ltmp361:
+	.short	.Ltmp363-.Ltmp362
+.Ltmp362:
 	.short	4360
 	.long	4254
 	.asciz	"alloc::string::String"
-.Ltmp298:
-	.short	.Ltmp300-.Ltmp299
-.Ltmp299:
+.Ltmp363:
+	.short	.Ltmp365-.Ltmp364
+.Ltmp364:
 	.short	4360
 	.long	4258
 	.asciz	"alloc::vec::Vec<u8>"
-.Ltmp300:
-	.short	.Ltmp302-.Ltmp301
-.Ltmp301:
+.Ltmp365:
+	.short	.Ltmp367-.Ltmp366
+.Ltmp366:
 	.short	4360
 	.long	4263
 	.asciz	"alloc::raw_vec::RawVec<u8, alloc::heap::Heap>"
-.Ltmp302:
-	.short	.Ltmp304-.Ltmp303
-.Ltmp303:
+.Ltmp367:
+	.short	.Ltmp369-.Ltmp368
+.Ltmp368:
 	.short	4360
 	.long	4268
 	.asciz	"core::ptr::Unique<u8>"
-.Ltmp304:
-	.short	.Ltmp306-.Ltmp305
-.Ltmp305:
+.Ltmp369:
+	.short	.Ltmp371-.Ltmp370
+.Ltmp370:
 	.short	4360
 	.long	4270
 	.asciz	"alloc::heap::Heap"
-.Ltmp306:
-	.short	.Ltmp308-.Ltmp307
-.Ltmp307:
+.Ltmp371:
+	.short	.Ltmp373-.Ltmp372
+.Ltmp372:
 	.short	4360
 	.long	4273
 	.asciz	"core::nonzero::NonZero<const u8*>"
-.Ltmp308:
-	.short	.Ltmp310-.Ltmp309
-.Ltmp309:
+.Ltmp373:
+	.short	.Ltmp375-.Ltmp374
+.Ltmp374:
 	.short	4360
 	.long	4275
 	.asciz	"core::marker::PhantomData<u8>"
-.Ltmp310:
-	.short	.Ltmp312-.Ltmp311
-.Ltmp311:
+.Ltmp375:
+	.short	.Ltmp377-.Ltmp376
+.Ltmp376:
 	.short	4360
 	.long	4282
 	.asciz	"sdl2::pixels::Color"
-.Ltmp312:
-	.short	.Ltmp314-.Ltmp313
-.Ltmp313:
+.Ltmp377:
+	.short	.Ltmp379-.Ltmp378
+.Ltmp378:
 	.short	4360
-	.long	4293
+	.long	4298
 	.asciz	"sdl2::rect::Rect"
-.Ltmp314:
-	.short	.Ltmp316-.Ltmp315
-.Ltmp315:
+.Ltmp379:
+	.short	.Ltmp381-.Ltmp380
+.Ltmp380:
 	.short	4360
-	.long	4296
+	.long	4301
 	.asciz	"sdl2_sys::rect::SDL_Rect"
-.Ltmp316:
-	.short	.Ltmp318-.Ltmp317
-.Ltmp317:
+.Ltmp381:
+	.short	.Ltmp383-.Ltmp382
+.Ltmp382:
 	.short	4360
-	.long	4306
+	.long	4311
 	.asciz	"closure"
-.Ltmp318:
-.Ltmp226:
+.Ltmp383:
+.Ltmp291:
 	.p2align	2
 	.cv_filechecksums
 	.cv_stringtable
@@ -4464,6 +4978,28 @@ const.2:
 	.byte	0x64, 0x72, 0x61, 0x77
 	.byte	0x5f, 0x63, 0x6f, 0x6c
 	.byte	0x6f, 0x72, 0x00, 0xf1
+	.byte	0x06, 0x00, 0x01, 0x12
+	.byte	0x00, 0x00, 0x00, 0x00
+	.byte	0x1a, 0x00, 0x09, 0x10
+	.byte	0x03, 0x00, 0x00, 0x00
+	.byte	0x80, 0x10, 0x00, 0x00
+	.byte	0x89, 0x10, 0x00, 0x00
+	.byte	0x00, 0x00, 0x00, 0x00
+	.byte	0xbd, 0x10, 0x00, 0x00
+	.byte	0x00, 0x00, 0x00, 0x00
+	.byte	0x12, 0x00, 0x02, 0x16
+	.byte	0x80, 0x10, 0x00, 0x00
+	.byte	0xbe, 0x10, 0x00, 0x00
+	.byte	0x63, 0x6c, 0x65, 0x61
+	.byte	0x72, 0x00, 0xf2, 0xf1
+	.byte	0x0a, 0x00, 0x02, 0x10
+	.byte	0x95, 0x10, 0x00, 0x00
+	.byte	0x0c, 0x00, 0x01, 0x00
+	.byte	0x12, 0x00, 0x02, 0x16
+	.byte	0x80, 0x10, 0x00, 0x00
+	.byte	0xbe, 0x10, 0x00, 0x00
+	.byte	0x70, 0x72, 0x65, 0x73
+	.byte	0x65, 0x6e, 0x74, 0x00
 	.byte	0x0e, 0x00, 0x01, 0x12
 	.byte	0x02, 0x00, 0x00, 0x00
 	.byte	0x8a, 0x10, 0x00, 0x00
@@ -4473,11 +5009,11 @@ const.2:
 	.byte	0x80, 0x10, 0x00, 0x00
 	.byte	0x89, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x02, 0x00
-	.byte	0xbd, 0x10, 0x00, 0x00
+	.byte	0xc2, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x16, 0x00, 0x02, 0x16
 	.byte	0x80, 0x10, 0x00, 0x00
-	.byte	0xbe, 0x10, 0x00, 0x00
+	.byte	0xc3, 0x10, 0x00, 0x00
 	.byte	0x64, 0x72, 0x61, 0x77
 	.byte	0x5f, 0x6c, 0x69, 0x6e
 	.byte	0x65, 0x00, 0xf2, 0xf1
@@ -4501,13 +5037,13 @@ const.2:
 	.byte	0x63, 0x34, 0x61, 0x00
 	.byte	0x0a, 0x00, 0x01, 0x12
 	.byte	0x01, 0x00, 0x00, 0x00
-	.byte	0xc0, 0x10, 0x00, 0x00
+	.byte	0xc5, 0x10, 0x00, 0x00
 	.byte	0x1a, 0x00, 0x09, 0x10
 	.byte	0x88, 0x10, 0x00, 0x00
 	.byte	0x80, 0x10, 0x00, 0x00
 	.byte	0x89, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x01, 0x00
-	.byte	0xc1, 0x10, 0x00, 0x00
+	.byte	0xc6, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x4e, 0x00, 0x05, 0x15
 	.byte	0x00, 0x00, 0x80, 0x02
@@ -4531,12 +5067,12 @@ const.2:
 	.byte	0x66, 0x65, 0x65, 0x00
 	.byte	0x12, 0x00, 0x03, 0x12
 	.byte	0x0d, 0x15, 0x03, 0x00
-	.byte	0xc3, 0x10, 0x00, 0x00
+	.byte	0xc8, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x72, 0x61
 	.byte	0x77, 0x00, 0xf2, 0xf1
 	.byte	0x46, 0x00, 0x05, 0x15
 	.byte	0x01, 0x00, 0x00, 0x02
-	.byte	0xc4, 0x10, 0x00, 0x00
+	.byte	0xc9, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x10, 0x00, 0x73, 0x64
@@ -4553,7 +5089,7 @@ const.2:
 	.byte	0x62, 0x34, 0x38, 0x64
 	.byte	0x63, 0x34, 0x61, 0x00
 	.byte	0x0e, 0x00, 0x06, 0x16
-	.byte	0xc5, 0x10, 0x00, 0x00
+	.byte	0xca, 0x10, 0x00, 0x00
 	.byte	0x0c, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x32, 0x00, 0x03, 0x12
@@ -4571,7 +5107,7 @@ const.2:
 	.byte	0x0c, 0x00, 0x68, 0x00
 	.byte	0x4e, 0x00, 0x05, 0x15
 	.byte	0x04, 0x00, 0x00, 0x02
-	.byte	0xc7, 0x10, 0x00, 0x00
+	.byte	0xcc, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x10, 0x00, 0x73, 0x64
@@ -4590,18 +5126,18 @@ const.2:
 	.byte	0x62, 0x62, 0x38, 0x30
 	.byte	0x66, 0x65, 0x65, 0x00
 	.byte	0x0e, 0x00, 0x06, 0x16
-	.byte	0xc8, 0x10, 0x00, 0x00
+	.byte	0xcd, 0x10, 0x00, 0x00
 	.byte	0x0c, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x16, 0x00, 0x02, 0x16
 	.byte	0x80, 0x10, 0x00, 0x00
-	.byte	0xc2, 0x10, 0x00, 0x00
+	.byte	0xc7, 0x10, 0x00, 0x00
 	.byte	0x64, 0x72, 0x61, 0x77
 	.byte	0x5f, 0x72, 0x65, 0x63
 	.byte	0x74, 0x00, 0xf2, 0xf1
 	.byte	0x16, 0x00, 0x02, 0x16
 	.byte	0x80, 0x10, 0x00, 0x00
-	.byte	0xc2, 0x10, 0x00, 0x00
+	.byte	0xc7, 0x10, 0x00, 0x00
 	.byte	0x66, 0x69, 0x6c, 0x6c
 	.byte	0x5f, 0x72, 0x65, 0x63
 	.byte	0x74, 0x00, 0xf2, 0xf1
@@ -4617,7 +5153,7 @@ const.2:
 	.byte	0x5f, 0x72, 0x65, 0x63
 	.byte	0x74, 0x00, 0xf2, 0xf1
 	.byte	0x0a, 0x00, 0x02, 0x10
-	.byte	0xc3, 0x10, 0x00, 0x00
+	.byte	0xc8, 0x10, 0x00, 0x00
 	.byte	0x0c, 0x00, 0x01, 0x00
 	.byte	0x3e, 0x00, 0x05, 0x15
 	.byte	0x00, 0x00, 0x80, 0x02
@@ -4636,16 +5172,16 @@ const.2:
 	.byte	0x35, 0x63, 0x63, 0x39
 	.byte	0x35, 0x34, 0x00, 0xf1
 	.byte	0x0a, 0x00, 0x02, 0x10
-	.byte	0xc0, 0x10, 0x00, 0x00
+	.byte	0xc5, 0x10, 0x00, 0x00
 	.byte	0x0c, 0x00, 0x01, 0x00
 	.byte	0x0e, 0x00, 0x01, 0x12
 	.byte	0x02, 0x00, 0x00, 0x00
-	.byte	0xce, 0x10, 0x00, 0x00
-	.byte	0xcf, 0x10, 0x00, 0x00
+	.byte	0xd3, 0x10, 0x00, 0x00
+	.byte	0xd4, 0x10, 0x00, 0x00
 	.byte	0x0e, 0x00, 0x08, 0x10
-	.byte	0xcd, 0x10, 0x00, 0x00
+	.byte	0xd2, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x02, 0x00
-	.byte	0xd0, 0x10, 0x00, 0x00
+	.byte	0xd5, 0x10, 0x00, 0x00
 	.byte	0x3e, 0x00, 0x05, 0x15
 	.byte	0x00, 0x00, 0x00, 0x02
 	.byte	0x21, 0x10, 0x00, 0x00
@@ -4663,12 +5199,12 @@ const.2:
 	.byte	0x35, 0x63, 0x63, 0x39
 	.byte	0x35, 0x34, 0x00, 0xf1
 	.byte	0x0e, 0x00, 0x06, 0x16
-	.byte	0xd2, 0x10, 0x00, 0x00
+	.byte	0xd7, 0x10, 0x00, 0x00
 	.byte	0x0c, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x00, 0x00
 	.byte	0x16, 0x00, 0x01, 0x16
-	.byte	0xcc, 0x10, 0x00, 0x00
 	.byte	0xd1, 0x10, 0x00, 0x00
+	.byte	0xd6, 0x10, 0x00, 0x00
 	.byte	0x7b, 0x7b, 0x63, 0x6c
 	.byte	0x6f, 0x73, 0x75, 0x72
 	.byte	0x65, 0x7d, 0x7d, 0x00
@@ -4686,10 +5222,22 @@ const.2:
 	.byte	0x0e, 0x00, 0x08, 0x10
 	.byte	0x02, 0x10, 0x00, 0x00
 	.byte	0x00, 0x00, 0x01, 0x00
-	.byte	0xd6, 0x10, 0x00, 0x00
+	.byte	0xdb, 0x10, 0x00, 0x00
 	.byte	0x12, 0x00, 0x01, 0x16
-	.byte	0xd5, 0x10, 0x00, 0x00
-	.byte	0xd7, 0x10, 0x00, 0x00
+	.byte	0xda, 0x10, 0x00, 0x00
+	.byte	0xdc, 0x10, 0x00, 0x00
 	.byte	0x64, 0x65, 0x72, 0x65
 	.byte	0x66, 0x00, 0xf2, 0xf1
+	.byte	0x0a, 0x00, 0x01, 0x12
+	.byte	0x01, 0x00, 0x00, 0x00
+	.byte	0x02, 0x10, 0x00, 0x00
+	.byte	0x0e, 0x00, 0x08, 0x10
+	.byte	0x03, 0x00, 0x00, 0x00
+	.byte	0x00, 0x00, 0x01, 0x00
+	.byte	0xde, 0x10, 0x00, 0x00
+	.byte	0x12, 0x00, 0x01, 0x16
+	.byte	0xda, 0x10, 0x00, 0x00
+	.byte	0xdf, 0x10, 0x00, 0x00
+	.byte	0x64, 0x72, 0x6f, 0x70
+	.byte	0x00, 0xf3, 0xf2, 0xf1
 
