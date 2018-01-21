@@ -6,6 +6,7 @@ use std::collections::HashMap;
 
 pub struct Args {
     dt: f64,
+    fps: f64,
     keys: HashMap<::Keycode, bool>,
 }
 
@@ -13,6 +14,7 @@ impl Args {
     pub fn new() -> Self {
         Args {
             dt: 0.,
+            fps: 0.,
             keys: HashMap::new(),
         }
     }
@@ -29,8 +31,16 @@ impl Args {
         self.keys.insert(key, false);
     }
 
+    pub fn set_fps(&mut self, fps: f64) {
+        self.fps = fps;
+    }
+
     pub fn set_dt(&mut self, dt: f64) {
         self.dt = dt;
+    }
+
+    pub fn fps(&self) -> f64 {
+        self.fps
     }
 
     pub fn dt(&self) -> f64 {
@@ -39,8 +49,8 @@ impl Args {
 }
 
 pub trait GameState {
-    fn update(&mut self, args: &mut Args) -> AsteroidResult;
-    fn render(&self, args: &mut Args, graphics: &mut Graphics) -> AsteroidResult;
+    fn update(&mut self, args: &Args) -> AsteroidResult;
+    fn render(&self, args: &Args, graphics: &mut Graphics) -> AsteroidResult;
 
     #[allow(unused_variables)]
     fn keyboard_input(&mut self, key: ::Keycode) -> AsteroidResult { AsteroidResult::Ok }

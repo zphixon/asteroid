@@ -16,29 +16,29 @@ struct Game {
 }
 
 impl GameState for Game {
-    fn update(&mut self, args: &mut Args) -> AsteroidResult {
+    fn update(&mut self, args: &Args) -> AsteroidResult {
         if args.is_down(Keycode::W) {
-            self.cy -= 50000. * args.dt();
+            self.cy -= 50. * args.dt();
         }
         if args.is_down(Keycode::A) {
-            self.cx -= 50000. * args.dt();
+            self.cx -= 50. * args.dt();
         }
         if args.is_down(Keycode::S) {
-            self.cy += 50000. * args.dt();
+            self.cy += 50. * args.dt();
         }
         if args.is_down(Keycode::D) {
-            self.cx += 50000. * args.dt();
+            self.cx += 50. * args.dt();
         }
         if args.is_down(Keycode::Q) {
-            self.cr += 50000. * args.dt();
+            self.cr += 50. * args.dt();
         }
         if args.is_down(Keycode::E) {
-            self.cr -= 50000. * args.dt();
+            self.cr -= 50. * args.dt();
         }
         AsteroidResult::Ok
     }
 
-    fn render(&self, args: &mut Args, graphics: &mut Graphics) -> AsteroidResult {
+    fn render(&self, args: &Args, graphics: &mut Graphics) -> AsteroidResult {
         graphics.set_color(255, 255, 255);
         graphics.draw(Draw::CircleFill {x: self.cx as i32, y: self.cy as i32, r: self.cr as i32});
         graphics.draw(Draw::EllipseLine {x: self.cx as i32, y: self.cy as i32, w: self.cr as i32 * 2, h: self.cr as i32});
@@ -64,7 +64,6 @@ fn main() {
         .build();
     //let settings = settings::open(settings_file).unwrap();
 
-    asteroid::game_loop_test(settings);
-    //asteroid::game_loop(game, settings);
+    asteroid::game_loop(game, settings);
 }
 
