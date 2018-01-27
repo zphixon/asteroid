@@ -18,23 +18,28 @@ struct Game {
 impl GameState for Game {
     fn update(&mut self, args: &Args) -> AsteroidResult {
         if args.is_down(Keycode::W) {
-            self.cy -= 50. * args.dt();
+            self.cy -= 150. * args.dt();
         }
         if args.is_down(Keycode::A) {
-            self.cx -= 50. * args.dt();
+            self.cx -= 150. * args.dt();
         }
         if args.is_down(Keycode::S) {
-            self.cy += 50. * args.dt();
+            self.cy += 150. * args.dt();
         }
         if args.is_down(Keycode::D) {
-            self.cx += 50. * args.dt();
+            self.cx += 150. * args.dt();
         }
         if args.is_down(Keycode::Q) {
-            self.cr += 50. * args.dt();
+            self.cr += 150. * args.dt();
         }
         if args.is_down(Keycode::E) {
-            self.cr -= 50. * args.dt();
+            self.cr -= 150. * args.dt();
         }
+
+        if self.cr <= 1. {
+            self.cr = 1.;
+        }
+
         AsteroidResult::Ok
     }
 

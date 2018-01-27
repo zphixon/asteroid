@@ -48,6 +48,7 @@ pub fn game_loop<T: GameState>(mut game: T, settings: Settings) -> AsteroidResul
     let mut second = 0.;
 
     while err.is_none() {
+        let mut steps = 0;
         let new_time = time::precise_time_s();
         let mut frame_time = new_time - current_time;
         current_time = new_time;
@@ -83,6 +84,12 @@ pub fn game_loop<T: GameState>(mut game: T, settings: Settings) -> AsteroidResul
             args.set_dt(delta_time);
             game.update(&mut args);
             frame_time -= delta_time;
+
+            steps += 1;
+            if steps >= 500 {
+                println!("spiral averted");
+                break;
+            }
         }
 
         game.render(&mut args, &mut graphics);

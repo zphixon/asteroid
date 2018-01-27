@@ -1,6 +1,6 @@
 [package]
 name = "asteroid"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["cheezgi <zackh@firemail.cc>"]
 description = "Small game framework based on SDL2"
 homepage = "https://github.com/cheezgi/asteroid"
