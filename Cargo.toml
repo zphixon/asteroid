@@ -9,6 +9,7 @@ keywords = ["game", "engine", "2d", "graphics"]
 categories = ["game-engines"]
 license = "MIT"
 readme = "README.md"
+build = "build.rs"
 
 [badges]
 travis-ci = { repository = "cheezgi/asteroid" }
