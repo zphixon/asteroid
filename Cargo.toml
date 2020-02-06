@@ -1,29 +1,19 @@
 [package]
 name = "asteroid"
-version = "0.2.0"
-authors = ["cheezgi <zackh@firemail.cc>"]
-description = "Small game framework based on SDL2"
-homepage = "https://github.com/cheezgi/asteroid"
-repository = "https://github.com/cheezgi/asteroid"
+version = "0.3.0"
+authors = ["Zack <zphixon@gmail.com>"]
+description = "Small 3d game framework"
+homepage = "https://github.com/zphixon/asteroid"
+repository = "https://github.com/zphixon/asteroid"
 keywords = ["game", "engine", "2d", "graphics"]
 categories = ["game-engines"]
 license = "MIT"
 readme = "README.md"
-build = "build.rs"
-
-[badges]
-travis-ci = { repository = "cheezgi/asteroid" }
-
-# examples need sdl2 to be present in order to build
-# but cargo doesn't know how to specify a build file for an example
-# so I'm just not showing the appveyor badge for now
-#appveyor = { repository = "cheezgi/asteroid" }
 
 [dependencies]
-nccl = "0.4.0"
-time = "0.1.38"
-sdl2 = "0.30.0"
-
-[[example]]
-name = "basic"
+time = "0.2"
+winit = "0.19.5"
+vulkano = "0.16"
+vulkano-win = "0.16"
+vulkano-shaders = "0.16"
 
