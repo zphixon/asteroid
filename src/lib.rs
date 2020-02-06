@@ -318,3 +318,4 @@ fn window_size_dependent_setup(
         ) as Arc<dyn FramebufferAbstract + Send + Sync>
     }).collect::<Vec<_>>()
 }
+
