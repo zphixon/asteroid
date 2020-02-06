@@ -1,9 +1,8 @@
 
 # asteroid [![Build Status](https://travis-ci.org/zphixon/asteroid.svg?branch=asteroid-3d)](https://travis-ci.org/zphixon/asteroid)  [![Build status](https://ci.appveyor.com/api/projects/status/pns13jbrgn1lyhon/branch/asteroid-3d?svg=true)](https://ci.appveyor.com/project/zphixon/asteroid/branch/asteroid-3d)
 
-Very simple 3D rendering engine with a Vulkan backend. Utilizes [vulkano]
-(https://github.com/vulkano-rs/vulkano) for bindings and vulkano-win for window
-creation.
+Very simple 3D rendering engine with a Vulkan backend. Utilizes [vulkano](https://github.com/vulkano-rs/vulkano)
+for bindings and vulkano-win for window creation.
 
 ## Goals
 
