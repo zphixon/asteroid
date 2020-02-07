@@ -5,7 +5,8 @@ Operations on this branch are now ceased. New work will focus on the 3d Vulkan
 port of asteroid taking place at the [asteroid-3d branch](https://github.com/zphixon/asteroid/tree/asteroid-3d).
 The 2d version will no longer be maintained, and eventually the crate will be
 entirely supplanted by the other branch. If you wish to further development on
-a 2d version, I welcome you to create your own fork.
+a 2d version, I welcome you to create your own fork. Additionally, the best
+spiritual successor to asteroid 0.3 currently is [crow](https://github.com/lcnr/crow).
 
 ~~Very simple game engine built on SDL2. Inspired by kiss3d/ggez.~~
 
