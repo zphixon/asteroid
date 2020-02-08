@@ -25,7 +25,13 @@ use vulkano::{
         RenderPassAbstract,
     },
     image::SwapchainImage,
+    instance,
     instance::{
+        debug::{
+            DebugCallback,
+            MessageSeverity,
+            MessageType,
+        },
         Instance,
         PhysicalDevice,
     },
@@ -68,8 +74,40 @@ pub struct Renderer;
 // TODO: abstract
 // TODO: validation layers
 pub fn triangle() {
+    //let debug_extensions = InstanceExtensions {
+    //    ext_debug_report: true,
+    //    ..InstanceExtensions::none()
+    //};
+    println!("List of layers available: ");
+    let mut layers = instance::layers_list().unwrap();
+    while let Some(layer) = layers.next() {
+        println!("{}", layer.name());
+    }
+
     let required_extensions = vulkano_win::required_extensions();
-    let instance = Instance::new(None, &required_extensions, None).expect("could not create instance");
+    let instance = Instance::new(None, &required_extensions, vec![
+        "VK_LAYER_LUNARG_standard_validation"
+    ]).expect("could not create instance");
+
+    let _debug_callback = DebugCallback::new(&instance, MessageSeverity {
+        error: true,
+        warning: true,
+        information: true,
+        verbose: true,
+    }, MessageType {
+        general: true,
+        performance: true,
+        validation: true,
+    }, |msg| {
+        let ty = if msg.ty.validation {
+            "validation"
+        } else if msg.ty.performance {
+            "perf"
+        } else if msg.ty.general {
+            "general"
+        } else { panic!("no impl") };
+        println!("{1}{3:?}{0}{2}", ty, msg.layer_prefix, msg.description, msg.severity);
+    });
 
     // TODO: select physical device more carefully
     let physical = PhysicalDevice::enumerate(&instance).next().expect("couldn't find physical device");
@@ -143,7 +181,6 @@ pub fn triangle() {
     };
 
     // create shader modules - automatically calls shaderc via macro, compiles to SPIR-V
-    // TODO: handle shaders better? idk if I want to rely on vulkano_shaders
     mod vs {
         vulkano_shaders::shader! {
             ty: "vertex",
@@ -160,7 +197,7 @@ pub fn triangle() {
             src: "#version 450
             layout (location = 0) out vec4 f_color;
             void main() {
-                f_color = vec4(1.0, 0.0, 0.0, 1.0);
+                f_color = vec4(0.7, 0.7, 0.7, 1.0);
             }"
         }
     }
@@ -249,7 +286,7 @@ pub fn triangle() {
         };
 
         // create command buffer, record commands
-        let clear_values = vec!([0.0, 0.0, 1.0, 1.0].into());
+        let clear_values = vec!([0.1, 0.1, 0.1, 1.0].into());
         let command_buffer = AutoCommandBufferBuilder::primary_one_time_submit(device.clone(), queue.family()).expect("couldn't make command buffer")
             .begin_render_pass(framebuffers[image_num].clone(), false, clear_values).expect("couldn't begin render pass")
             .draw(pipeline.clone(), &dynamic_state, vertex_buffer.clone(), (), ()).expect("couldn't draw")
@@ -318,4 +355,3 @@ fn window_size_dependent_setup(
         ) as Arc<dyn FramebufferAbstract + Send + Sync>
     }).collect::<Vec<_>>()
 }
-
