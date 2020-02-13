@@ -57,16 +57,24 @@ use vulkano::{
 use vulkano_win::VkSurfaceBuild;
 
 use winit::{
-    EventsLoop,
-    WindowBuilder,
-    Window,
-    Event,
-    WindowEvent,
-    ElementState,
-    VirtualKeyCode,
+    event_loop::{
+        EventLoop,
+        ControlFlow,
+    },
+    window::{
+        Window,
+        WindowBuilder,
+    },
+    event::{
+        Event,
+        VirtualKeyCode,
+        WindowEvent,
+    },
 };
 
 use std::sync::Arc;
+use vulkano::swapchain::{FullscreenExclusive, ColorSpace};
+use winit::event::ElementState;
 
 // will contain VkInstance, VkDevice, VkPipeline(s), VkQueue(s), etc
 pub struct Renderer;
@@ -74,11 +82,7 @@ pub struct Renderer;
 // TODO: abstract
 // TODO: validation layers
 pub fn triangle() {
-    //let debug_extensions = InstanceExtensions {
-    //    ext_debug_report: true,
-    //    ..InstanceExtensions::none()
-    //};
-    println!("List of layers available: ");
+    println!("available layers: ");
     let mut layers = instance::layers_list().unwrap();
     while let Some(layer) = layers.next() {
         println!("{}", layer.name());
@@ -115,12 +119,11 @@ pub fn triangle() {
 
     // create window
     // TODO: user-configurable - force user to handle window/surface creation?
-    let mut event_loop = EventsLoop::new();
+    let mut event_loop = EventLoop::new();
     let surface = WindowBuilder::new()
         .with_title("asteroid")
         .build_vk_surface(&event_loop, instance.clone())
         .expect("couldn't build window");
-    let window = surface.window();
 
     // get queue family - must support graphics and render to surface
     // TODO: make nicer
@@ -147,21 +150,22 @@ pub fn triangle() {
         let usage = capabilities.supported_usage_flags;
         let alpha = capabilities.supported_composite_alpha.iter().next().expect("couldn't get surface alpha");
         let format = capabilities.supported_formats[0].0;
-        let dimensions: (u32, u32) = window.get_inner_size().expect("couldn't get window size").into();
+        let dimensions: [u32; 2] = surface.window().inner_size().into();
         Swapchain::new(
             device.clone(),
             surface.clone(),
             capabilities.min_image_count,
             format,
-            [dimensions.0, dimensions.1],
+            dimensions,
             1,
             usage,
             &queue,
             SurfaceTransform::Identity,
             alpha,
             PresentMode::Fifo,
+            FullscreenExclusive::Default,
             true,
-            None,
+            ColorSpace::SrgbNonLinear,
         ).expect("couldn't make swapchain")
     };
 
@@ -173,7 +177,7 @@ pub fn triangle() {
         vulkano::impl_vertex!(Vertex, position);
 
         // allocates a buffer and fills it
-        CpuAccessibleBuffer::from_iter(device.clone(), BufferUsage::all(), [
+        CpuAccessibleBuffer::from_iter(device.clone(), BufferUsage::all(), false, [
             Vertex { position: [-0.5,  -0.25] },
             Vertex { position: [ 0.0,   0.5 ] },
             Vertex { position: [ 0.25, -0.1 ] },
@@ -247,90 +251,80 @@ pub fn triangle() {
     let mut framebuffers = window_size_dependent_setup(&images, render_pass.clone(), &mut dynamic_state);
 
     let mut recreate_swapchain = false;
-    let mut previous_frame_end = Box::new(sync::now(device.clone())) as Box<dyn GpuFuture>;
+    let mut previous_frame_end = Some(Box::new(sync::now(device.clone())) as Box<dyn GpuFuture>);
 
-    // TODO: figure out custom frame limiting?
-    loop {
-        previous_frame_end.cleanup_finished();
-
-        // handle recreation of swapchain and viewport if window resizes
-        if recreate_swapchain {
-            let dimensions = if let Some(dimensions) = window.get_inner_size() {
-                let dimensions: (u32, u32) = dimensions.to_physical(window.get_hidpi_factor()).into();
-                [dimensions.0, dimensions.1]
-            } else {
-                println!("idk dimensions");
-                return;
-            };
-
-            let (new_swapchain, new_images) = match swapchain.recreate_with_dimension(dimensions) {
-                Ok(r) => r,
-                Err(SwapchainCreationError::UnsupportedDimensions) => continue,
-                Err(e) => panic!("{:?}", e),
-            };
-
-            swapchain = new_swapchain;
-            framebuffers = window_size_dependent_setup(&new_images, render_pass.clone(), &mut dynamic_state);
-
-            recreate_swapchain = false;
-        }
-
-        // acquire swapchain image
-        let (image_num, acquire_future) = match swapchain::acquire_next_image(swapchain.clone(), None) {
-            Ok(r) => r,
-            Err(AcquireError::OutOfDate) => {
-                recreate_swapchain = true;
-                continue;
+    event_loop.run(move |event, _, flow| {
+        match event {
+            Event::WindowEvent { event: WindowEvent::CloseRequested, .. } => *flow = ControlFlow::Exit,
+            Event::WindowEvent { event: WindowEvent::Resized(_), .. } => recreate_swapchain = true,
+            Event::WindowEvent { event: WindowEvent::KeyboardInput { input, .. }, .. } => {
+                if input.state == ElementState::Pressed && input.virtual_keycode == Some(VirtualKeyCode::Escape) {
+                    *flow = ControlFlow::Exit;
+                }
             },
-            Err(e) => panic!("{:?}", e),
-        };
+            Event::RedrawEventsCleared => {
+                previous_frame_end.as_mut().unwrap().cleanup_finished();
 
-        // create command buffer, record commands
-        let clear_values = vec!([0.1, 0.1, 0.1, 1.0].into());
-        let command_buffer = AutoCommandBufferBuilder::primary_one_time_submit(device.clone(), queue.family()).expect("couldn't make command buffer")
-            .begin_render_pass(framebuffers[image_num].clone(), false, clear_values).expect("couldn't begin render pass")
-            .draw(pipeline.clone(), &dynamic_state, vertex_buffer.clone(), (), ()).expect("couldn't draw")
-            .end_render_pass().expect("couldn't end render pass")
-            .build().expect("couldn't build");
+                // handle recreation of swapchain and viewport if window resizes
+                if recreate_swapchain {
+                    let dimensions: [u32; 2] = surface.window().inner_size().into();
 
-        // is this a VkFence?
-        let future = previous_frame_end.join(acquire_future)
-            .then_execute(queue.clone(), command_buffer).expect("couldn't execute command buffer")
-            .then_swapchain_present(queue.clone(), swapchain.clone(), image_num)
-            .then_signal_fence_and_flush();
+                    let (new_swapchain, new_images) = match swapchain.recreate_with_dimensions(dimensions) {
+                        Ok(r) => r,
+                        Err(SwapchainCreationError::UnsupportedDimensions) => return,
+                        Err(e) => panic!("{:?}", e),
+                    };
 
-        // wait for fence?
-        match future {
-            Ok(future) => {
-                future.wait(None).expect("couldn't wait on future");
-                previous_frame_end = Box::new(future);
-            }
-            Err(FlushError::OutOfDate) => {
-                recreate_swapchain = true;
-                previous_frame_end = Box::new(sync::now(device.clone()));
-            }
-            Err(e) => {
-                println!("{:?}", e);
-                previous_frame_end = Box::new(sync::now(device.clone()));
-            }
-        }
+                    swapchain = new_swapchain;
+                    framebuffers = window_size_dependent_setup(&new_images, render_pass.clone(), &mut dynamic_state);
 
-        // TODO: send these events to the user
-        let mut done = false;
-        event_loop.poll_events(|event| {
-            match event {
-                Event::WindowEvent { event: WindowEvent::CloseRequested, .. } => done = true,
-                Event::WindowEvent { event: WindowEvent::Resized(_), .. } => recreate_swapchain = true,
-                Event::WindowEvent { event: WindowEvent::KeyboardInput { input, .. }, .. } => {
-                    if input.state == ElementState::Pressed && input.virtual_keycode == Some(VirtualKeyCode::Escape) {
-                        done = true;
+                    recreate_swapchain = false;
+                }
+
+                // acquire swapchain image
+                let (image_num, b, acquire_future) = match swapchain::acquire_next_image(swapchain.clone(), None) {
+                    Ok(r) => r,
+                    Err(AcquireError::OutOfDate) => {
+                        recreate_swapchain = true;
+                        return;
+                    },
+                    Err(e) => panic!("{:?}", e),
+                };
+
+                // create command buffer, record commands
+                let clear_values = vec!([0.1, 0.1, 0.1, 1.0].into());
+                let command_buffer = AutoCommandBufferBuilder::primary_one_time_submit(device.clone(), queue.family()).expect("couldn't make command buffer")
+                    .begin_render_pass(framebuffers[image_num].clone(), false, clear_values).expect("couldn't begin render pass")
+                    .draw(pipeline.clone(), &dynamic_state, vertex_buffer.clone(), (), ()).expect("couldn't draw")
+                    .end_render_pass().expect("couldn't end render pass")
+                    .build().expect("couldn't build");
+
+                // is this a VkFence?
+                let future = previous_frame_end.take().unwrap()
+                    .join(acquire_future)
+                    .then_execute(queue.clone(), command_buffer).expect("couldn't execute command buffer")
+                    .then_swapchain_present(queue.clone(), swapchain.clone(), image_num)
+                    .then_signal_fence_and_flush();
+
+                // wait for fence?
+                match future {
+                    Ok(future) => {
+                        future.wait(None).expect("couldn't wait on future");
+                        previous_frame_end = Some(Box::new(future));
                     }
-                },
-                _ => ()
+                    Err(FlushError::OutOfDate) => {
+                        recreate_swapchain = true;
+                        previous_frame_end = Some(Box::new(sync::now(device.clone())));
+                    }
+                    Err(e) => {
+                        println!("{:?}", e);
+                        previous_frame_end = Some(Box::new(sync::now(device.clone())));
+                    }
+                }
             }
-        });
-        if done { break }
-    }
+            _ => ()
+        }
+    });
 }
 
 fn window_size_dependent_setup(

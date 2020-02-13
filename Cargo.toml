@@ -9,10 +9,11 @@ keywords = ["game", "engine", "2d", "graphics"]
 categories = ["game-engines"]
 license = "MIT"
 readme = "README.md"
+edition = "2018"
 
 [dependencies]
 time = "0.2"
-winit = "0.19.5"
-vulkano = "0.16"
-vulkano-win = "0.16"
+winit = "0.21"
+vulkano = "0.17"
+vulkano-win = "0.17"
 vulkano-shaders = "0.16"
