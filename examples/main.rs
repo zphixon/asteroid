@@ -2,6 +2,7 @@
 extern crate asteroid;
 
 fn main() {
-    asteroid::triangle();
+    let (r, l) = asteroid::Renderer::initialize();
+    r.main_loop(l);
 }
 
