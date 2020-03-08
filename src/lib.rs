@@ -4,12 +4,13 @@ extern crate vulkano;
 extern crate vulkano_win;
 extern crate time;
 extern crate winit;
+//extern crate nalgebra;
 
 use vulkano::{
-    buffer::{
-        BufferUsage,
-        CpuAccessibleBuffer,
-    },
+    //buffer::{
+    //    //BufferUsage,
+    //    //CpuAccessibleBuffer,
+    //},
     command_buffer::{
         AutoCommandBufferBuilder,
         DynamicState,
@@ -76,6 +77,11 @@ use std::sync::Arc;
 use vulkano::swapchain::{FullscreenExclusive, ColorSpace};
 use winit::event::ElementState;
 
+pub mod mesh;
+pub mod vertex;
+
+pub use vertex::Vertex;
+
 // will contain VkInstance, VkDevice, VkPipeline(s), VkQueue(s), etc
 pub struct Renderer;
 
@@ -119,7 +125,7 @@ pub fn triangle() {
 
     // create window
     // TODO: user-configurable - force user to handle window/surface creation?
-    let mut event_loop = EventLoop::new();
+    let event_loop = EventLoop::new();
     let surface = WindowBuilder::new()
         .with_title("asteroid")
         .build_vk_surface(&event_loop, instance.clone())
@@ -169,29 +175,25 @@ pub fn triangle() {
         ).expect("couldn't make swapchain")
     };
 
-    // TODO: move to object loading module
-    let vertex_buffer = {
-        // macro creates vertex input attribute descriptions
-        #[derive(Default, Debug, Clone)]
-        struct Vertex { position: [f32; 2] }
-        vulkano::impl_vertex!(Vertex, position);
-
-        // allocates a buffer and fills it
-        CpuAccessibleBuffer::from_iter(device.clone(), BufferUsage::all(), false, [
-            Vertex { position: [-0.5,  -0.25] },
-            Vertex { position: [ 0.0,   0.5 ] },
-            Vertex { position: [ 0.25, -0.1 ] },
-        ].iter().cloned()).expect("couldn't make buffer")
-    };
+    let mesh = mesh::Mesh::new_verts(vec![
+        Vertex::new_2d(-0.5,  -0.25),
+        Vertex::new_2d(0.0,   0.5),
+        Vertex::new_2d(0.25, -0.1),
+    ]);
+    let vertex_buffer = mesh.buffer(device.clone());
 
     // create shader modules - automatically calls shaderc via macro, compiles to SPIR-V
     mod vs {
         vulkano_shaders::shader! {
             ty: "vertex",
             src: "#version 450
-            layout (location = 0) in vec2 position;
+            layout (location = 0) in vec3 pos;
+            layout (location = 1) in vec3 normal;
+            layout (location = 2) in vec2 tex_coords;
+            layout (location = 3) in vec3 tangent;
+            layout (location = 4) in vec3 bitangent;
             void main() {
-                gl_Position = vec4(position, 0.0, 1.0);
+                gl_Position = vec4(pos.x, pos.y, 0.0, 1.0);
             }"
         }
     }
@@ -230,7 +232,7 @@ pub fn triangle() {
 
     // vkCreateGraphicsPipelines
     let pipeline = Arc::new(GraphicsPipeline::start()
-        .vertex_input_single_buffer()
+        .vertex_input_single_buffer::<vertex::Vertex>()
         .vertex_shader(vs.main_entry_point(), ())
         .triangle_list()
         .viewports_dynamic_scissors_irrelevant(1)
@@ -282,7 +284,7 @@ pub fn triangle() {
                 }
 
                 // acquire swapchain image
-                let (image_num, b, acquire_future) = match swapchain::acquire_next_image(swapchain.clone(), None) {
+                let (image_num, _b, acquire_future) = match swapchain::acquire_next_image(swapchain.clone(), None) {
                     Ok(r) => r,
                     Err(AcquireError::OutOfDate) => {
                         recreate_swapchain = true;
@@ -295,7 +297,8 @@ pub fn triangle() {
                 let clear_values = vec!([0.1, 0.1, 0.1, 1.0].into());
                 let command_buffer = AutoCommandBufferBuilder::primary_one_time_submit(device.clone(), queue.family()).expect("couldn't make command buffer")
                     .begin_render_pass(framebuffers[image_num].clone(), false, clear_values).expect("couldn't begin render pass")
-                    .draw(pipeline.clone(), &dynamic_state, vertex_buffer.clone(), (), ()).expect("couldn't draw")
+                    // TODO: replace with draw_indexed
+                    .draw(pipeline.clone(), &dynamic_state, vertex_buffer.clone(), (/* descriptor set: images, sampler, etc */), ()).expect("couldn't draw")
                     .end_render_pass().expect("couldn't end render pass")
                     .build().expect("couldn't build");
 

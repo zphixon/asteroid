@@ -12,8 +12,14 @@ readme = "README.md"
 edition = "2018"
 
 [dependencies]
+nalgebra = "0.19"
+image = "0.22.4"
+tobj = "0.1.12"
 time = "0.2"
 winit = "0.21"
+#vulkano = { path = "../vulkano/vulkano" }
+#vulkano-win = { path = "../vulkano/vulkano-win" }
+#vulkano-shaders = { path = "../vulkano/vulkano-shaders" }
 vulkano = "0.17"
 vulkano-win = "0.17"
 vulkano-shaders = "0.16"
