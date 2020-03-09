@@ -8,6 +8,7 @@ use std::path::Path;
 
 use vulkano::image::{ImmutableImage, Dimensions};
 use vulkano::format::Format;
+use vulkano::format::AcceptsPixels;
 
 use crate::Vertex;
 use image::GenericImageView;
@@ -31,15 +32,17 @@ pub struct Texture {
 impl Texture {
     pub fn new(path: String, kind: TextureKind, queue: Arc<Queue>) -> Self {
         let img = image::open(Path::new(&path)).expect(&format!("Couldn't load image {}", path));
-        let data = img.flipv().raw_pixels();
         let dimensions = Dimensions::Dim2d { width: img.width(), height: img.height() };
+
+        // TODO: refactor
+        let data = img.flipv().as_rgba8().expect(&format!("image isn't rgba8: {}", path)).clone().into_raw().clone();
 
         let (img, _tex_future) = ImmutableImage::from_iter(
             data.iter().cloned(),
             dimensions,
             Format::R8G8B8A8Srgb,
             queue.clone()
-        ).unwrap();
+        ).expect(&format!("womp womp: {}", path));
 
         Texture {
             img,

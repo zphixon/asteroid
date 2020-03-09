@@ -81,6 +81,7 @@ pub mod mesh;
 pub mod vertex;
 
 pub use vertex::Vertex;
+use vulkano::buffer::TypedBufferAccess;
 
 // will contain VkInstance, VkDevice, VkPipeline(s), VkQueue(s), etc
 pub struct Renderer;
@@ -181,6 +182,8 @@ pub fn triangle() {
         Vertex::new_2d(0.25, -0.1),
     ]);
     let vertex_buffer = mesh.buffer(device.clone());
+
+    let test_model = mesh::Model::new("assets/nanosuit/nanosuit.obj", queue.clone());
 
     // create shader modules - automatically calls shaderc via macro, compiles to SPIR-V
     mod vs {
