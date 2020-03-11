@@ -1,8 +1,9 @@
 
 extern crate asteroid;
+extern crate env_logger;
 
 fn main() {
-    //std::io::stdin().read_line(&mut String::new()).unwrap();
+    env_logger::init();
     asteroid::triangle();
 }
 

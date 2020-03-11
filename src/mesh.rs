@@ -35,6 +35,7 @@ impl Texture {
         let dimensions = Dimensions::Dim2d { width: img.width(), height: img.height() };
 
         // TODO: refactor
+        info!("        new {:?} texture from {}", kind, path);
         let data = img.flipv().as_rgba8().expect(&format!("image isn't rgba8: {}", path)).clone().into_raw().clone();
 
         let (img, _tex_future) = ImmutableImage::from_iter(
@@ -55,18 +56,22 @@ impl Texture {
 
 pub struct Model {
     meshes: Vec<Mesh>,
+    name: String,
     dir: String,
 }
 
 impl Model {
     pub fn new(path: &str, queue: Arc<Queue>) -> Model {
+        info!("load model from {}", path);
         let path = Path::new(path);
         let mut meshes = Vec::new();
         let dir = path.parent().unwrap_or_else(|| Path::new(""))
             .to_str().unwrap().into();
+        let name = path.parent().unwrap().file_name().unwrap().to_str().unwrap().to_owned();
         let obj = tobj::load_obj(path);
         let (models, materials) = obj.expect("could't load obj file");
         for model in models {
+            info!("    mesh \"{}\" in {}", model.name, name);
             let mesh = &model.mesh;
             let num_verts = mesh.positions.len() / 3;
 
@@ -115,11 +120,13 @@ impl Model {
 
         Model {
             meshes,
+            name,
             dir,
         }
     }
 
     pub fn buffers(&self, device: Arc<Device>) -> Vec<Arc<CpuAccessibleBuffer<[Vertex]>>> {
+        info!("buffers from meshes for {}", self.name);
         self.meshes.iter().map(|mesh| mesh.buffer(device.clone())).collect()
     }
 }
@@ -155,6 +162,7 @@ impl Mesh {
     }
 
     pub fn buffer(&self, device: Arc<Device>) -> Arc<CpuAccessibleBuffer<[Vertex]>> {
+        info!("    create buffer from mesh {}", self.name);
         CpuAccessibleBuffer::from_iter(
             device,
             BufferUsage::all(),

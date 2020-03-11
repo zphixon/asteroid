@@ -23,3 +23,10 @@ winit = "0.21"
 vulkano = "0.17"
 vulkano-win = "0.17"
 vulkano-shaders = "0.16"
+log = "0.4"
+
+[dev-dependencies]
+env_logger = "0.7.1"
+
+[[example]]
+name = "main"

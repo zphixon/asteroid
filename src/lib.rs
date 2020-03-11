@@ -1,4 +1,6 @@
 
+#[macro_use]
+extern crate log;
 extern crate vulkano_shaders;
 extern crate vulkano;
 extern crate vulkano_win;
@@ -76,12 +78,14 @@ use winit::{
 use std::sync::Arc;
 use vulkano::swapchain::{FullscreenExclusive, ColorSpace};
 use winit::event::ElementState;
+use log::{info, debug, warn, error};
 
 pub mod mesh;
 pub mod vertex;
 
 pub use vertex::Vertex;
 use vulkano::buffer::TypedBufferAccess;
+use std::fmt::Debug;
 
 // will contain VkInstance, VkDevice, VkPipeline(s), VkQueue(s), etc
 pub struct Renderer;
@@ -89,10 +93,10 @@ pub struct Renderer;
 // TODO: abstract
 // TODO: validation layers
 pub fn triangle() {
-    println!("available layers: ");
+    info!("available layers: ");
     let mut layers = instance::layers_list().unwrap();
     while let Some(layer) = layers.next() {
-        println!("{}", layer.name());
+        info!("{}", layer.name());
     }
 
     let required_extensions = vulkano_win::required_extensions();
@@ -117,12 +121,12 @@ pub fn triangle() {
         } else if msg.ty.general {
             "general"
         } else { panic!("no impl") };
-        println!("{1}{3:?}{0}{2}", ty, msg.layer_prefix, msg.description, msg.severity);
+        error!("{1}{3:?}{0}{2}", ty, msg.layer_prefix, msg.description, msg.severity);
     });
 
     // TODO: select physical device more carefully
     let physical = PhysicalDevice::enumerate(&instance).next().expect("couldn't find physical device");
-    println!("Using physical device ({:?}): {}", physical.ty(), physical.name());
+    info!("Using physical device ({:?}): {}", physical.ty(), physical.name());
 
     // create window
     // TODO: user-configurable - force user to handle window/surface creation?
@@ -184,6 +188,7 @@ pub fn triangle() {
     let vertex_buffer = mesh.buffer(device.clone());
 
     let test_model = mesh::Model::new("assets/nanosuit/nanosuit.obj", queue.clone());
+    let vbuffer2 = test_model.buffers(device.clone());
 
     // create shader modules - automatically calls shaderc via macro, compiles to SPIR-V
     mod vs {
@@ -323,7 +328,7 @@ pub fn triangle() {
                         previous_frame_end = Some(Box::new(sync::now(device.clone())));
                     }
                     Err(e) => {
-                        println!("{:?}", e);
+                        warn!("{:?}", e);
                         previous_frame_end = Some(Box::new(sync::now(device.clone())));
                     }
                 }
