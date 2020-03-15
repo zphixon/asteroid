@@ -7,12 +7,10 @@ extern crate vulkano_win;
 extern crate time;
 extern crate winit;
 //extern crate nalgebra;
+//extern crate imgui;
 
 use vulkano::{
-    //buffer::{
-    //    //BufferUsage,
-    //    //CpuAccessibleBuffer,
-    //},
+    buffer::TypedBufferAccess,
     command_buffer::{
         AutoCommandBufferBuilder,
         DynamicState,
@@ -45,6 +43,8 @@ use vulkano::{
     swapchain,
     swapchain::{
         AcquireError,
+        ColorSpace,
+        FullscreenExclusive,
         PresentMode,
         SurfaceTransform,
         Swapchain,
@@ -56,8 +56,6 @@ use vulkano::{
         FlushError,
     },
 };
-
-use vulkano_win::VkSurfaceBuild;
 
 use winit::{
     event_loop::{
@@ -75,17 +73,17 @@ use winit::{
     },
 };
 
-use std::sync::Arc;
-use vulkano::swapchain::{FullscreenExclusive, ColorSpace};
-use winit::event::ElementState;
 use log::{info, debug, warn, error};
+use vulkano_win::VkSurfaceBuild;
+use winit::event::ElementState;
+
+use std::sync::Arc;
+use std::fmt::Debug;
 
 pub mod mesh;
 pub mod vertex;
 
 pub use vertex::Vertex;
-use vulkano::buffer::TypedBufferAccess;
-use std::fmt::Debug;
 
 // will contain VkInstance, VkDevice, VkPipeline(s), VkQueue(s), etc
 pub struct Renderer;
@@ -185,34 +183,22 @@ pub fn triangle() {
         Vertex::new_2d(0.0,   0.5),
         Vertex::new_2d(0.25, -0.1),
     ]);
-    let vertex_buffer = mesh.buffer(device.clone());
+    let vertex_buffer = mesh.vertex_buffer(device.clone());
 
     let test_model = mesh::Model::new("assets/nanosuit/nanosuit.obj", queue.clone());
-    let vbuffer2 = test_model.buffers(device.clone());
+    let (model_vertex_buffer, model_index_buffer) = test_model.buffers(device.clone());
 
     // create shader modules - automatically calls shaderc via macro, compiles to SPIR-V
     mod vs {
         vulkano_shaders::shader! {
             ty: "vertex",
-            src: "#version 450
-            layout (location = 0) in vec3 pos;
-            layout (location = 1) in vec3 normal;
-            layout (location = 2) in vec2 tex_coords;
-            layout (location = 3) in vec3 tangent;
-            layout (location = 4) in vec3 bitangent;
-            void main() {
-                gl_Position = vec4(pos.x, pos.y, 0.0, 1.0);
-            }"
+            path: "shaders/2d.vert"
         }
     }
     mod fs {
         vulkano_shaders::shader! {
             ty: "fragment",
-            src: "#version 450
-            layout (location = 0) out vec4 f_color;
-            void main() {
-                f_color = vec4(0.7, 0.7, 0.7, 1.0);
-            }"
+            path: "shaders/2d.frag"
         }
     }
 
@@ -303,11 +289,13 @@ pub fn triangle() {
 
                 // create command buffer, record commands
                 let clear_values = vec!([0.1, 0.1, 0.1, 1.0].into());
-                let command_buffer = AutoCommandBufferBuilder::primary_one_time_submit(device.clone(), queue.family()).expect("couldn't make command buffer")
+                let mut cbb = AutoCommandBufferBuilder::primary_one_time_submit(device.clone(), queue.family()).expect("couldn't make command buffer")
                     .begin_render_pass(framebuffers[image_num].clone(), false, clear_values).expect("couldn't begin render pass")
-                    // TODO: replace with draw_indexed
-                    .draw(pipeline.clone(), &dynamic_state, vertex_buffer.clone(), (/* descriptor set: images, sampler, etc */), ()).expect("couldn't draw")
-                    .end_render_pass().expect("couldn't end render pass")
+                    .draw(pipeline.clone(), &dynamic_state, vertex_buffer.clone(), (/* descriptor set: images, sampler, etc */), ()).expect("couldn't draw");
+                for (vertices, indices) in model_vertex_buffer.iter().cloned().zip(model_index_buffer.iter().cloned()) {
+                    cbb = cbb.draw_indexed(pipeline.clone(), &dynamic_state, vertices, indices, (), ()).expect("couldn't draw indexed");
+                }
+                let command_buffer = cbb.end_render_pass().expect("couldn't end render pass")
                     .build().expect("couldn't build");
 
                 // is this a VkFence?

@@ -58,6 +58,7 @@ pub struct Model {
     meshes: Vec<Mesh>,
     name: String,
     dir: String,
+    // Arc<GraphicsPipeline> ?
 }
 
 impl Model {
@@ -125,9 +126,12 @@ impl Model {
         }
     }
 
-    pub fn buffers(&self, device: Arc<Device>) -> Vec<Arc<CpuAccessibleBuffer<[Vertex]>>> {
+    pub fn buffers(&self, device: Arc<Device>) -> (Vec<Arc<CpuAccessibleBuffer<[Vertex]>>>, Vec<Arc<CpuAccessibleBuffer<[u32]>>>) {
         info!("buffers from meshes for {}", self.name);
-        self.meshes.iter().map(|mesh| mesh.buffer(device.clone())).collect()
+        (
+            self.meshes.iter().map(|mesh| mesh.vertex_buffer(device.clone())).collect(),
+            self.meshes.iter().map(|mesh| mesh.index_buffer(device.clone())).collect()
+        )
     }
 }
 
@@ -157,17 +161,27 @@ impl Mesh {
             verts,
             indices: vec![],
             textures: vec![],
-            name: "idk lol".into(),
+            name: "anonymous mesh".into(),
         }
     }
 
-    pub fn buffer(&self, device: Arc<Device>) -> Arc<CpuAccessibleBuffer<[Vertex]>> {
-        info!("    create buffer from mesh {}", self.name);
+    pub fn vertex_buffer(&self, device: Arc<Device>) -> Arc<CpuAccessibleBuffer<[Vertex]>> {
+        info!("    create vertex buffer from mesh {}", self.name);
         CpuAccessibleBuffer::from_iter(
             device,
             BufferUsage::all(),
             false,
             self.verts.iter().cloned()
+        ).expect("couldn't make buffer")
+    }
+
+    pub fn index_buffer(&self, device: Arc<Device>) -> Arc<CpuAccessibleBuffer<[u32]>> {
+        info!("    create index buffer from mesh {}", self.name);
+        CpuAccessibleBuffer::from_iter(
+            device,
+            BufferUsage::all(),
+            false,
+            self.indices.iter().cloned()
         ).expect("couldn't make buffer")
     }
 
