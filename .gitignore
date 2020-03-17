@@ -1,13 +1,9 @@
-target
+target/
 **/*.dll
 **/*.a
 **/*.la
 **/*.lib
-dftwg.zip
-/setup.bat
-/SDL2-devel-2.0.5-VC.zip
-/SDL2-devel-2.0.5-mingw.zip
-/release.sh
-/SDL2-devel-2.0.7-mingw.tar.gz
-Session.vim
 .idea/
+asteroid-vulkano.drawio
+assets/
+captures/
