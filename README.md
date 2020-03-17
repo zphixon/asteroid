@@ -23,7 +23,6 @@ easy to integrate.
 
 * [X] First triangle
 * [ ] More robust pipelines
-    * [ ] Forward/deferred
     * [ ] More robust shader system
     * [ ] Uniforms
 * [ ] Mesh support
