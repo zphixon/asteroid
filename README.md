@@ -30,3 +30,4 @@ easy to integrate.
     * [ ] Height maps
 * [ ] GUI system (imgui, or nuklear if it ever stabilizes in rust)
 
+![](./asteroid-vulkano.svg)

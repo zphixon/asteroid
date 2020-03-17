@@ -1,0 +1,12 @@
+For the moment, Model cannot own a GraphicsPipeline:
+* Vulkano uses a macro to create a struct implementing GraphicsPipeline
+    * which requires access to a Device
+    * so it cannot be a module-level invocation
+* Vulkano also uses a macro to create shader modules that
+    * have an input and output structs implementing ShaderInterfaceDef which
+        * have an iter for both input and output
+    * as well as a struct implementing PipelineLayoutDesc
+    * for both the vertex and fragment shaders (5 structs each, 10 total)
+
+If we want to allow per-model shaders, we would need to write eleven structs
+that cover the majority of use cases.
